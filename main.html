@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        fetch('sales-information.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('sales-information-placeholder').innerHTML = html;
+            })
+        fetch('navigation-bar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navigation-bar-placeholder').innerHTML = html;
+            })
+        fetch('main-panel.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('main-panel-placeholder').innerHTML = html;
+            })
+        fetch('feature-panel.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('feature-panel-placeholder').innerHTML = html;
+            })
+        fetch('secondary-panel.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('secondary-panel-placeholder').innerHTML = html;
+            })
+        fetch('category-panel.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('category-panel-placeholder').innerHTML = html;
+            })
+        fetch('tertiary-panel.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('tertiary-panel-placeholder').innerHTML = html;
+            })
+        fetch('news-panel.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('news-panel-placeholder').innerHTML = html;
+            })
+        fetch('logo.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('logo-placeholder').innerHTML = html;
+            })
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+    </script>
+</head>
+<style>
+    body {
+        overflow-y: scroll;
+        font-family: "Century Gothic", Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+    .sales-information {
+        background-color: #ed3535;
+    }
+    .navigation-bar {
+
+    }
+    .main-panel {
+        background-color: #836161;
+    }
+    .feature-panel {
+        background-color: #a36060;
+    }
+    .secondary-panel {
+        background-color: #a85b5b;
+    }
+    .category-panel {
+        background-color: #935151;
+    }
+    .tertiary-panel {
+        background-color: #982020;
+    }
+    .news-panel {
+        background-color: #c81f1f;
+    }
+    .logo {
+        background-color: #fd0000;
+    }
+    footer {
+        background-color: #000000;
+        color: #FFF;
+        font-size: 1em;
+        font-style: normal;
+        font-weight: 700;
+    }
+</style>
+<body>
+    <div id = "sales-information-placeholder">1</div>
+    <div id = "navigation-bar-placeholder">2</div>
+    <div id = "main-panel-placeholder">3</div>
+    <div id = "feature-panel-placeholder">4</div>
+    <div id = "secondary-panel-placeholder">5</div>
+    <div id = "category-panel-placeholder">6</div>
+    <div id = "tertiary-panel-placeholder">7</div>
+    <div id = "news-panel-placeholder">8</div>
+    <div id = "logo-placeholder">9</div>
+    <div id = "footer-placeholder">10</div>
+</body>
+</html>
