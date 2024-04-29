@@ -5,8 +5,157 @@
     <title>Title</title>
 </head>
 <style>
+    body{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Century Gothic", Arial, sans-serif;
+    }
+
+    #logo{
+        text-align: center;
+        padding: 3vw;
+    }
+
+    #footercolumn{
+        display: flex;
+        list-style: none;
+        gap: 8vw;
+        font-size: 11px;    /*responsive issue*/
+        padding-left: 2vw;
+    }
+
+    #footer{
+        color: #FFFFFF;
+        display: flex;
+        background-color: #161616;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 30vh;
+        justify-content: center;
+    }
+
+    #copyright{
+        font-size: 10px;
+    }
+
+    #helps{
+        margin-top: 2vh;
+        font-size: 10px;
+    }
+
+    #Newsletter{
+        display: flex;
+        flex-direction: column;
+        font-family: "Century Gothic", Arial, sans-serif;
+        padding-right: 2vw;
+    }
+
+    #NewsletterInput{
+        margin-top: 1vh;
+        outline: 1px white;
+        resize: none;
+        background-color: #161616;
+        color: #FFFFFF;
+        font-family: "Century Gothic", Arial, sans-serif;
+    }
+
+    button{
+        margin-top: 2vh;
+        font-family: "Century Gothic", Arial, sans-serif;
+        border: none;
+        background-color: #FFFFFF;
+        height: 3vh;
+        font-weight: 500;
+    }
+
+    .line{
+        width: 100%;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        height: 1px;
+        background-color: #FFFFFF;
+    }
+
+    #FollowUs{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+
 </style>
 <body>
+<section id="logo">
+    <div style="font-weight: 800">COUGAR LIGHTING</div>
+    <div>Since 1975</div>
+</section>
+<section id="footer">
+    <section id="footercolumn">
 
+        <div class="AboutUs">
+            <h2>About Us</h2>
+            <li>Our Story</li>
+            <li>Blog</li>
+            <li>Affiliate Program</li>
+            <li>Ambassador Program</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Services</li>
+        </div>
+
+        <div class="Support">
+            <h2>Help Centre</h2>
+            <li>Product Warranty</li>
+            <li>Styling Guides</li>
+            <li>Delivery</li>
+            <li>Returns</li>
+            <li>FAQs</li>
+            <li>Payments</li>
+        </div>
+
+        <div class="Shop">
+            <h2>Exteriors</h2>
+            <li>Flush</li>
+            <li>Pendants</li>
+            <li>Table & Floor</li>
+            <li>Vanity</li>
+            <li>Wall</li>
+        </div>
+
+        <div id = "ContactEnquire">
+            <div class="Contact">
+                <h2>Contact</h2>
+                <li>+61 (3) 1234 5678</li>
+                <li>Mon - Fri,</li>
+                <li>9:00AM - 5:00PM</li>
+            </div>
+
+            <div class="Enquire">
+                <h2>Enquire</h2>
+                sales@cougarlighting.com.au
+            </div>
+        </div>
+
+        <div id="Newsletter">
+            <div class="line"></div>
+            <h2>Newsletter</h2>
+            <div>Receive the latest updates on our exquisite lighting collections, exclusive offers, and illuminating insights.</div>
+            <textarea id="NewsletterInput" cols="30" rows="2">Your email address</textarea>
+            <button> Receive Updates</button>
+            <div class="line"></div>
+            <div id="FollowUs">
+                <h2>Follow us</h2>
+                <img src="images/facebook icon.png" height="40" width="39"/>
+                <img src="images/instagram icon.png" height="40" width="39"/>
+                <img src="images/twitter icon.png" height="40" width="39"/>
+            </div>
+
+            <div id="helps">Condition of Use | Privacy Notice | Cookie Settings</div>
+        </div>
+    </section>
+
+    <div id="copyright">@2024, Cougar Lighting. All rights reserved.</div>
+</section>
 </body>
 </html>
