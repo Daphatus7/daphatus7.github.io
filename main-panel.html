@@ -4,15 +4,38 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    .card {
+        display: inline-block;
+        position: relative;
+    }
+    .container {
+        margin: 0;
+        padding: 4px 16px;
+        top: 180px;
+        left: 0;
+        position: absolute;
+    }
+    .main-display-text {
+        position: absolute;
+        width: 5em;
+        height: 5em;
+        color:#000;
+        font-size: 8em;
+        font-weight: 700;
+    }
+</style>
 <body>
-    <section id="pagebody">
-        <section id="main">
-            <div id = mainpage_button style ="z-index: 2";>Shop new Collections</div>
-            <div id = slogan style ="z-index: 2";>Illuminating Elegance, One Bulb at a Time</div>
-            <div id = backdrop style ="z-index: 1";> </div>
-            <img src="" alt="main-panel-visual" id="main-panel-visual">
-        </section>
-    
-    </section>
+    <div class="card-container black-text">
+        <div class="card">
+            <img src="images/Ross-Gardam-New-Pavilion-Digital-Space-Furniture-Lighting-Visuals-Mr-P-Studio-Yellowtrace-05%20(1).png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <button id = "main-panel-button" style ="z-index: -1">Shop new Collections</button>
+                <h2 class="main-display-text">Illuminating Elegance, One Bulb at a Time</h2>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
+
