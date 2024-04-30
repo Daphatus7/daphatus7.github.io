@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<style>
+    .product-item-display-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 266px;
+        height: 368px;
+        margin: 0;
+    }
+    .product-item-display-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 266px;
+        scale: 150%;
+        overflow: hidden;
+    }
+    #product-item-display-bottom-container {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+        width: 100%;
+        height: 102px;
+    }
+    #product-item-information-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    #price-container {
+        display: flex;
+        justify-content: start;
+    }
+    .add-to-cart-button {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 1.5em;
+        font-style: normal;
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+    .product-name-text {
+        font-size: var(--medium-text);
+    }
+    .price {
+        font-size: var(--title-text);
+    }
+</style>
+<body>
+<div class="product-item-display-container">
+    <div class="product-item-display-image-container">
+        <img class="product-item-display-image" src="images/vanity-image.png" alt="item-image">
+    </div>
+    <div id="product-item-display-bottom-container">
+        <div id="product-item-information-container"> 
+            <div>COLOUR SELECTION</div>
+            <div>Best Seller</div>
+            <div class="product-name-text">Zola Flush Light</div>
+            <div id="price-container">
+                <div class="currency">$</div>
+                <div class="price">399.00</div>
+            </div>
+            <div id="product-review">
+                <div class="product-rating"></div>
+                <div class="product-review-count"></div>
+            </div>
+        </div>
+        <img class="add-to-cart-button" src="images/add-icon.png" alt="">
+    </div>
+        
+</div>
+</body>
+</html>

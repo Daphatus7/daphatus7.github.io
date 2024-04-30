@@ -1,0 +1,15 @@
+:root {
+    --small-text: 14px;
+    --medium-text: 16px;
+    --title-text: 24px;
+}
+.placeholder {
+    overflow: hidden;
+}
+/*provide overall structure*/
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+}
