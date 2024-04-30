@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-page-product-display</title>
+</head>
+<style>
+    .sidebar-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sidebar{
+        flex-basis: 30rem;
+        flex-grow: 1;
+        min-width: 50%;
+    }
+
+    .not-sidebar{
+        flex-basis: 0;
+        flex-grow: 999;
+        min-width: 50%;
+    }
+    .product-display__description-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }   
+    #product-price-block {
+        display: flex;
+        flex-direction: row;
+    }
+    .add-to-cart {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .quantity-button{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+</style>
+<body>
+    <div class="product-display">
+        <div class="product-display__breadcrumb">
+            Best Seller/ Flush Light/ Zola Flush Light
+        </div>
+        <div class="product-display__description sidebar-container">
+            <img src="images/flush-image.png" class = "sidebar" alt="">
+            <div class = "product-display__description-panel not-sidebar">
+                <div id= "brand">ZOLA2GLD</div>
+                <div id= "product-name">Zola Flush Light</div>
+                <div id= "product-price-block">
+                    <div class="currency">$</div>
+                    <div class="product-price">429.00</div>
+                </div>
+                <div id= "product-colour"> </div>
+                <div id= "product-variation"> </div>
+                <div id= "product-description">
+                    <div class="product-description-title">
+                        Description
+                    </div>
+                    <div class="product-description-text">
+                        Introducing the Zola Flush Light: a striking addition
+                        to our modern lighting collection that embodies both
+                        grace and grandeur in its design. Crafted to captivate,
+                        the Zola Flush Light is an artistic creation that effortlessly
+                        becomes the focal point of any room. The Zola's design
+                        is not only beautiful but versatile. Perfect for lower
+                        ceilings or more compact spaces, it adds depth and warmth
+                        without overwhelming the area. Its diffused light is perfect
+                        for creating an inviting atmosphere in entryways, halls, or even over a chic dining room table.
+                    </div>
+                </div>
+                <div class= "add-to-cart">
+                    <div class="quantity-button">
+                        <button> - </button>
+                        <div class="product-quantity">1</div>
+                        <button> + </button>
+                    </div>
+                    <button> Add to Cart </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+           
+                  
