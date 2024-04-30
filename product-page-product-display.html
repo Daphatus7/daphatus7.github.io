@@ -10,9 +10,11 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-
+    #product-display__description sidebar-container{
+        display: flex;
+        flex-direction: row;
+    }
     .sidebar{
-        flex-basis: 30rem;
         flex-grow: 1;
         min-width: 50%;
     }
@@ -43,6 +45,11 @@
         flex-direction: row;
         gap: 10px;
     }
+
+    #productimage{
+        width: 40px;
+
+    }
 </style>
 <body>
     <div class="product-display">
@@ -50,21 +57,22 @@
             Best Seller/ Flush Light/ Zola Flush Light
         </div>
         <div class="product-display__description sidebar-container">
-            <img src="images/flush-image.png" class = "sidebar" alt="">
+            <img id = "productimage" src="images/flush-image.png" class = "sidebar" alt="">
             <div class = "product-display__description-panel not-sidebar">
-                <div id= "brand">ZOLA2GLD</div>
-                <div id= "product-name">Zola Flush Light</div>
+                <div id= "brand" style="font-size: 14.955px;">ZOLA2GLD</div>
+                <div id= "product-name" style="font-size: 42.054px; font-weight: 700;">Zola Flush Light</div>
                 <div id= "product-price-block">
-                    <div class="currency">$</div>
-                    <div class="product-price">429.00</div>
+                    <div class="currency" style="font-size: 21.168px;">$</div>
+                    <div class="product-price" style="font-size: 40.386px;">429.00</div>
                 </div>
                 <div id= "product-colour"> </div>
                 <div id= "product-variation"> </div>
                 <div id= "product-description">
-                    <div class="product-description-title">
+                    <div class="product-description-title" style="font-weight: 600; font-size: 23.928px;">
                         Description
                     </div>
-                    <div class="product-description-text">
+                    <div class="product-description-text" style="font-size: 14.955px; font-weight: 400;">
+
                         Introducing the Zola Flush Light: a striking addition
                         to our modern lighting collection that embodies both
                         grace and grandeur in its design. Crafted to captivate,
