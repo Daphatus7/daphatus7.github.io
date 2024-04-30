@@ -8,155 +8,178 @@
 <style>
     body{
         margin: 0;
+        padding: 0;
+    }
+    .footer{
+        margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         font-family: "Century Gothic", Arial, sans-serif;
-    }
-
-    #logo{
-        text-align: center;
-        padding: 3vw;
-    }
-
-    #footercolumn{
-        display: flex;
-        list-style: none;
-        gap: 8vw;
-        font-size: 11px;    /*responsive issue*/
-        padding-left: 2vw;
-    }
-
-    #footer{
-        color: #FFFFFF;
-        display: flex;
         background-color: #161616;
-        align-items: center;
+    }
+    #footer-top {
+        display: flex;
         flex-direction: column;
-        width: 100vw;
-        height: 30vh;
+        align-items: center;
         justify-content: center;
+        width: 100vw;
+        height: 50px;
+        color: #000000;
+        background-color: #ffffff;
     }
-
-    #copyright{
-        font-size: 10px;
+    #footer-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 100vw;
+        height: auto;
+        color: #FFFFFF;
     }
-
+    #footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 30px;
+        color: #000000;
+        background-color: #FFFFFF;
+    }
     #helps{
         margin-top: 2vh;
         font-size: 10px;
     }
-
     #Newsletter{
+        /*top line*/
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
+        justify-content: space-evenly;
         font-family: "Century Gothic", Arial, sans-serif;
-        padding-right: 2vw;
+        width: 390px;
     }
-
-    #NewsletterInput{
-        margin-top: 1vh;
-        outline: 1px white;
-        resize: none;
-        background-color: #161616;
-        color: #FFFFFF;
-        font-family: "Century Gothic", Arial, sans-serif;
+    #newsletter-text{
+        align-self: center;
     }
-
-    button{
-        margin-top: 2vh;
-        font-family: "Century Gothic", Arial, sans-serif;
-        border: none;
-        background-color: #FFFFFF;
-        height: 3vh;
-        font-weight: 500;
-    }
-
     .line{
+        border: 1px solid #FFFFFF;
         width: 100%;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-        height: 1px;
-        background-color: #FFFFFF;
     }
-
-    #FollowUs{
-        display: flex;
+    #footer-icon-container {
+        flex-wrap: wrap;
         flex-direction: row;
-        gap: 2vw;
+    }
+    #follow-us {
+        /*alignment*/
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+    }
+    
+    #receive-updates-button {
+        /*alignment*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*size*/
+        width: 100%;
+        height: 30px;
+        /*color*/
+        background-color: #FFFFFF;
+        color: #000000;
+        font-size: 10px;
+        /*border*/
+        border-inline: 1px solid #000000;
     }
 
+    #email-input {
+        /*size*/
+        width: 100%;
+        height: 30px;
+        /*color*/
+        background-color: #000000;
+        font-size: 10px;
+        color: white;
+        margin: 0;
+        padding: 0;
+        /*border*/
+        border-inline: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    
 </style>
 <body>
-<section id="logo">
-    <div style="font-weight: 800">COUGAR LIGHTING</div>
-    <div>Since 1975</div>
-</section>
-<section id="footer">
-    <section id="footercolumn">
-
-        <div class="AboutUs">
+<div class="footer">
+    <div id="footer-top">
+        <div style="font-weight: 800">COUGAR LIGHTING</div>
+        <div>Since 1975</div>
+    </div>
+    <div id="footer-container">
+        <div class="footer-information">
             <h2>About Us</h2>
-            <li>Our Story</li>
-            <li>Blog</li>
-            <li>Affiliate Program</li>
-            <li>Ambassador Program</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Services</li>
+            <div>Our Story</div>
+            <div>Blog</div>
+            <div>Affiliate Program</div>
+            <div>Ambassador Program</div>
+            <div>Privacy Policy</div>
+            <div>Terms of Services</div>
         </div>
-
-        <div class="Support">
+        <div class="footer-information">
             <h2>Help Centre</h2>
-            <li>Product Warranty</li>
-            <li>Styling Guides</li>
-            <li>Delivery</li>
-            <li>Returns</li>
-            <li>FAQs</li>
-            <li>Payments</li>
+            <div>Product Warranty</div>
+            <div>Styling Guides</div>
+            <div>Delivery</div>
+            <div>Returns</div>
+            <div>FAQs</div>
+            <div>Payments</div>
         </div>
-
-        <div class="Shop">
+        <div class="footer-information">
             <h2>Exteriors</h2>
-            <li>Flush</li>
-            <li>Pendants</li>
-            <li>Table & Floor</li>
-            <li>Vanity</li>
-            <li>Wall</li>
+            <div>Flush</div>
+            <div>Pendants</div>
+            <div>Table & Floor</div>
+            <div>Vanity</div>
+            <div>Wall</div>
         </div>
-
-        <div id = "ContactEnquire">
-            <div class="Contact">
+        <div class="footer-information">
+            <div id="Contact">
                 <h2>Contact</h2>
-                <li>+61 (3) 1234 5678</li>
-                <li>Mon - Fri,</li>
-                <li>9:00AM - 5:00PM</li>
+                <div>+61 (3) 1234 5678</div>
+                <div>Mon - Fri,</div>
+                <div>9:00AM - 5:00PM</div>
             </div>
 
-            <div class="Enquire">
+            <div id="Enquire">
                 <h2>Enquire</h2>
                 sales@cougarlighting.com.au
             </div>
         </div>
-
         <div id="Newsletter">
-            <div class="line"></div>
-            <h2>Newsletter</h2>
-            <div>Receive the latest updates on our exquisite lighting collections, exclusive offers, and illuminating insights.</div>
-            <textarea id="NewsletterInput" cols="30" rows="2">Your email address</textarea>
-            <button> Receive Updates</button>
-            <div class="line"></div>
-            <div id="FollowUs">
+            <div class = "line"></div>
+            <h2 id="newsletter-title">Newsletter</h2>
+            <div id = "newsletter-text">Receive the latest updates on our exquisite lighting collections, 
+                    exclusive offers, and illuminating insights.</div>
+            <label for="email-input"></label>
+            <input id="email-input" placeholder="Your email address">
+            <div id="receive-updates-button"> Receive Updates</div>
+            <div class = "line"></div>
+            <div id="follow-us">
                 <h2>Follow us</h2>
-                <img src="images/facebook icon.png" height="40" width="39"/>
-                <img src="images/instagram icon.png" height="40" width="39"/>
-                <img src="images/twitter icon.png" height="40" width="39"/>
+                <div id= "footer-icon-container">
+                    <img class = "footer-icons" src="images/facebook icon.png" alt=""/>
+                    <img class = "footer-icons" src="images/instagram icon.png" alt="">
+                    <img class = "footer-icons" src="images/twitter icon.png" alt=""/>
+                </div>
             </div>
-
             <div id="helps">Condition of Use | Privacy Notice | Cookie Settings</div>
         </div>
-    </section>
-
-    <div id="copyright">@2024, Cougar Lighting. All rights reserved.</div>
-</section>
+    </div>
+    <div id="footer-bottom">@2024, Cougar Lighting. All rights reserved.</div>
+</div>
 </body>
 </html>
