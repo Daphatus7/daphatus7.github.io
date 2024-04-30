@@ -13,3 +13,16 @@
     flex-direction: column;
     margin: 0;
 }
+body{
+    font-family: "Century Gothic", Arial, sans-serif;
+}
+
+button{
+    outline: none;
+    border: none;
+    background: #161616;
+    font-size: 0.7em;
+    font-weight: 400;
+    padding: 10px 20px;
+    color: #FFFFFF;
+}
