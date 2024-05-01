@@ -3,34 +3,14 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product-page-product-display</title>
+    <style></style>
 </head>
 <style>
-    body{
-
-    }
     .product-display__breadcrumb{
-        font-size: 10px;
+        font-size: var(--description-font-size);
         margin-left: 3%;
     }
-    .sidebar-container{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    #product-display__description sidebar-container{
-        display: flex;
-        flex-direction: row;
-    }
-    .sidebar{
-        flex-grow: 1;
-        min-width: 50%;
-    }
-
-    .not-sidebar{
-        flex-basis: 0;
-        flex-grow: 999;
-        min-width: 50%;
-    }
+    
     .product-display__description-panel {
         display: flex;
         flex-direction: column;
@@ -40,61 +20,34 @@
         display: flex;
         flex-direction: row;
     }
-
-    #productimage{
-        width: 40px;
+    #product__image {
+        width: 100%;
+        height: 100%;
     }
-
     #product-ID{
         font-size: 10px;
         margin: 0;
     }
-
-    #product-name{
-        font-size: 24px;
-        font-weight: 800;
-    }
-
-    .currency{
-        font-size: 14px;
-    }
-
-    .product-price{
-        font-size: 23px
-    }
-
-    .product-description-title{
-        font-weight: 600;
-        font-size: 18px;
-        margin-bottom: 1vh;
-    }
-
-    .product-description-text{
-        font-size: 9px;
-        font-weight: 400;
-        width: 90%;
-    }
-
+    
     #product-colour-block{
         margin-top: 2vh;
         margin-bottom: 2vh;
     }
     #current-colour-name{
-        font-size: 10px;
-
+        font-size: 14px;
     }
     .product-color-choices{
         display: flex;
         flex-direction: row;
         gap: 1vw;
-        margin: 0.5vw 0.5vw 0.5vw 0;
     }
 
     .circle{
-        width: 2.5vw;
-        height: 2.5vw;
+        width: 31px;
+        height: 31px;
         border-radius: 50%;
-        outline-color: ;
+        outline: 1px solid #414042;
+        
     }
     #gold{
         background-color: #E8BB47;
@@ -113,10 +66,13 @@
     }
 
     .add-to-cart-block {
+        /*alignment*/
         display: flex;
         flex-direction: row;
-        gap: 3vw;
-        margin-top: 3vh;
+        
+        /*size*/
+        /*gap: 3vw;*/
+        /*margin-top: 3vh;*/
     }
 
     .quantity-button{
@@ -124,7 +80,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: 3vw;
+        /*gap: 3vw;*/
         outline: 1px solid #414042;
         width: 30%;
         background-color: white;
@@ -134,6 +90,33 @@
         width: 55%;
         background-color: #414042;
     }
+    
+    
+    /*    TEXT section*/
+    .product-description-title{
+        font-size: var(--title-font-size);
+        font-weight: 600;
+    }
+
+    .product-description-text{
+        font-size: var(--description-font-size);
+        font-weight: 400;
+        width: 90%;
+    }
+
+    #product-name{
+        font-size: var(--title-font-size);
+        font-weight: 800;
+    }
+
+    .currency{
+        font-size: 14px;
+    }
+
+    .product-price{
+        font-size: var(--title-font-size);
+    }
+    
 </style>
 <body>
     <div class="product-display">
@@ -141,8 +124,7 @@
             Best Seller/ Flush Light/ Zola Flush Light
         </div>
         <div class="product-display__description sidebar-container">
-            <img id = "productimage" src="images/flush-image.png" class = "sidebar" alt="">
-
+            <img id = "product__image" src="images/zola2ltgoldtransparent%201.png" class = "sidebar" alt="">
             <div class = "product-display__description-panel not-sidebar">
                 <div id= "product-ID">ZOLA2GLD</div>
                 <div id= "product-name">Zola Flush Light</div>
@@ -165,7 +147,6 @@
                         Description
                     </div>
                     <div class="product-description-text">
-
                         Introducing the Zola Flush Light: a striking addition
                         to our modern lighting collection that embodies both
                         grace and grandeur in its design. Crafted to captivate,
@@ -186,9 +167,6 @@
                     <button id="add-to-cart-button"> Add to Basket </button>
                 </div>
             </div>
-
-
-
         </div>
     </div>
 </body>
