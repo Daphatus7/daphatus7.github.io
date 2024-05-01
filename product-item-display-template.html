@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scripts/css/structure.css">
     <title>Title</title>
 </head>
 <style>
@@ -12,14 +13,13 @@
         align-items: center;
         justify-items: center;
         width: 160px;
-        height: 368px;
         margin: 0;
     }
     .product-item-display-image-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        scale: 150%;
+        scale: 95%;
         overflow: hidden;
     }
     #product-item-display-bottom-container {
@@ -40,20 +40,44 @@
     #price-container {
         display: flex;
         justify-content: start;
+        padding-top: 0.5vw;
     }
     .add-to-cart-button {
         background-color: #ffffff;
-        color: #000000;
-        font-size: 1.5em;
         font-style: normal;
-        padding: 10px 20px;
-        border-radius: 30px;
     }
     .product-name-text {
-        font-size: var(--medium-text);
+        font-size: 16px;
     }
     .price {
-        font-size: var(--title-text);
+        font-size: 24px;
+    }
+    .caption{
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+    #product-review{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product-review-count{
+        font-size: 12px;
+    }
+
+    .colour-selection{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        padding-bottom: 1vw;
+    }
+    .colour-selection-circle{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #E8BB47;
     }
 </style>
 <body>
@@ -63,16 +87,22 @@
     </div>
     <div id="product-item-display-bottom-container">
         <div id="product-item-information-container"> 
-            <div>COLOUR SELECTION</div>
-            <div>Best Seller</div>
+            <div class="colour-selection">
+                <div class="colour-selection-circle" id="gold"></div>
+                <div class="colour-selection-circle" id="black"></div>
+                <div class="colour-selection-circle" id="white"></div>
+            </div>
+            <div class="caption">Best Seller</div>
             <div class="product-name-text">Zola Flush Light</div>
             <div id="price-container">
                 <div class="currency">$</div>
                 <div class="price">399.00</div>
             </div>
             <div id="product-review">
-                <div class="product-rating"></div>
-                <div class="product-review-count"></div>
+                <div class="product-rating">
+                    &#9733&#9733&#9733&#9733&#9734
+                </div>
+                <div class="product-review-count">(2)</div>
             </div>
         </div>
         <img class="add-to-cart-button" src="images/add-icon.png" alt="">
