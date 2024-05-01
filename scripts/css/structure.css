@@ -1,5 +1,6 @@
 :root {
-    font-size: 16px;
+    --medium-text: 10px;
+    --title-text: 10px;
 }
 
 html {
@@ -15,6 +16,17 @@ html {
     flex-direction: column;
     margin: 0;
 }
+
+#gold{
+    background-color: #E8BB47;
+}
+#black{
+    background-color: #333333;
+}
+#white{
+    background-color: #DCDCDC;
+}
+
 
 body{
     font-family: "Century Gothic", Arial, sans-serif;
