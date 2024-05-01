@@ -13,6 +13,7 @@ const products = [
         name: "Zola Flush Light",
         imagePath: "images/flush-image.png",
         price: "300",
+        numberOfStars: 4
     },    
     {
         name: "Zola Flush Light",

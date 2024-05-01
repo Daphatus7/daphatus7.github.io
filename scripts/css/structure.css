@@ -1,11 +1,14 @@
 :root {
-    --medium-text: 10px;
-    --title-text: 10px;
+
+    /* define different font sizes*/
+    font-size: 16px;
+    --main-font-size: 16px;
+    --minor-font-size: 14px;
+    --description-font-size: 14px;
+    --major-font-size: 20px;
+    --title-font-size: 28px;
 }
 
-html {
-    font-size: 100%; /* Adapts based on the default browser settings */
-}
 .placeholder {
     overflow: hidden;
 }
@@ -17,14 +20,22 @@ html {
     margin: 0;
 }
 
-#gold{
-    background-color: #E8BB47;
+.sidebar-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-#black{
-    background-color: #333333;
+
+.sidebar{
+    flex-basis: 30rem;
+    flex-grow: 1;
+    min-width: 50%;
 }
-#white{
-    background-color: #DCDCDC;
+
+.not-sidebar{
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 50%;
 }
 
 
