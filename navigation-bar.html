@@ -16,19 +16,18 @@
     }
 
     #logo {
-        font-size: var(--title-text);
+        font-size: var(--major-font-size);
     }
 
     #category {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 70%;
     }
     .navigation-button {
         cursor: pointer;
         padding: 10px;
-        font-size: 1em;
+        font-size: var(--main-font-size);
     }
     #bar-level1{
         display: flex;
@@ -69,7 +68,7 @@
     }
 </style>
 <body>
-    <section id="navigation-bar">
+    <div id="navigation-bar">
         <div id="bar-level1">
             <div id="infos">
                 <div id="language">
@@ -96,6 +95,6 @@
             <div class="navigation-button">Table & Floor</div>
             <div class="navigation-button">Vanity</div>
         </div>
-    </section>
+    </div>
 </body>
 </html>
