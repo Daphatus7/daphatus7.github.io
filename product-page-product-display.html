@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scripts/css/structure.css">
     <title>product-page-product-display</title>
 </head>
 <style>
@@ -88,21 +89,12 @@
         margin: 0.5vw 0.5vw 0.5vw 0;
     }
 
-    .circle{
-        width: 2.5vw;
-        height: 2.5vw;
+    .colour-selection-circle{
+        width: 15px;
+        height: 15px;
         border-radius: 50%;
-        outline-color: ;
     }
-    #gold{
-        background-color: #E8BB47;
-    }
-    #black{
-        background-color: #333333;
-    }
-    #white{
-        background-color: #DCDCDC;
-    }
+
 
     .quantity{
         background-color: transparent;
@@ -152,9 +144,9 @@
                 <div id="product-colour-block">
                     <div id="current-colour-name">Colour: Gold</div>
                     <div class="product-color-choices">
-                        <div class="circle" id="gold"></div>
-                        <div class="circle" id="black"></div>
-                        <div class="circle" id= "white"></div>
+                        <div class="colour-selection-circle" id="gold"></div>
+                        <div class="colour-selection-circle" id="black"></div>
+                        <div class="colour-selection-circle" id= "white"></div>
                     </div>
                 </div>
                 <div id= "product-colour"> </div>
