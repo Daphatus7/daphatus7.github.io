@@ -15,7 +15,7 @@
         justify-content: space-evenly;
     }
 
-    #logos {
+    #logo {
         font-size: var(--title-text);
     }
 
@@ -30,10 +30,64 @@
         padding: 10px;
         font-size: 1em;
     }
+    #bar-level1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #logo-image{
+        width: 15vw;
+        height: auto;
+        padding: 0.5vh;
+    }
+    #infos{
+        margin-left: 2vw;
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+    }
+    #bar-level1{
+        font-size: 10px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    #language{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #functions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1vw;
+        margin-right: 2vw;
+    }
+    .icon{
+        width: 10px;
+    }
 </style>
 <body>
     <section id="navigation-bar">
-        <div id="logos">COUGAR LIGHTING</div>
+        <div id="bar-level1">
+            <div id="infos">
+                <div id="language">
+                    <img src="images/globe icon.png" height="10vw" width="10vw"/>
+                    AU|EN
+                </div>
+                <div>About</div>
+                <div>Contact</div>
+            </div>
+            <div id="logo">
+                <img id="logo-image" src="images/Courgar Lighting Logo.png"/>
+            </div>
+            <div id="functions">
+                <img class="icon" src="images/Magnifying Glass.png"/>
+                <img class="icon" src="images/Cart.png"/>
+                <img class="icon" src="images/User Icon.png"/>
+            </div>
+        </div>
         <div id="category">
             <div class="navigation-button">Exterior</div>
             <div class="navigation-button">Flush</div>
