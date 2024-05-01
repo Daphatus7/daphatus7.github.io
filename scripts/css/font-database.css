@@ -1,0 +1,35 @@
+:root {
+
+    /* define different font sizes*/
+    font-size: 16px;
+    --main-font-size: 16px;
+    --description-font-size: 14px;
+    --major-font-size: 20px;
+    --title-font-size: 28px;
+
+    /*padding for text space*/
+    --text-padding-left: 40px;
+    --font-family: "Century Gothic", Arial, sans-serif;
+}
+
+.description-text{
+    font-size: var(--description-font-size);
+    padding-left: var(--text-padding-left);
+    padding-right: var(--text-padding-left);
+
+    font-weight: 400;
+}
+
+.subheading{
+    font-size: var(--main-font-size);
+    font: var(--font-family);
+    font-weight: 600;
+    padding-left: var(--text-padding-left);
+    padding-right: var(--text-padding-left);
+}
+.heading{
+    padding-left: var(--text-padding-left);
+    padding-right: var(--text-padding-left);
+    font-size: var(--title-font-size);
+    font-weight: 700;
+}
