@@ -2,12 +2,12 @@ const basketItems = [
     {
         name: "Zola Flush Light",
         imagePath: "images/flush-image.png",
-        price: "300",
+        price: "300.00",
     },
     {
         name: "Zola Flush Light",
         imagePath: "images/flush-image.png",
-        price: "300",
+        price: "300.00",
     },
 
 ];
