@@ -15,6 +15,11 @@
             .then(html => {
                 document.getElementById('navigation-bar-placeholder').innerHTML = html;
             })
+        fetch('summary.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('summary-placeholder').innerHTML = html;
+            })
         fetch('footer.html')
             .then(response => response.text())
             .then(html => {
@@ -24,15 +29,7 @@
     <script src="scripts/js/basket-item-loader.js"></script>
 </head>
 <style>
-    .summary-panel {
-background-color: rgba(83, 83, 83, 0.29);
-    }
-    .line{
-        width: 100%;
-        height: 1px;
-        background-color: #000000;
-        margin: 10px 0;
-    }
+
 </style>
 <body class="stack">
 <div id = "sales-information-placeholder">1</div>
@@ -43,26 +40,7 @@ background-color: rgba(83, 83, 83, 0.29);
         <div class = "basket-products">
         </div>
     </div>
-    <div class="summary not-sidebar">
-        <h1 class = "total-items">2 items</h1>
-        <h2>YOUR ORDER SUMMARY</h2>
-        <div class="summary-panel">
-            <div class="summary-number">
-                <p>Subtotal</p>
-                <p>$602.00</p>
-            </div>
-            <div class="summary-number">
-                <p>Shipping</p>
-                <p>$45.80</p>
-            </div>
-            <div class="line"></div>
-            <div class="summary-number">
-                <p>Total</p>
-                <p>$647.80</p>
-            </div>
-        </div>
-        <button class = "checkout-button">Proceed to Checkout</button>
-    </div>
+    <div id= "summary-placeholder" class = "not-sidebar"></div>
 </div>
 <div id = "footer-placeholder">10</div>
 </body>
