@@ -11,7 +11,7 @@
     .basket-product-display {
         display: flex;
         justify-content: space-between;
-        padding: 10px;
+        padding-top: 2vh;
         border-bottom: 1px solid #000000;
     }
     .basket-product-information {
@@ -22,30 +22,29 @@
     .basket-product-information-left {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
     .basket-product-information-right {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: flex-end;
-        margin-right: 2vh;
     }
-
+    .basket-image-container{
+        height: 80%;
+    }
     .quantity-button {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        outline: 1px solid black;
+        outline: 0.5px solid black;
         border-radius: 20px;
-        height:30px
+        height:25px;
+        margin-bottom: 1vh;
+        width: 100px;
     }
-    .quantity {
-        background-color: transparent;
-        margin: 0;
-    }
+
     .product-quantity {
-        font-size: 20px;
+        margin-top: 1px;
+        font-size: 14px;
         color: #000000;
     }
     .remove-button {
@@ -63,13 +62,24 @@
     .like-button {
         width: 15px;
         height: 15px;
-        margin-top: 2vh;
+        margin-top: 1vh;
     }
+
+    .quantity-icon-plus{
+        padding-left: 1vw;
+        width: 1vh;
+    }
+
+    .quantity-icon-minus{
+        padding-right: 1vw;
+        width: 1vh;
+    }
+
     .product-price-block {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-top: 7vh;
+        margin-top: 5.5vh;
     }
     .currency {
         font-size: 10px;
@@ -80,7 +90,7 @@
         color: #000000;
     }
     .edit-button {
-        font-size: 10px;
+        font-size: 12px;
         color: #000000;
         text-decoration-line: underline;
     }
@@ -89,12 +99,11 @@
         height: 12px;
         outline: 1px solid #7B7575;
         border-radius: 50%;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
     .product-name-text{
         font-size: 18px;
-
     }
 </style>
 <body>
@@ -111,9 +120,9 @@
                     <div class="colour-selection-circle" id="gold"></div>
                 </div>
                 <div class="quantity-button">
-                    <button class="quantity"><img src="images/Plus sign.png" alt=""/></button>
+                    <img class = "quantity-icon-plus" src="images/Plus sign.png" alt=""/>
                     <div class="product-quantity">1</div>
-                    <button class="quantity"><img src="images/Minus sign.png" alt=""/></button>
+                    <img class = "quantity-icon-minus" src="images/Minus sign.png" alt=""/>
                 </div>                
             </div>
             <div class = "basket-product-information-right">
