@@ -28,6 +28,9 @@
     min-width: 50%;
 }
 
+#gold{
+    background-color: #E8BB47
+}
 
 button{
     font-family: "Century Gothic", Arial, sans-serif;

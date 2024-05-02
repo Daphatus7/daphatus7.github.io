@@ -3,19 +3,30 @@
     /* define different font sizes*/
     font-size: 16px;
     --main-font-size: 16px;
+    --sub-description-font-size: 10px;
     --description-font-size: 14px;
+    --sub-major-font-size:18px;
     --major-font-size: 20px;
     --title-font-size: 28px;
 
+    /*different font weight*/
+    font-weight: 400;
+    --bold: 800;
+
     /*padding for text space*/
     --text-padding-left: 40px;
-    --font-family: "Century Gothic", Arial, sans-serif;
+    --font-family: "Century Gothic";
+}
+
+body{
+    font-family: var(--font-family),  Arial, sans-serif;
 }
 
 .description-text{
     font-size: var(--description-font-size);
     padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
+
     font-weight: 400;
 }
 
