@@ -16,14 +16,123 @@
         font-style: normal;
         font-weight: 700;
     }
+    .equal-divider-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .checkout-input {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        margin: 5px 0;
+    
+    }
 </style>
 <body class="stack">
 <section id = "sales-information-placeholder">1</section>
 <section id = "navigation-bar-placeholder">2</section>
-<section>
+<section id = "checkout__panel">
     <div class="checkout-progress-bar"></div>
-    <h1 class = "title">Checkout</h1>
-    
+    <h1 class = "heading">Checkout</h1>
+    <div id= "checkout-summary" class = "sidebar-container">
+        <form id= "billing__information" class="sidebar">
+            <div id="contact" class="summary-category">
+                <h2 class="subheading">Contact</h2>
+                <div class="summary-cell">
+                    <h3 class="description-text">Phone Number</h3>
+                    <input class="checkout-input" type="text" id="phone-number" placeholder="">
+                </div>
+
+                <div class="summary-cell">
+                    <h3 class="description-text">Email</h3>
+                    <input class="checkout-input" type="text" id="email" placeholder="">
+                </div>
+            </div>
+            <div id="delivery-address" class="summary-category">
+                <h2 class="subheading">Delivery Address</h2>
+                <div class="summary-cell">
+                <!--divider-->
+                    <div class="equal-divider-container">
+                        <div class="summary-cell">
+                            <h3 class="description-text">First Name</h3>
+                            <input class="checkout-input" type="text" id="first-name-input" placeholder="">
+                        </div>
+                        <div class="summary-cell">
+                            <h3 class="description-text">Last Name</h3>
+                            <input class="checkout-input" type="text" id="last-name-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-cell">
+                    <h3 class="description-text">Street Line 1</h3>
+                    <input class="checkout-input" type="text" id="street-line1-input" placeholder="">
+                </div>
+                
+                <div class="summary-cell">
+                    <h3 class="description-text">Street Line 2</h3>
+                    <input class="checkout-input" type="text" id="street-line2-input" placeholder="">
+                </div>
+
+                <!--divider-->
+                <div class="equal-divider-container">
+                    <div class="summary-cell">
+                        <h3 class="description-text">City</h3>
+                        <input class="checkout-input" type="text" id="city-input" placeholder="">
+                    </div>
+                    <div class="summary-cell">
+                        <h3 class="description-text">State</h3>
+                        <input class="checkout-input" type="text" id="state-input" placeholder="">
+                    </div>
+                </div>
+
+                <div class="summary-cell">
+                    <h3 class="description-text">Postcode</h3>
+                    <input class="checkout-input" type="text" id="postcode-input" placeholder="">
+                </div>
+                
+            </div>
+            <div id="payment-detail" class="summary-category">
+                <input placeholder="1234 5678 9011 1213">
+                
+                <div class="summary-cell">
+                    <h3 class="description-text">Name on Card</h3>
+                    <input class="checkout-input" type="text" id="name-on-card-input" placeholder="">
+                </div>
+
+                <div class="summary-cell">
+                    <h3 class="description-text">Card Number</h3>
+                    <input class="checkout-input" type="text" id="card-number-input" placeholder="">
+                </div>
+                
+                <!--divider-->
+                <div class="equal-divider-container">
+                    <div class="summary-cell">
+                        <h3 class="description-text">Expiry Date</h3>
+                        <input class="checkout-input" type="text" id="expiry-date-input" placeholder="">
+                    </div>
+                    <div class="summary-cell">
+                        <h3 class="description-text">Security Code</h3>
+                        <input class="checkout-input" type="text" id="security-code-input" placeholder="">
+                    </div>
+                </div>
+
+                <label>
+                    <input type="checkbox" name="subscribe" value="newsletter">
+                    Remember Me
+                </label>       
+                <button class="checkout-button">Checkout</button>
+            </div>
+        </form>
+        <section id= "order__summary" class="not-sidebar stack">
+            <h1 class="heading">Order Summary</h1>
+            
+            
+        </section>
+        
 </section>
 <section id = "footer-placeholder">9</section>
 </body>

@@ -37,6 +37,12 @@ body{
     padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
 }
+.input-text{
+    font-size: var(--description-font-size);
+    font: var(--font-family);
+    padding-left: var(--text-padding-left);
+    padding-right: var(--text-padding-left);
+}
 .heading{
     padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
