@@ -19,17 +19,46 @@
     .equal-divider-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        gap:10%;
         width: 100%;
     }
     .checkout-input {
         width: 100%;
         height: 30px;
-        border-radius: 5px;
-        border: 1px solid #000000;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #000000;
         margin: 5px 0;
-    
+
     }
+    .summary-category{
+        margin-left: 2vw;
+    }
+    .summary-cell-half{
+        width: 45%;
+    }
+    #card-info-selector{
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 18px;
+        height: 50px;
+
+    }
+    .checkout-button{
+        margin-top: 2vw;
+        width: 100%;
+        height: 50px;
+        margin-left: 2vw;
+    }
+
+
+    .order-summary-panel{
+        background-color:#FAFAFA ;
+        height: fit-content;
+        width: 80%;
+    }
+
 </style>
 <body class="stack">
 <section id = "sales-information-placeholder">1</section>
@@ -56,11 +85,11 @@
                 <div class="summary-cell">
                 <!--divider-->
                     <div class="equal-divider-container">
-                        <div class="summary-cell">
+                        <div class="summary-cell-half">
                             <h3 class="description-text">First Name</h3>
                             <input class="checkout-input" type="text" id="first-name-input" placeholder="">
                         </div>
-                        <div class="summary-cell">
+                        <div class="summary-cell-half">
                             <h3 class="description-text">Last Name</h3>
                             <input class="checkout-input" type="text" id="last-name-input" placeholder="">
                         </div>
@@ -79,11 +108,11 @@
 
                 <!--divider-->
                 <div class="equal-divider-container">
-                    <div class="summary-cell">
+                    <div class="summary-cell-half">
                         <h3 class="description-text">City</h3>
                         <input class="checkout-input" type="text" id="city-input" placeholder="">
                     </div>
-                    <div class="summary-cell">
+                    <div class="summary-cell-half">
                         <h3 class="description-text">State</h3>
                         <input class="checkout-input" type="text" id="state-input" placeholder="">
                     </div>
@@ -96,8 +125,8 @@
                 
             </div>
             <div id="payment-detail" class="summary-category">
-                <input placeholder="1234 5678 9011 1213">
-                
+                <h2>Payment Detail</h2>
+                <input id ="card-info-selector" placeholder="  1234 5678 9011 1213">
                 <div class="summary-cell">
                     <h3 class="description-text">Name on Card</h3>
                     <input class="checkout-input" type="text" id="name-on-card-input" placeholder="">
@@ -110,29 +139,31 @@
                 
                 <!--divider-->
                 <div class="equal-divider-container">
-                    <div class="summary-cell">
-                        <h3 class="description-text">Expiry Date</h3>
+                    <div class="summary-cell-half">
+                        <h3 class="summary-cell-half">Expiry Date</h3>
                         <input class="checkout-input" type="text" id="expiry-date-input" placeholder="">
                     </div>
-                    <div class="summary-cell">
+                    <div class="summary-cell-half">
                         <h3 class="description-text">Security Code</h3>
                         <input class="checkout-input" type="text" id="security-code-input" placeholder="">
                     </div>
                 </div>
 
-                <label>
+                <label id="remember-me-box">
                     <input type="checkbox" name="subscribe" value="newsletter">
                     Remember Me
-                </label>       
-                <button class="checkout-button">Checkout</button>
+                </label>
             </div>
+            <button class="checkout-button">Checkout</button>
         </form>
         <section id= "order__summary" class="not-sidebar stack">
-            <h1 class="heading">Order Summary</h1>
-            
+            <div class="order-summary-panel">
+                <h1 class="heading">Order Summary</h1>
+
+            </div>
             
         </section>
-        
+
 </section>
 <section id = "footer-placeholder">9</section>
 </body>
