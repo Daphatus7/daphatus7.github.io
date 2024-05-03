@@ -8,15 +8,15 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/checkout-order-summary.html',
-        placeholderId: 'checkout-order-summary-placeholder'
+        url: 'page-components/basket-page-basket-summary.html',
+        placeholderId: 'basket-summary-placeholder'
     },
     {
         url: 'page-components/footer.html',
         placeholderId: 'footer-placeholder'
     }
-]
 
+]
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
 function fetchPage(url, placeholderId) {

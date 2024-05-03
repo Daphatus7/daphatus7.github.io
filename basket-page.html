@@ -5,29 +5,8 @@
     <title>Check out page</title>
     <link rel="stylesheet" href="scripts/css/structure-database.css">
     <link rel="stylesheet" href="scripts/css/font-database.css">
-    <script>
-        fetch('sales-information.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('sales-information-placeholder').innerHTML = html;
-            })
-        fetch('navigation-bar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navigation-bar-placeholder').innerHTML = html;
-            })
-        fetch('summary.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('summary-placeholder').innerHTML = html;
-            })
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
-            })
-    </script>
     <script src="scripts/js/basket-item-loader.js"></script>
+    <script src="scripts/js/basket-page.js"></script>
 </head>
 <style>
     #basket-text{
@@ -47,7 +26,7 @@
         <div class = "basket-products">
         </div>
     </div>
-    <div id= "summary-placeholder" class = "not-sidebar"></div>
+    <div id= "basket-summary-placeholder" class = "not-sidebar"></div>
 </div>
 <div id = "footer-placeholder">10</div>
 </body>

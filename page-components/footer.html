@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <link rel="stylesheet" href="scripts/css/font-database.css">
-    <link rel="stylesheet" href="scripts/css/structure-database.css">
+    <link rel="stylesheet" href="../scripts/css/font-database.css">
+    <link rel="stylesheet" href="../scripts/css/structure-database.css">
 </head>
 
 <style>
@@ -18,7 +18,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: "Century Gothic", Arial, sans-serif;
+        
+        font-family: var(--font-family),serif;
         background-color: #161616;
     }
     #footer-top {
@@ -26,13 +27,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         height: 50px;
-        padding: 4vw;
         color: #000000;
         outline: none;
         background-color: #ffffff;
     }
+    #footer-top-container {
+        padding: 30px;
+    }
+    
     #footer-container{
         display: flex;
         flex-wrap: wrap;
@@ -145,8 +149,10 @@
 <body>
 <div class="footer">
     <div id="footer-top">
-        <div style="font-weight: 400; font-size: 20px">COUGAR LIGHTING</div>
-        <div style="font-size: 10px">Since 1975</div>
+        <div id="footer-top-container">
+            <div style="font-weight: 400; font-size: 20px">COUGAR LIGHTING</div>
+            <div style="font-size: 10px">Since 1975</div>
+        </div>
     </div>
     <div id="footer-container">
         <div class="footer-information">
@@ -200,9 +206,9 @@
             <div id="follow-us">
                 <div>Follow us</div>
                 <div id= "footer-icon-container">
-                    <img class = "footer-icons" src="images/facebook icon.png" alt=""/>
-                    <img class = "footer-icons" src="images/instagram icon.png" alt="">
-                    <img class = "footer-icons" src="images/twitter icon.png" alt=""/>
+                    <img class = "footer-icons" src="../images/facebook%20icon.png" alt=""/>
+                    <img class = "footer-icons" src="../images/instagram%20icon.png" alt="">
+                    <img class = "footer-icons" src="../images/twitter%20icon.png" alt=""/>
                 </div>
             </div>
             <div id="helps">Condition of Use | Privacy Notice | Cookie Settings</div>

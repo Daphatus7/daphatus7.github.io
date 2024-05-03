@@ -8,7 +8,7 @@
     --sub-major-font-size:18px;
     --major-font-size: 20px;
     --title-font-size: 28px;
-
+    --extra-title-font-size: 58px;
     /*different font weight*/
     font-weight: 400;
     --bold: 900;
@@ -25,23 +25,32 @@ body{
 .description{
     font-size: var(--description-font-size);
     font-weight: 400;
-
+    padding-left: var(--text-padding-left);
+    padding-right: var(--text-padding-left);
 }
 
 .subheading{
     font-size: var(--sub-major-font-size);
     font: var(--font-family);
     font-weight: 600;
+    padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
 }
 .input-text{
     font-size: var(--description-font-size);
     font: var(--font-family);
+    padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
 }
 .heading{
     padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
     font-size: var(--title-font-size);
+    font-weight: 700;
+}
+.extra-heading{
+    padding-left: var(--text-padding-left);
+    padding-right: var(--text-padding-left);
+    font-size: var(--extra-title-font-size);
     font-weight: 700;
 }

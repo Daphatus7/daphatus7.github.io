@@ -6,18 +6,21 @@
     <title>Title</title>
     <style>
         #visual{
-            width: 100%;
             display: block;
+            height: 100%;
         }
-        #textelement{
+        #tertiarytextelement{
             position: absolute;
+            align-items: center;
             display: flex;
+            justify-items: center;
             flex-direction: column;
             width: 50vw;
             background-color: rgba(255, 255, 255, 0.49);
             padding: 5vw;
         }
         #container{
+            overflow: hidden;
             position: relative;
             display: flex;
             justify-content: center;
@@ -25,21 +28,27 @@
             flex-direction: column;
             background-color: rgba(255, 255, 255, 0.49);;
         }
-        button{
+        #shopnow{
             margin-top: 2vw;
             width: 30%;
         }
+        #learnmore{
+            margin: 1vw;
+            background: none;
+            border:1px black;
+            color: black;
+        }
     </style>
 </head>
+
 <body>
 <div id="container">
-    <img src="images/LightLivingAWOI-scaled.png" id="visual"/>
-    <div id="textelement">
-        <div style="font-size: 40px; font-weight: 700;">SHINE FRESH</div>
-        <div style="font-size: 20px; font-weight: 700;">13/4</div>
-        <div style="font-size: 10px; font-weight: 400; ">Redefine Your Radiance with Our New Arrivals</div>
-        <div style="font-size: 13px; font-weight: 400; ">Whether you're redecorating, upgrading, or simply looking for that perfect lighting accent, our New Arrivals section is the place to start. Be the first to showcase the newest designs that are sure to brighten and transform any space. Browse, be inspired, and light up your life with the latest</div>
-        <button>Shop New Arrivals</button>
+    <img id="visual" src="../images/LR.jpg"/>
+    <div id="tertiarytextelement">
+        <div style="font-size: 40px; font-weight: 700;">Soren Collection</div>
+        <div style="font-size: 13px; font-weight: 400; ">a testament to the timeless beauty of French modernity, with a nod to minimalist design and a whisper of avant-garde allure.</div>
+        <button id="shopnow">Shop Now</button>
+        <button id="learnmore">Learn More</button>
     </div>
 </div>
 

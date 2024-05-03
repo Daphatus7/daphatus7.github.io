@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout order summary</title>
+</head>
+<style>
+    .summary-cell-half{
+        width: 45%;
+    }
+    #card-info-selector{
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 18px;
+        height: 50px;
+
+    }
+    #checkout-summary-panel{
+        background-color:#FAFAFA ;
+        height: fit-content;
+    }
+    
+</style>
+<body>
+<div id="checkout-summary-panel" class = "inner-container">
+    <h1 class="heading">Order Summary</h1>
+    <div class="product-display stack summary-panel">
+        <div class = "summary-image-container">
+        </div>
+        <div id="checkout-order-items-placeholder"></div>
+        <!--Summery-->
+        <div class="summary-number">
+            <p>Subtotal</p>
+            <p>$602.00</p>
+        </div>
+        <div class="summary-number">
+            <p>Shipping</p>
+            <p>$45.80</p>
+        </div>
+        <div class="summary-number">
+            <p>GST</p>
+            <p>$30.35</p>
+        </div>
+        <div class="line"></div>
+        <div class="summary-number" id="total-amount">
+            <p>Total</p>
+            <p>$647.80</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
