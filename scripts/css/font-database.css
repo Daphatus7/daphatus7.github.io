@@ -14,7 +14,7 @@
     --bold: 900;
 
     /*padding for text space*/
-    --text-padding-left: 40px;
+    --text-padding-left: 2vw;
     --font-family: "Century Gothic";
 }
 
@@ -22,25 +22,21 @@ body{
     font-family: var(--font-family),  Arial, sans-serif;
 }
 
-.description-text{
+.description{
     font-size: var(--description-font-size);
-    padding-left: var(--text-padding-left);
-    padding-right: var(--text-padding-left);
-
     font-weight: 400;
+
 }
 
 .subheading{
-    font-size: var(--main-font-size);
+    font-size: var(--sub-major-font-size);
     font: var(--font-family);
     font-weight: 600;
-    padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
 }
 .input-text{
     font-size: var(--description-font-size);
     font: var(--font-family);
-    padding-left: var(--text-padding-left);
     padding-right: var(--text-padding-left);
 }
 .heading{

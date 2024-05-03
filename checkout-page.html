@@ -20,18 +20,46 @@
     .equal-divider-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        gap:10%;
         width: 100%;
     }
     .checkout-input {
         width: 100%;
         height: 30px;
-        border-radius: 5px;
-        border: 1px solid #000000;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #000000;
         margin: 5px 0;
-    
+
     }
-    
+    .summary-category{
+        margin-left: 2vw;
+    }
+    .summary-cell-half{
+        width: 45%;
+    }
+    #card-info-selector{
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 18px;
+        height: 50px;
+
+    }
+    .checkout-button{
+        margin-top: 2vw;
+        width: 100%;
+        height: 50px;
+        margin-left: 2vw;
+    }
+
+
+    .order-summary-panel{
+        background-color:#FAFAFA ;
+        height: fit-content;
+        width: 80%;
+    }
+
 </style>
 <body class="stack">
     <section id = "sales-information-placeholder">1</section>
