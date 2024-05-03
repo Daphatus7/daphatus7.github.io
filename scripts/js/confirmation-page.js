@@ -8,11 +8,7 @@ fetch('navigation-bar.html')
     .then(html => {
         document.getElementById('navigation-bar-placeholder').innerHTML = html;
     })
-fetch('order-summary.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('order__summary-placeholder').innerHTML = html;
-    })
+
 fetch('footer.html')
     .then(response => response.text())
     .then(html => {

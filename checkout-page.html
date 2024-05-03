@@ -37,189 +37,187 @@
     <section id = "sales-information-placeholder">1</section>
     <section id = "navigation-bar-placeholder">2</section>
     <section id = "checkout__panel">
-    <div class="checkout-progress-bar"></div>
-    <h1 class = "heading">Checkout</h1>
-    <div id= "checkout-summary" class = "sidebar-container">
-        <form id= "billing__information" class="sidebar">
-            <div id="contact" class="summary-category">
-                <h2 class="subheading">Contact</h2>
-                <div class="summary-cell">
-                    <h3 class="description-text">Phone Number</h3>
-                    <input class="checkout-input" type="text" id="phone-number" placeholder="">
+        <div class="checkout-progress-bar"></div>
+        <h1 class = "heading">Checkout</h1>
+        <div id= "checkout-summary" class = "sidebar-container">
+            <form id= "billing__information" class="sidebar">
+                <div id="contact" class="summary-category">
+                    <h2 class="subheading">Contact</h2>
+                    <div class="summary-cell">
+                        <h3 class="description-text">Phone Number</h3>
+                        <input class="checkout-input" type="text" id="phone-number" placeholder="">
+                    </div>
+    
+                    <div class="summary-cell">
+                        <h3 class="description-text">Email</h3>
+                        <input class="checkout-input" type="text" id="email" placeholder="">
+                    </div>
                 </div>
-
-                <div class="summary-cell">
-                    <h3 class="description-text">Email</h3>
-                    <input class="checkout-input" type="text" id="email" placeholder="">
-                </div>
-            </div>
-            <div id="delivery-address" class="summary-category">
-                <h2 class="subheading">Delivery Address</h2>
-                <div class="summary-cell">
-                <!--divider-->
+                <div id="delivery-address" class="summary-category">
+                    <h2 class="subheading">Delivery Address</h2>
+                    <div class="summary-cell">
+                    <!--divider-->
+                        <div class="equal-divider-container">
+                            <div class="summary-cell">
+                                <h3 class="description-text">First Name</h3>
+                                <input class="checkout-input" type="text" id="first-name-input" placeholder="">
+                            </div>
+                            <div class="summary-cell">
+                                <h3 class="description-text">Last Name</h3>
+                                <input class="checkout-input" type="text" id="last-name-input" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="summary-cell">
+                        <h3 class="description-text">Street Line 1</h3>
+                        <input class="checkout-input" type="text" id="street-line1-input" placeholder="">
+                    </div>
+                    
+                    <div class="summary-cell">
+                        <h3 class="description-text">Street Line 2</h3>
+                        <input class="checkout-input" type="text" id="street-line2-input" placeholder="">
+                    </div>
+    
+                    <!--divider-->
                     <div class="equal-divider-container">
                         <div class="summary-cell">
-                            <h3 class="description-text">First Name</h3>
-                            <input class="checkout-input" type="text" id="first-name-input" placeholder="">
+                            <h3 class="description-text">City</h3>
+                            <input class="checkout-input" type="text" id="city-input" placeholder="">
                         </div>
                         <div class="summary-cell">
-                            <h3 class="description-text">Last Name</h3>
-                            <input class="checkout-input" type="text" id="last-name-input" placeholder="">
+                            <h3 class="description-text">State</h3>
+                            <input class="checkout-input" type="text" id="state-input" placeholder="">
                         </div>
                     </div>
-                </div>
-
-                <div class="summary-cell">
-                    <h3 class="description-text">Street Line 1</h3>
-                    <input class="checkout-input" type="text" id="street-line1-input" placeholder="">
-                </div>
-                
-                <div class="summary-cell">
-                    <h3 class="description-text">Street Line 2</h3>
-                    <input class="checkout-input" type="text" id="street-line2-input" placeholder="">
-                </div>
-
-                <!--divider-->
-                <div class="equal-divider-container">
+    
                     <div class="summary-cell">
-                        <h3 class="description-text">City</h3>
-                        <input class="checkout-input" type="text" id="city-input" placeholder="">
+                        <h3 class="description-text">Postcode</h3>
+                        <input class="checkout-input" type="text" id="postcode-input" placeholder="">
                     </div>
+                    
+                </div>
+                <div id="payment-detail" class="summary-category">
+                    <input placeholder="1234 5678 9011 1213">
+                    
                     <div class="summary-cell">
-                        <h3 class="description-text">State</h3>
-                        <input class="checkout-input" type="text" id="state-input" placeholder="">
+                        <h3 class="description-text">Name on Card</h3>
+                        <input class="checkout-input" type="text" id="name-on-card-input" placeholder="">
                     </div>
-                </div>
-
-                <div class="summary-cell">
-                    <h3 class="description-text">Postcode</h3>
-                    <input class="checkout-input" type="text" id="postcode-input" placeholder="">
-                </div>
-                
-            </div>
-            <div id="payment-detail" class="summary-category">
-                <input placeholder="1234 5678 9011 1213">
-                
-                <div class="summary-cell">
-                    <h3 class="description-text">Name on Card</h3>
-                    <input class="checkout-input" type="text" id="name-on-card-input" placeholder="">
-                </div>
-
-                <div class="summary-cell">
-                    <h3 class="description-text">Card Number</h3>
-                    <input class="checkout-input" type="text" id="card-number-input" placeholder="">
-                </div>
-                
-                <!--divider-->
-                <div class="equal-divider-container">
+    
                     <div class="summary-cell">
-                        <h3 class="description-text">Expiry Date</h3>
-                        <input class="checkout-input" type="text" id="expiry-date-input" placeholder="">
+                        <h3 class="description-text">Card Number</h3>
+                        <input class="checkout-input" type="text" id="card-number-input" placeholder="">
                     </div>
-                    <div class="summary-cell">
-                        <h3 class="description-text">Security Code</h3>
-                        <input class="checkout-input" type="text" id="security-code-input" placeholder="">
+                    
+                    <!--divider-->
+                    <div class="equal-divider-container">
+                        <div class="summary-cell">
+                            <h3 class="description-text">Expiry Date</h3>
+                            <input class="checkout-input" type="text" id="expiry-date-input" placeholder="">
+                        </div>
+                        <div class="summary-cell">
+                            <h3 class="description-text">Security Code</h3>
+                            <input class="checkout-input" type="text" id="security-code-input" placeholder="">
+                        </div>
                     </div>
+    
+                    <label>
+                        <input type="checkbox" name="subscribe" value="newsletter">
+                        Remember Me
+                    </label>       
+                    <button class="checkout-button">Checkout</button>
                 </div>
-
-                <label>
-                    <input type="checkbox" name="subscribe" value="newsletter">
-                    Remember Me
-                </label>       
-                <button class="checkout-button">Checkout</button>
-            </div>
-        </form>
-        
-        <section id= "order__summary" class="not-sidebar stack">
-            <h1 class="heading">Order Summary</h1>
-            <div class="product-display stack summary-panel">
-                <div class = "summary-image-container">
-                </div>
-                <!--item 1-->
-                <div class="product-display">
+            </form>
+            <div id= "order__summary-placeholder" class="not-sidebar stack"></div>
+                <h1 class="heading">Order Summary</h1>
+                <div class="product-display stack summary-panel">
                     <div class = "summary-image-container">
-                        <img class = "basket-image" src="images/flush-image.png" alt="">
                     </div>
-                    <div class = "basket-product-information">
-                        <div class = "basket-product-information-left">
-                            <div class="caption">Best Seller</div>
-                            <div class="product-name-text"> Zola Flush Light</div>
-                            <div class="product-id-text">Product ID:ZOLA3GLD</div>
-                            <div class="product-price-block">
-                                <div class="currency">$</div>
-                                <div class="product__price">429.00</div>
+                    <!--item 1-->
+                    <div class="product-display">
+                        <div class = "summary-image-container">
+                            <img class = "basket-image" src="images/flush-image.png" alt="">
+                        </div>
+                        <div class = "basket-product-information">
+                            <div class = "basket-product-information-left">
+                                <div class="caption">Best Seller</div>
+                                <div class="product-name-text"> Zola Flush Light</div>
+                                <div class="product-id-text">Product ID:ZOLA3GLD</div>
+                                <div class="product-price-block">
+                                    <div class="currency">$</div>
+                                    <div class="product__price">429.00</div>
+                                </div>
+                            </div>
+                            <div class = "basket-product-information-right">
+                                <p class = "description-text">Colour: Gold</p>
+                                <p class = "description-text">Qty: 1</p>
                             </div>
                         </div>
-                        <div class = "basket-product-information-right">
-                            <p class = "description-text">Colour: Gold</p>
-                            <p class = "description-text">Qty: 1</p>
+                    </div>
+                    <!--item 2-->
+                    <div class="product-display">
+                        <div class = "summary-image-container">
+                            <img class = "basket-image" src="images/flush-image.png" alt="">
                         </div>
-                    </div>
-                </div>
-                <!--item 2-->
-                <div class="product-display">
-                    <div class = "summary-image-container">
-                        <img class = "basket-image" src="images/flush-image.png" alt="">
-                    </div>
-                    <div class = "basket-product-information">
-                        <div class = "basket-product-information-left">
-                            <div class="caption">Best Seller</div>
-                            <div class="product-name-text"> Zola Flush Light</div>
-                            <div class="product-id-text">Product ID:ZOLA3GLD</div>
-                            <div class="product-price-block">
-                                <div class="currency">$</div>
-                                <div class="product__price">429.00</div>
+                        <div class = "basket-product-information">
+                            <div class = "basket-product-information-left">
+                                <div class="caption">Best Seller</div>
+                                <div class="product-name-text"> Zola Flush Light</div>
+                                <div class="product-id-text">Product ID:ZOLA3GLD</div>
+                                <div class="product-price-block">
+                                    <div class="currency">$</div>
+                                    <div class="product__price">429.00</div>
+                                </div>
+                            </div>
+                            <div class = "basket-product-information-right">
+                                <p class = "description-text">Colour: Gold</p>
+                                <p class = "description-text">Qty: 1</p>
                             </div>
                         </div>
-                        <div class = "basket-product-information-right">
-                            <p class = "description-text">Colour: Gold</p>
-                            <p class = "description-text">Qty: 1</p>
+                    </div>
+                    <!--item 3-->
+                    <div class="product-display">
+                        <div class = "summary-image-container">
+                            <img class = "basket-image" src="images/flush-image.png" alt="">
                         </div>
-                    </div>
-                </div>
-                <!--item 3-->
-                <div class="product-display">
-                    <div class = "summary-image-container">
-                        <img class = "basket-image" src="images/flush-image.png" alt="">
-                    </div>
-                    <div class = "basket-product-information">
-                        <div class = "basket-product-information-left">
-                            <div class="caption">Best Seller</div>
-                            <div class="product-name-text"> Zola Flush Light</div>
-                            <div class="product-id-text">Product ID:ZOLA3GLD</div>
-                            <div class="product-price-block">
-                                <div class="currency">$</div>
-                                <div class="product__price">429.00</div>
+                        <div class = "basket-product-information">
+                            <div class = "basket-product-information-left">
+                                <div class="caption">Best Seller</div>
+                                <div class="product-name-text"> Zola Flush Light</div>
+                                <div class="product-id-text">Product ID:ZOLA3GLD</div>
+                                <div class="product-price-block">
+                                    <div class="currency">$</div>
+                                    <div class="product__price">429.00</div>
+                                </div>
+                            </div>
+                            <div class = "basket-product-information-right">
+                                <p class = "description-text">Colour: Gold</p>
+                                <p class = "description-text">Qty: 1</p>
                             </div>
                         </div>
-                        <div class = "basket-product-information-right">
-                            <p class = "description-text">Colour: Gold</p>
-                            <p class = "description-text">Qty: 1</p>
-                        </div>
                     </div>
-                </div>
-                
-                <!--Summery-->
-                <div class="summary-number">
-                    <p>Subtotal</p>
-                    <p>$602.00</p>
-                </div>
-                <div class="summary-number">
-                    <p>Shipping</p>
-                    <p>$45.80</p>
-                </div>
-                <div class="summary-number">
-                    <p>GST</p>
-                    <p>$30.35</p>
-                </div>
-                <div class="line"></div>
-                <div class="summary-number" id="total-amount">
-                    <p>Total</p>
-                    <p>$647.80</p>
+                    
+                    <!--Summery-->
+                    <div class="summary-number">
+                        <p>Subtotal</p>
+                        <p>$602.00</p>
+                    </div>
+                    <div class="summary-number">
+                        <p>Shipping</p>
+                        <p>$45.80</p>
+                    </div>
+                    <div class="summary-number">
+                        <p>GST</p>
+                        <p>$30.35</p>
+                    </div>
+                    <div class="line"></div>
+                    <div class="summary-number" id="total-amount">
+                        <p>Total</p>
+                        <p>$647.80</p>
+                    </div>
                 </div>
             </div>
-        </se>
-</section>
     </div>
     </section>
     <section id = "footer-placeholder">9</section>
