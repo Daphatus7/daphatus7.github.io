@@ -3,6 +3,7 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+/*navigation bar overall*/
 #navigation__bar {
     display: flex;
     align-items: center;
