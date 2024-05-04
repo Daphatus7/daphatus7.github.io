@@ -1,0 +1,44 @@
+/* Base Styles */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Dropdown used code from workshop 10*/
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav > ul{
+    cursor: pointer;
+    display:flex;
+    flex-direction: row;
+}
+
+nav li{
+    padding: 0.5em 1em;
+    width: 7em;
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateX(-1em);
+}
+
+nav ul ul{
+    transform: scale(1,0);
+    transform-origin: top center;
+    position: absolute;
+    top:100%;
+    transition: 0.3s;
+}
+
+nav li:hover ul{
+    cursor: pointer;
+    transform: scale(1,1);
+    transition: 0.2s;
+}
+    
+       
+
+
+
