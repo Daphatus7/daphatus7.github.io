@@ -2,97 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Title</title>
     <link rel="stylesheet" href="../scripts/css/font-database.css">
     <link rel="stylesheet" href="../scripts/css/structure-database.css">
     <link rel="stylesheet" href="../scripts/css/navigation-bar.css">
 </head>
 <style>
-    #navigation-bar {
-        display: flex;
-        align-items: center;
-        background-color: #ffffff;
-        color: #000000;
-        width: 100vw;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-
-    #logo {
-        font-size: var(--major-font-size);
-    }
-
-    #category {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .navigation-button {
-        cursor: pointer;
-        padding: 10px;
-        font-size: var(--main-font-size);
-    }
-    #bar-level1{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    #logo-image{
-        width: 15vw;
-        height: auto;
-        padding: 0.5vh;
-    }
-    #infos{
-        margin-left: 2vw;
-        display: flex;
-        flex-direction: row;
-        gap: 1vw;
-    }
-    #bar-level1{
-        font-size: 10px;
-        justify-content: space-between;
-        width: 100%;
-    }
-    #language{
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-    }
-    #functions{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 1vw;
-        margin-right: 2vw;
-    }
-    .icon{
-        width: 10px;
-    }
-    
 </style>
 <body>
-    <div id="navigation-bar">
-        <div id="bar-level1">
-            <div id="infos">
-                <div id="language">
-                    <img src="../images/globe%20icon.png" height="10vw" width="10vw"/>
-                    AU|EN
-                </div>
-                <div>About</div>
-                <div>Contact</div>
+    <div id="navigation__bar">
+<!--        navigation-bar-top-->
+        <div id="navigation__bar__top">
+            <div id = "navigation__bar-left">
+                <img src="../images/global-icon.png" alt="language-icon"/>
+                <a href="">AU|EN</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
             </div>
-            <div id="logo">
-                <img id="logo-image" src="../images/Courgar%20Lighting%20Logo.png"/>
+            <div id=  "navigation__bar-middle">
+                <img id="logo-image" src="../images/Courgar%20Lighting%20Logo.png" alt="">
             </div>
-            <div id="functions">
-                <img class="icon" src="../images/Magnifying%20Glass.png"/>
-                <img class="icon" src="../images/Cart.png"/>
-                <img class="icon" src="../images/User%20Icon.png"/>
+            <div id = "navigation__bar-right">
+                <img src="../images/search-icon.png" alt="action-image"/>
+                <img src="../images/cart-icon.png" alt="action-image">
+                <img src="../images/user-icon.png" alt="action-image">
             </div>
         </div>
-        <nav>
+<!--        dropdown menu-->
+        <nav id="navigation__bar__bottom">
             <ul>
                 <li>
                     Exterior

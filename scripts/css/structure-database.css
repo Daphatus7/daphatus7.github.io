@@ -2,15 +2,6 @@
 .placeholder {
     overflow: hidden;
 }
-/*provide overall structure*/
-.stack {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
-}
-
 .sidebar-container{
     display: flex;
     flex-direction: row;

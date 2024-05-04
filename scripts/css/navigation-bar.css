@@ -3,8 +3,50 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+#navigation__bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* position*/
+    width: 100vw;
+    /*    style*/
+    background-color: #ffffff;
+    color: #000000;
+}
+#navigation__bar__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 
+/*setup the structure so the logo can be centered*/
+#navigation__bar-left, #navigation__bar-right {
+    flex: 1;
+    justify-content: flex-start;
+    text-align: left;
+}
+#navigation__bar-right {
+    justify-content: flex-end;
+    text-align: right;
+}
+/* set nav bar right image */
+#navigation__bar-left > a, img {
+    height: 2rem;
+    width: auto;
+    font-size: var(--description-font-size);
+    color: #000000;
+    text-decoration: none;
+    line-height: 2rem;
+    /*center text*/
+    vertical-align: middle;
+}
+
+/*navigation bar bottom*/
 /* Dropdown used code from workshop 10*/
+
+/*remove all style*/
 ol, ul {
     list-style: none;
     margin: 0;
@@ -13,6 +55,7 @@ ol, ul {
 nav > ul{
     cursor: pointer;
     display:flex;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 
