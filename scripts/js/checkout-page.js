@@ -9,7 +9,7 @@ const componentsToLoad = [
     },
     {
         url: 'page-components/checkout-order-summary.html',
-        placeholderId: 'checkout-order-summary-placeholder'
+        placeholderId: 'checkout-order-items-placeholder'
     },
     {
         url: 'page-components/footer.html',

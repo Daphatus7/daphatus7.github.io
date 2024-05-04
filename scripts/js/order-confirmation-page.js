@@ -12,7 +12,7 @@ const componentsToLoad = [
         placeholderId: 'order-confirmation-page-placeholder'
     },
     {
-        url: 'page-components/order-summary-panel.html',
+        url: 'page-components/checkout-order-summary.html',
         placeholderId: 'order-summary-placeholder'
     },
     {

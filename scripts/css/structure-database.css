@@ -43,3 +43,12 @@ button{
     padding: 10px 20px;
     color: #FFFFFF;
 }
+/*use when 2 components in the far opposite*/
+.far-between{
+    display: flex;
+    justify-content: space-between;
+}
+.inner-container
+{
+    padding: 2vh 5vw 2vh 5vw;
+}

@@ -8,7 +8,7 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/basket-page-basket-summary.html',
+        url: 'page-components/basket-order-summary.html',
         placeholderId: 'basket-summary-placeholder'
     },
     {

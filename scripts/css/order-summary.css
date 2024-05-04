@@ -19,16 +19,9 @@ p{
     margin-top: 1px;
     margin-bottom: 1px;
 }
-
 #total-amount{
     font-size: var(--sub-major-font-size);
     font-weight: var(--bold);
-}
-
-
-.summary-panel {
-    background-color: #FAFAFA;
-    padding: 1vh 2vh 2vh;
 }
 .summary{
     display: flex;
@@ -44,5 +37,4 @@ p{
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    font-size: var(--description-font-size);
 }

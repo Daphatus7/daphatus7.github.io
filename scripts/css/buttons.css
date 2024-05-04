@@ -1,0 +1,21 @@
+.btn{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding:0.5em 1.2em;
+    transition: all 0.2s
+}
+.btn-primary{
+    background-color: #26bfbf;
+    color: #fff;
+    border: #26bfbf 2px solid;
+}
+.btn-secondary{
+    bockground-color: #fff;
+    color: #26bfbf;
+    border: #26bfbf 2px solid;
+}
+.btn-rounded {
+    border-radius: 2em;
+}

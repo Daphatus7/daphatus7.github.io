@@ -5,7 +5,7 @@
     --main-font-size: 16px;
     --sub-description-font-size: 10px;
     --description-font-size: 14px;
-    --sub-major-font-size:18px;
+    --sub-major-font-size: 18px;
     --major-font-size: 20px;
     --title-font-size: 28px;
     --extra-title-font-size: 58px;
@@ -13,44 +13,53 @@
     font-weight: 400;
     --bold: 900;
 
+    --light-weight:300;
+    --regular-weight: 400;
+    --bold-weight: 700;
+
     /*padding for text space*/
     --text-padding-left: 2vw;
-    --font-family: "Century Gothic";
+    --font-family: "Century Gothic", sans-serif;
 }
 
 body{
-    font-family: var(--font-family),  Arial, sans-serif;
+    font-family: var(--font-family), sans-serif;
 }
 
+/*fonts for description */
 .description{
     font-size: var(--description-font-size);
-    font-weight: 400;
-    padding-left: var(--text-padding-left);
-    padding-right: var(--text-padding-left);
+    font-weight: var(--light-weight);
+    color: #000;
+    font-style: normal;
+    line-height: normal;
 }
 
+/*fonts for subheadings */
 .subheading{
     font-size: var(--sub-major-font-size);
     font: var(--font-family);
-    font-weight: 600;
-    padding-left: var(--text-padding-left);
-    padding-right: var(--text-padding-left);
+    font-weight: var(--regular-weight);
 }
+
+/*fonts for input text */
 .input-text{
     font-size: var(--description-font-size);
     font: var(--font-family);
-    padding-left: var(--text-padding-left);
-    padding-right: var(--text-padding-left);
 }
+/*fonts for headings */
 .heading{
-    padding-left: var(--text-padding-left);
-    padding-right: var(--text-padding-left);
     font-size: var(--title-font-size);
-    font-weight: 700;
+    font-weight: var(--regular-weight);
 }
+
+/*fonts for extra large headings*/
 .extra-heading{
-    padding-left: var(--text-padding-left);
-    padding-right: var(--text-padding-left);
     font-size: var(--extra-title-font-size);
-    font-weight: 700;
+    font-weight: var(--bold-weight);
+
+    color: #000;
+    font-style: normal;
+    line-height: normal;
+    margin: 0;
 }
