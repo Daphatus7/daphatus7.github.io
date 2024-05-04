@@ -10,6 +10,7 @@ body{
     justify-content: space-evenly;
     /* position*/
     width: 100vw;
+    margin: 1rem;
     /*    style*/
     background-color: #ffffff;
     color: #000000;
