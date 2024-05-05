@@ -1,0 +1,13 @@
+#basket-text{
+    margin-left: 2vh;
+}
+.basket-products{
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+#left__container{
+    flex-grow: 2;
+}
+#right__container{
+    flex-grow: 1;
+}

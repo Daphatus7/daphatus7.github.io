@@ -6,30 +6,32 @@
     <link rel="stylesheet" href="scripts/css/structure-database.css">
     <link rel="stylesheet" href="scripts/css/font-database.css">
     <link rel="stylesheet" href="scripts/css/order-summary.css">
-    <link rel="stylesheet" href="scripts/css/container-style.css">
+    <link rel="stylesheet" href="scripts/css/background-style.css">
+    <link rel="stylesheet" href="scripts/css/basket-page.css">
+    
     <script src="scripts/js/basket-item-loader.js"></script>
     <script src="scripts/js/basket-page.js"></script>
 </head>
-<style>
-    #basket-text{
-        margin-left: 2vh;
-    }
-    .basket-products{
-        padding-left: 2vh;
-        padding-right: 2vh;
-    }
-</style>
 <body>
-<div id = "sales-information-placeholder">1</div>
-<div id = "navigation-bar-placeholder">2</div>
-<div class = "checkout-container sidebar-container">
-    <div class="basket sidebar">
+<!--Header-->
+<section id = "sales-information-placeholder">1</section>
+<!--Navigation bar-->
+<section id = "navigation-bar-placeholder">2</section>
+<section class = "checkout-container sidebar-container inner-container">
+<!--    basket-->
+    <div id = "left__container">
+        <div class="basket sidebar">
         <h1 id ="basket-text">Basket</h1>
         <div class = "basket-products">
         </div>
     </div>
-    <div id= "basket-summary-placeholder" class = "not-sidebar"></div>
-</div>
+    </div>
+<!--    basket summary-->
+    <div id = "right__container">
+        <div id= "basket-summary-placeholder" class = "not-sidebar"></div>
+    </div>
+</section>
+<!--Footer-->
 <div id = "footer-placeholder">10</div>
 </body>
 </html>
