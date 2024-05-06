@@ -1,3 +1,4 @@
+//list some products that will be displayed on the page
 const basketItems = [
     {
         name: "Zola Flush Light",
@@ -11,6 +12,7 @@ const basketItems = [
     },
 ];
 
+//load the website components
 function displayBasketItems(basketItems) {
     let product_list = document.getElementsByClassName('basket-products')[0];
     fetch('page-components/templates/basket-item-display-template.html')  
@@ -29,4 +31,5 @@ function displayBasketItems(basketItems) {
             })
         })
 }
+//load the components
 addEventListener('DOMContentLoaded', () => displayBasketItems(basketItems));

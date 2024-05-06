@@ -1,15 +1,9 @@
+/*The outer frame of the panel*/
 .card-panel {
     width: 92vw;
     padding: 2vh 4vw 2vh 4vw;
+}
 
-}
-.category-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0;
-}
 .title {
     font-size: 2em;
     font-family: var(--font-family), serif;
@@ -18,6 +12,15 @@
     margin: 0;
     width: 92vw;
 }
+/*the card container for all cards*/
+.category-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+/*each card that consist of a image and a label*/
 .category-card {
     position: relative;
     display: flex;

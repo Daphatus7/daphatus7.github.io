@@ -1,7 +1,10 @@
+
+//Add components to the page
+
 const componentsToLoad = [
     {
         url: 'page-components/sales-information.html',
-        placeholderId: 'sales-information-placeholder'
+        placeholderId: 'sales-banner-placeholder'
     },
     {
         url: 'page-components/navigation-bar.html',

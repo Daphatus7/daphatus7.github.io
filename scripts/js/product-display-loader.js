@@ -1,3 +1,5 @@
+
+//define a list of product information
 const products = [
     {
         name: "Zola Flush Light",
@@ -53,6 +55,7 @@ const products = [
     
 ];
 
+//load the website components
 function displayProducts(products) {
     let product_list = document.getElementsByClassName('product-list-items')[0];
     fetch('page-components/templates/product-item-display-template.html')
@@ -72,4 +75,5 @@ function displayProducts(products) {
         })
 }
 
+//load the product list
 addEventListener('DOMContentLoaded', () => displayProducts(products));

@@ -34,10 +34,21 @@
         margin: 5px 0;
 
     }
+    .checkout-button{
+        background-color: #000000;
+        color: #FFF;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    .empty{
+        width: 100%;
+        height: 1px;   
+    }
 </style>
 <body>
 
-    <section id = "sales-information-placeholder">1</section>
+    <section id = "sales-banner-placeholder">1</section>
     <section id = "navigation-bar-placeholder">2</section>
     <div class="checkout-progress-bar"></div>
 <!--    checkout title-->
@@ -140,8 +151,9 @@
             <div id= "checkout-order-items-placeholder"></div>
         </div>
         <div class = "sidebar">
-            <div class="far-between">
-                <a class="checkout-button" href="order-confirmation-page.html">Checkout</a>
+            <div class="far-between sidebar-container">
+                <a class="checkout-button sidebar" href="order-confirmation-page.html">Checkout</a>
+                <div class="empty non-sidebar"></div>
             </div>
         </div>
     </div>
