@@ -11,48 +11,6 @@ const products = [
         imagePath: "images/flush-image.png",
         price: "300",
     },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-        numberOfStars: 4
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-
 ];
 
 //load the website components
