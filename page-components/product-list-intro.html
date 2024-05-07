@@ -8,13 +8,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100vw;
+            width: 100%;
             overflow: hidden;
         }
         .product-list-intro-image {
             display: flex;
             width: 100%;
             height: auto;
+        }
+        .intro-text{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product-list-intro-text{
+            text-align: center;
+            width: 50%;
+            margin-bottom: 9vh;
+        }
+
+        .product-list-intro-title-text{
+            margin-bottom: 0;
+            margin-top: 6vh;
+            font-size: 2.5rem;
+
         }
     </style>
 </head>
@@ -23,7 +40,7 @@
         <div class = "product-list-intro-image-container">
             <img class = "product-list-intro-image" src="../images/product-intro-image.png" alt="product-list-intro-image">
         </div>
-        <div class = "intro-text-container">
+        <div class = "intro-text">
             <h1 class = "product-list-intro-title-text">Table & Floor</h1>
             <p class = "product-list-intro-text">Choose from a variety of lighting options 
                 - whether you're setting the mood for a quiet 
