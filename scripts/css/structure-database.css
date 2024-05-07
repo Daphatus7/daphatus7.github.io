@@ -1,3 +1,20 @@
+/*Desktop */
+@media (min-width: 768px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}
+/*Mobile*/
+@media (max-width: 768px)
+{
+    body{
+        margin: 0;
+        padding-top: 80px;
+        height: auto;
+    }
+}
 
 .placeholder {
     overflow: hidden;
@@ -42,4 +59,11 @@ button{
 .inner-container
 {
     padding: 2vh 5vw 2vh 5vw;
+}
+.lean-left{
+    display: flex;
+    justify-content: flex-start;
+}
+.full-width{
+    width: 100%;
 }

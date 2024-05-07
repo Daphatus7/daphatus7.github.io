@@ -22,13 +22,14 @@
 /*Desktop layout*/
 @media (min-width: 768px) {
     .sale-banner {
-        position: relative;
+        
     }
 }
 /*Mobile Layout*/
 @media (max-width: 767px) {
     .sale-banner {
         position: fixed;
+        top:0;
         width: 100vw;
         z-index: 1001;
     }
