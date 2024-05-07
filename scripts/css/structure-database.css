@@ -1,3 +1,21 @@
+/*Desktop */
+@media (min-width: 768px)
+{
+    body{
+        margin: 0;
+        padding: 0;
+    }
+}
+/*Mobile*/
+@media (max-width: 768px)
+{
+    body{
+        margin: 0;
+        padding-top: 80px;
+        height: auto;
+    }
+}
+
 
 .placeholder {
     overflow: hidden;
