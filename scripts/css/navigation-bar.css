@@ -37,8 +37,8 @@ img{
     justify-content: flex-end;
     text-align: right;
 }
-/* set nav bar right image */
-.navigation__bar-left > a, img {
+/* set nav bar left image */
+.navigation__bar-left > a{
     height: 2rem;
     width: auto;
     font-size: var(--description-font-size);
@@ -47,6 +47,11 @@ img{
     line-height: 2rem;
     /*center text*/
     vertical-align: middle;
+}
+.navigation__bar-left > img, .navigation__bar-right > img, .navigation__bar-middle > img{
+    height: 2rem;
+    width: auto;
+    margin-right: 1rem;
 }
 
 /*navigation bar bottom*/
