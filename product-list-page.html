@@ -28,7 +28,7 @@
     .filter-button {
         background-color: #ffffff;
         color: #000000;
-        font-size: 1em;
+        font-size: 1rem;
         font-style: normal;
         padding: 10px 20px;
         margin: 0 10px;
@@ -60,13 +60,17 @@
             transform: scale(1.4);
         }
 
-    /*mobile grid version*/
+    /*mobile version*/
     @media (max-width: 767px){
         .product-list-items {
             grid-template-columns: repeat(2,1fr);
             transform: scale(1);
             margin-top: 0;
             gap: 50px;
+        }
+        .filter-button{
+            font-size: 0.7rem;
+            margin: 0;
         }
     }
 
