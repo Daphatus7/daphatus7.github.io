@@ -11,3 +11,8 @@
 #right__container{
     flex-grow: 1;
 }
+#item-count{
+    text-align: end;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
