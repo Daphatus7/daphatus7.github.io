@@ -147,6 +147,12 @@
     border: 1px solid white;
     outline: none;
 }
+/*mobile CSS*/
+.logo-black{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 
 #footer-container{
     font-size: var(--description-font-size);
@@ -190,7 +196,7 @@
     padding-bottom: 5px;
     width: 100%;
 }
-.footer__mobile__top p,h3{
+.footer__mobile__top p{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: var(--description-font-size);
@@ -199,13 +205,39 @@
 }
 .footer__mobile__bottom p{
     padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: var(--description-font-size);
+    padding-bottom: 5px;
+    font-size: var(--sub-description-font-size);
     color: #FAFAFA;
     font-weight: 300;
 }
 
+#mobile-newsletter-title{
+    text-align: center;
+}
 
+#mobile-newsletter-text{
+    margin-left: 5px;
+}
+.newsletter{
+    font-family: "Century Gothic", Arial, sans-serif;
+    width: 90vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    outline: 1px solid #161616;
+    border: none;
+}
+.lean-left{
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+    justify-content: flex-start;
+}
+#mobile-update-button{
+    width: 93vw;
+    margin: 0;
+}
 #footer__international{
     display: flex;
     flex-direction: row;
@@ -220,4 +252,10 @@
 }
 .footer-icons{
     height: 20px;
+}
+
+.far-between{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
