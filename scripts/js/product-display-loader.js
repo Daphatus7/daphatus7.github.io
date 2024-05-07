@@ -63,7 +63,7 @@ function displayProducts(products) {
         .then(template => {
             products.forEach(product => {
                 let productDisplay = document.createElement('div');
-                productDisplay.innerHTML = template
+                productDisplay.innerHTML = template;
                 productDisplay.querySelector(".product-name-text")
                     .innerHTML = product.name;
                 productDisplay.querySelector(".price")
