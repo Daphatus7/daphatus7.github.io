@@ -83,16 +83,24 @@ nav li:hover ul{
 }
     
 .navigation__bar_mobile{
+    /*boarder*/
     padding: 1vh 1vw 1vh 1vw;
+    /*adjusted width*/
+    width: 98vw;
+    /*stay on top*/
+    top: 30px;
+    position: fixed;
+    z-index: 1000;
+    background-color: #FAFAFA;
 }
 /*responsive*/
-/*Mobile Layout*/
+/*Desktop Layout*/
 @media (min-width: 768px) {
     .navigation__bar_mobile {
         display: none;
     }
 }
-/*Desktop Layout*/
+/*Mobile Layout*/
 @media (max-width: 767px) {
     .navigation__bar {
         display: none;

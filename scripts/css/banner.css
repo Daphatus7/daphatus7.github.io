@@ -1,0 +1,35 @@
+.sale-banner {
+    /*style*/
+    background-color: #000000;
+    color: #ffffff;
+
+    /*alignment*/
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    /*size*/
+    padding: 10px;
+}
+.banner-text{
+    font-family: "Century Gothic", Arial, sans-serif;
+    display: flex;
+    font-size: var(--description-font-size);
+    font-weight: 700;
+    align-self: center;
+    justify-content: end;
+}
+/*Desktop layout*/
+@media (min-width: 768px) {
+    .sale-banner {
+        position: relative;
+    }
+}
+/*Mobile Layout*/
+@media (max-width: 767px) {
+    .sale-banner {
+        position: fixed;
+        width: 100vw;
+        z-index: 1001;
+    }
+}
