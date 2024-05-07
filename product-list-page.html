@@ -35,14 +35,31 @@
         border: solid 1px #000000;
         border-radius: 30px;
     }
-    .product-list-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 94%;
-        gap: 4vw;
+    @media (min-width: 768px) {
+        .product-list-items {
+            margin-top: 170px;
+            height: fit-content;
+            display: flex;
+            transform: scale(1.4);
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 70%;
+            gap: 4vw;
+        }
     }
+
+    @media (min-width: 767px) {
+        .product-list-items {
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
 
 </style>
 <body class="stack">
