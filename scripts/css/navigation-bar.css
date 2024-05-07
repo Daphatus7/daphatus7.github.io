@@ -82,7 +82,9 @@ nav li:hover ul{
     transition: 0.2s;
 }
     
-       
+.navigation__bar_mobile{
+    padding: 1vh 1vw 1vh 1vw;
+}
 /*responsive*/
 /*Mobile Layout*/
 @media (min-width: 768px) {
