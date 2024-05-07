@@ -33,13 +33,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    height: 120px;
     color: #000000;
     outline: none;
     background-color: #ffffff;
 }
 #footer-top-container {
-    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer-container{
