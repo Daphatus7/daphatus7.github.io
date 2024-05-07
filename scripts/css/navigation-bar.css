@@ -4,7 +4,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 /*navigation bar overall*/
-#navigation__bar {
+.navigation__bar {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,7 +15,7 @@ body{
     background-color: #ffffff;
     color: #000000;
 }
-#navigation__bar__top{
+.navigation__bar__top{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,17 +23,17 @@ body{
 }
 
 /*setup the structure so the logo can be centered*/
-#navigation__bar-left, #navigation__bar-right {
+.navigation__bar-left, .navigation__bar-right {
     flex: 1;
     justify-content: flex-start;
     text-align: left;
 }
-#navigation__bar-right {
+.navigation__bar-right {
     justify-content: flex-end;
     text-align: right;
 }
 /* set nav bar right image */
-#navigation__bar-left > a, img {
+.navigation__bar-left > a, img {
     height: 2rem;
     width: auto;
     font-size: var(--description-font-size);
@@ -83,6 +83,16 @@ nav li:hover ul{
 }
     
        
-
-
-
+/*responsive*/
+/*Mobile Layout*/
+@media (min-width: 768px) {
+    .navigation__bar_mobile {
+        display: none;
+    }
+}
+/*Desktop Layout*/
+@media (max-width: 767px) {
+    .navigation__bar {
+        display: none;
+    }
+}

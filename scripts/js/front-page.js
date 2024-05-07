@@ -1,3 +1,7 @@
+//The program
+
+
+
 //list components that will need for the webpage
 const componentsToLoad = [
     {
@@ -37,8 +41,6 @@ const componentsToLoad = [
         placeholderId: 'footer-placeholder'
     }
 ]
-
-
 
 //load the components listed above
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
