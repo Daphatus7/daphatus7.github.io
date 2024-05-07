@@ -1,4 +1,8 @@
-//list components that will need for the page
+//The program
+
+
+
+//list components that will need for the webpage
 const componentsToLoad = [
     {
         url: 'page-components/sales-information.html',
@@ -9,8 +13,28 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/checkout-order-summary.html',
-        placeholderId: 'checkout-order-items-placeholder'
+        url: 'page-components/main-panel.html',
+        placeholderId: 'main-panel-placeholder'
+    },
+    {
+        url: 'page-components/feature-panel.html',
+        placeholderId: 'feature-panel-placeholder'
+    },
+    {
+        url: 'page-components/secondary-panel.html',
+        placeholderId: 'secondary-panel-placeholder'
+    },
+    {
+        url: 'page-components/category-panel.html',
+        placeholderId: 'category-panel-placeholder'
+    },
+    {
+        url: 'page-components/tertiary-panel.html',
+        placeholderId: 'tertiary-panel-placeholder'
+    },
+    {
+        url: 'page-components/news-panel.html',
+        placeholderId: 'news-panel-placeholder'
     },
     {
         url: 'page-components/footer.html',

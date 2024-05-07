@@ -1,0 +1,108 @@
+/* Base Styles */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/*navigation bar overall*/
+.navigation__bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* position*/
+    width: 100vw;
+    /*    style*/
+    background-color: #ffffff;
+    color: #000000;
+}
+.navigation__bar__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*setup the structure so the logo can be centered*/
+.navigation__bar-left, .navigation__bar-right {
+    flex: 1;
+    justify-content: flex-start;
+    text-align: left;
+}
+.navigation__bar-right {
+    justify-content: flex-end;
+    text-align: right;
+}
+/* set nav bar right image */
+.navigation__bar-left > a, img {
+    height: 2rem;
+    width: auto;
+    font-size: var(--description-font-size);
+    color: #000000;
+    text-decoration: none;
+    line-height: 2rem;
+    /*center text*/
+    vertical-align: middle;
+}
+
+/*navigation bar bottom*/
+/* Dropdown used code from workshop 10*/
+
+/*remove all style*/
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav > ul{
+    cursor: pointer;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav li{
+    padding: 0.5em 1em;
+    width: 7em;
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateX(-1em);
+}
+
+nav ul ul{
+    transform: scale(1,0);
+    transform-origin: top center;
+    position: absolute;
+    top:100%;
+    transition: 0.3s;
+}
+
+nav li:hover ul{
+    cursor: pointer;
+    transform: scale(1,1);
+    transition: 0.2s;
+}
+    
+.navigation__bar_mobile{
+    /*boarder*/
+    padding: 1vh 1vw 1vh 1vw;
+    /*adjusted width*/
+    width: 98vw;
+    /*stay on top*/
+    top: 30px;
+    position: fixed;
+    z-index: 1000;
+    background-color: #FAFAFA;
+}
+/*responsive*/
+/*Desktop Layout*/
+@media (min-width: 768px) {
+    .navigation__bar_mobile {
+        display: none;
+    }
+}
+/*Mobile Layout*/
+@media (max-width: 767px) {
+    .navigation__bar {
+        display: none;
+    }
+}

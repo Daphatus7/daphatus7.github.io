@@ -1,3 +1,5 @@
+
+//define a list of product information
 const products = [
     {
         name: "Zola Flush Light",
@@ -53,10 +55,10 @@ const products = [
     
 ];
 
+//load the website components
 function displayProducts(products) {
     let product_list = document.getElementsByClassName('product-list-items')[0];
-    console.log("sds");
-    fetch('product-item-display-template.html')
+    fetch('page-components/templates/product-item-display-template.html')
         .then(response => response.text())
         .then(template => {
             products.forEach(product => {
@@ -73,24 +75,5 @@ function displayProducts(products) {
         })
 }
 
-function displayProducts(products, element,template, ) {
-    let product_list = document.getElementsByClassName('product-list-items')[0];
-    fetch(template)
-        .then(response => response.text())
-        .then(template => {
-            products.forEach(product => {
-                let productDisplay = document.createElement('div');
-                productDisplay.innerHTML = template
-                productDisplay.querySelector(".product-name-text")
-                    .innerHTML = product.name;
-                productDisplay.querySelector(".price")
-                    .innerHTML = product.price;
-                productDisplay.querySelector(".product-item-display-image")
-                    .src = product.imagePath;
-                product_list.appendChild(productDisplay);
-            })
-        })
-}
-
-
+//load the product list
 addEventListener('DOMContentLoaded', () => displayProducts(products));

@@ -9,13 +9,14 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/checkout-order-summary.html',
-        placeholderId: 'checkout-order-items-placeholder'
+        url: 'page-components/basket-order-summary.html',
+        placeholderId: 'basket-summary-placeholder'
     },
     {
         url: 'page-components/footer.html',
         placeholderId: 'footer-placeholder'
     }
+
 ]
 
 //load the components listed above

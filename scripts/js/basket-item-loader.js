@@ -1,3 +1,4 @@
+//list some products that will be displayed on the page
 const basketItems = [
     {
         name: "Zola Flush Light",
@@ -9,11 +10,12 @@ const basketItems = [
         imagePath: "images/flush-image.png",
         price: "300.00",
     },
-
 ];
+
+//load the website components
 function displayBasketItems(basketItems) {
     let product_list = document.getElementsByClassName('basket-products')[0];
-    fetch('basket-item-display-template.html')  
+    fetch('page-components/templates/basket-item-display-template.html')  
         .then(response => response.text())
         .then(template => {
             basketItems.forEach(basketItem => {
@@ -29,4 +31,5 @@ function displayBasketItems(basketItems) {
             })
         })
 }
+//load the components
 addEventListener('DOMContentLoaded', () => displayBasketItems(basketItems));

@@ -1,4 +1,4 @@
-//list components that will need for the page
+// add the components that will need on be page
 const componentsToLoad = [
     {
         url: 'page-components/sales-information.html',
@@ -9,8 +9,16 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/checkout-order-summary.html',
-        placeholderId: 'checkout-order-items-placeholder'
+        url: 'page-components/product-page-product-display.html',
+        placeholderId: 'product-page-product-display-placeholder'
+    },
+    {
+        url: 'page-components/product-page-product-information.html',
+        placeholderId: 'product-page-product-information-placeholder'
+    },
+    {
+        url: 'page-components/product-panel.html',
+        placeholderId: 'product-panel-placeholder'
     },
     {
         url: 'page-components/footer.html',
@@ -18,10 +26,13 @@ const componentsToLoad = [
     }
 ]
 
-//load the components listed above
+
+
+
+// load the components listed above
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
-//fetch the page and insert it into the placeholder
+// fetch the page and insert it into the placeholder
 function fetchPage(url, placeholderId) {
     fetch(url)
         .then(response => response.text())

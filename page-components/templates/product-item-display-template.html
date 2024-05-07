@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../scripts/css/structure-database.css">
+    <title>product-item-display</title>
+</head>
+<style>
+    .product-item-display-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 160px;
+        margin: 0;
+    }
+    .product-item-display-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        scale: 95%;
+        overflow: hidden;
+    }
+    #product-item-display-bottom-container {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-between;
+        width: 100%;
+        height: 102px;
+    }
+    #product-item-information-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+    #price-container {
+        display: flex;
+        justify-content: start;
+        padding-top: 0.5vw;
+    }
+    .add-to-cart-button {
+        background-color: #ffffff;
+        font-style: normal;
+    }
+    .product-name-text {
+        font-size: 16px;
+    }
+    .price {
+        font-size: 24px;
+    }
+    .caption{
+        font-size: 10px;
+        font-weight: 800;
+    }
+
+    #product-review{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product-review-count{
+        font-size: 12px;
+    }
+
+    .colour-selection{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        padding-bottom: 1vw;
+    }
+    .colour-selection-circle{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #E8BB47;
+    }
+</style>
+<body>
+<div class="product-item-display-container">
+    <div class="product-item-display-image-container">
+        <img class="product-item-display-image" src="../../images/vanity-image.png" alt="item-image">
+    </div>
+    <div id="product-item-display-bottom-container">
+        <div id="product-item-information-container"> 
+            <div class="colour-selection">
+                <div class="colour-selection-circle" id="gold"></div>
+                <div class="colour-selection-circle" id="black"></div>
+                <div class="colour-selection-circle" id="white"></div>
+            </div>
+            <div class="caption">Best Seller</div>
+            <div class="product-name-text">Zola Flush Light</div>
+            <div id="price-container">
+                <div class="currency">$</div>
+                <div class="price">399.00</div>
+            </div>
+            <div id="product-review">
+                <div class="product-rating">
+                    &#9733&#9733&#9733&#9733&#9734
+                </div>
+                <div class="product-review-count">(2)</div>
+            </div>
+        </div>
+        <img class="add-to-cart-button" src="../../images/add-icon.png" alt="">
+    </div>
+        
+</div>
+</body>
+</html>

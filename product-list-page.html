@@ -4,28 +4,7 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product-list-page</title>
     <link rel="stylesheet" href="scripts/css/structure-database.css">
-    <script>
-        fetch('sales-information.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('sales-information-placeholder').innerHTML = html;
-            })
-        fetch('navigation-bar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navigation-bar-placeholder').innerHTML = html;
-            })
-        fetch('product-list-intro.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('product-list-intro-placeholder').innerHTML = html;
-            })
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
-            })
-    </script>
+    <script src="scripts/js/product-list-page.js"></script>
     <script src="scripts/js/product-display-loader.js"></script>
 </head>
 <style>
@@ -73,7 +52,7 @@
     }
 </style>
 <body class="stack">
-<div id = "sales-information-placeholder">1</div>
+<div id = "sales-banner-placeholder">1</div>
 <div id = "navigation-bar-placeholder">2</div>
 <div id = "product-list-intro-placeholder">3</div>
 <div class = "product-list-panel">
@@ -82,16 +61,13 @@
             <button class="filter-button">
                 Price Range
             </button>
-
             <button class="filter-button">
                 Colour
             </button>
-
             <button class="filter-button">
                 Size
             </button>
         </div>
-
         <div id="filters-right">
             <button class="filter-button">
                 Sort by
