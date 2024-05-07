@@ -3,9 +3,14 @@
 body{
     font-family: 'Roboto', sans-serif;
 }
+img{
+
+
+}
 /*navigation bar overall*/
 .navigation__bar {
     display: flex;
+    margin-top: 5px;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
