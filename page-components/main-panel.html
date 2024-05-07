@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main display panel</title>
-<!--    This is the main display section for the front page-->
+    <!--    This is the main display section for the front page-->
 </head>
 <style>
     .wrapper {
@@ -22,27 +22,32 @@
         align-items: center;
     }
     .layer {
-        opacity: 0.8;
         position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: center;
         align-items: start;
         width: 90%;
         height: 90%;
     }
     .main-display-text {
-        font-size: 50px;
         display: flex;
         margin: 0;
+        font-size: 65px;
+        padding-top: 15%;
+        width: 50vw;
     }
     #main-panel-button {
-        margin-top: 2vh;
+        margin-top: 5vh;
+        font-size: 14px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
+
     #main-panel-image {
         display: flex;
         width: 100%;
-        height: auto;    
+        height: auto;
     }
 
     .text-wrap{
@@ -66,22 +71,22 @@
         display: inline-block;
         position: relative;
     }
-    
+
 </style>
-    <div class="main-page-display-card">
-        <div class="media">
-            <div class="layer">
-                <div class="text-wrap">
-                    <h1 class="main-display-text"> Illuminating <br>
-                        Elegance, One<br>
-                        Bulb at a Time
-                    </h1>
-                    <button id = "main-panel-button" style ="z-index: -1">Shop new Collections</button>
-                </div>
+<div class="main-page-display-card">
+    <div class="media">
+        <div class="layer">
+            <div class="text-wrap">
+                <h1 class="main-display-text"> Illuminating <br>
+                    Elegance, One<br>
+                    Bulb at a Time.
+                </h1>
+                <button id = "main-panel-button" class="btn">Shop new Collections</button>
             </div>
-            <img id="main-panel-image" src="../images/Ross-Gardam-New-Pavilion-Digital-Space-Furniture-Lighting-Visuals-Mr-P-Studio-Yellowtrace-05%20(1).png" alt="Avatar" style="width:100%">
         </div>
+        <img id="main-panel-image" src="../images/Ross-Gardam-New-Pavilion-Digital-Space-Furniture-Lighting-Visuals-Mr-P-Studio-Yellowtrace-05%20(1).png" alt="Avatar" style="width:100%">
     </div>
+</div>
 </html>
 
 

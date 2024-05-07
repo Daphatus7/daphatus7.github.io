@@ -1,3 +1,4 @@
+
 :root {
 
     /* define different font sizes*/
@@ -8,7 +9,7 @@
     --sub-major-font-size: 18px;
     --major-font-size: 20px;
     --title-font-size: 28px;
-    --extra-title-font-size: 58px;
+    --extra-title-font-size: 48px;
     /*different font weight*/
     font-weight: 400;
     --bold: 900;
@@ -37,9 +38,9 @@ body{
 
 /*fonts for subheadings */
 .subheading{
-    font-size: var(--sub-major-font-size);
+    font-size: var(--major-font-size);
     font: var(--font-family);
-    font-weight: var(--regular-weight);
+    font-weight: var(--bold-weight);
 }
 
 /*fonts for input text */
@@ -50,7 +51,7 @@ body{
 /*fonts for headings */
 .heading{
     font-size: var(--title-font-size);
-    font-weight: var(--regular-weight);
+    font-weight: var(--bold-weight);
 }
 
 /*fonts for extra large headings*/
