@@ -43,6 +43,7 @@ body{
     font-weight: var(--bold-weight);
 }
 
+
 /*fonts for input text */
 .input-text{
     font-size: var(--description-font-size);
