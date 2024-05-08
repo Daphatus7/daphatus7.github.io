@@ -34,31 +34,60 @@
         margin: 5px 0;
 
     }
-    .checkout-button{
-        background-color: #000000;
-        color: #FFF;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-    }
+
     .empty{
         width: 100%;
         height: 1px;   
     }
+    #card-info{
+        width: 100%;
+        height: 50px;
+        border: none;
+        outline: 1px solid black;
+        margin-top: 30px;
+        background-color: transparent;
+        padding-left: 10px;
+        border-radius: 20px;
+    }
+
+    #payment-detail{
+        margin-top: 40px;
+    }
+
+    h2{
+        margin: 0;
+    }
+
+    h3{
+        font-weight: 300;
+    }
+
+    #checkout-info-container{
+        margin-top: 0;
+    }
+
+    #checkout-progress-bar-placeholder{
+        padding-top: 30px;
+        margin-left: 10%;
+    }
+
+
+
+
 </style>
 <body>
 
     <section id = "sales-banner-placeholder">1</section>
     <section id = "navigation-bar-placeholder">2</section>
-    <div class="checkout-progress-bar"></div>
+    <section id="checkout-progress-bar-placeholder">3</section>
 <!--    checkout title-->
-    <h1 class = "heading inner-container">Checkout</h1>
+    <h1 class = "heading inner-container" style="font-size: 38px">Checkout</h1>
 <!--    Checkout container-->
     <div id= "checkout-summary" class = "sidebar-container">
         <form id= "billing__information" class = "sidebar" action="order-confirmation-page.html">
-            <div class = "inner-container">
+            <div class = "inner-container" id="checkout-info-container">
                 <div id="contact" class="summary-category">
-                    <h2 class="subheading">Contact</h2>
+                    <h2 class="heading">Contact</h2>
                     <div class="billing-information-block">
                         <h3 class="description-text">Phone Number</h3>
                         <label for="phone-number"></label><input class="checkout-input" type="text" id="phone-number" placeholder="">
@@ -69,7 +98,7 @@
                     </div>
                 </div>
                 <div id="delivery-address" class="summary-category">
-                    <h2 class="subheading">Delivery Address</h2>
+                    <h2 class="heading">Delivery Address</h2>
                     <div class="billing-information-block">
                         <!--divider-->
                         <div class="equal-divider-container">
@@ -113,8 +142,9 @@
 
                 </div>
                 <div id="payment-detail" class="summary-category">
+                    <div class="heading">Payment Detail</div>
                     <label>
-                        <input placeholder="1234 5678 9011 1213">
+                        <input id="card-info" placeholder="1234 5678 9011 1213">
                     </label>
 
                     <div class="billing-information-block">
@@ -152,7 +182,7 @@
         </div>
         <div class = "sidebar">
             <div class="far-between sidebar-container">
-                <a class="checkout-button sidebar" href="order-confirmation-page.html">Checkout</a>
+                <button id="checkout-button" class="checkout-button sidebar" href="order-confirmation-page.html">Checkout</button>
                 <div class="empty non-sidebar"></div>
             </div>
         </div>

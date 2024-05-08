@@ -9,6 +9,10 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
+        url: 'page-components/progress-bar.html',
+        placeholderId:'checkout-progress-bar-placeholder'
+    },
+    {
         url: 'page-components/checkout-order-summary.html',
         placeholderId: 'checkout-order-items-placeholder'
     },
