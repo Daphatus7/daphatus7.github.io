@@ -22,7 +22,7 @@ img{
     margin-bottom: 10px;
 }
 .navigation__bar__top{
-    padding-top: 10px;
+    padding-top: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
