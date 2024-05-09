@@ -49,7 +49,7 @@ img{
     vertical-align: middle;
 }
 .navigation__bar-left > img, .navigation__bar-right > img, .navigation__bar-middle > img{
-    height: 2rem;
+    height: 1.5rem;
     width: auto;
     margin-right: 1rem;
 }
