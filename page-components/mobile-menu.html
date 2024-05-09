@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feature-panel</title>
+    <link rel="stylesheet" href="../scripts/css/structure-database.css">
+</head>
+<style>
+    #mobile--menu-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 25px;
+    }
+    
+    
+    .mobile-menu-icon {
+        height: 24px;
+    }
+    .black-line {
+        background-color: black;
+        height: 1px;
+        width: 100%;
+    }
+    #mobile__menu-middle{
+        display: flex;
+        flex-direction: column;
+        
+        padding: 25px 0;
+    }
+    input {
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 16px;
+    }
+    input::placeholder {
+        color: grey;
+    }
+    
+</style>
+<body>
+    <div id="mobile--menu-container">
+        <div id = "mobile__menu-search-bar" class="far-between">
+        <!--            x icon-->
+            <a>
+                <img class = "mobile-menu-icon" src="../images/close-button.png" alt="x-icon">
+            </a>
+            <label>
+                <input id="mobile-search-input" type="search" placeholder="Light">
+            </label>
+        </div>
+        <div class="black-line"></div>
+        <div id="mobile__menu-middle">
+            <div id="mobile__menu-middle-upper">
+                <div id= "menu-center">
+                    <div class="mobile-menu-block far-between">
+                        <p>Exterior</p>
+                        <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
+                    </div>
+                    <div class="mobile-menu-block far-between">
+                        <p>Interior</p>
+                        <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
+                    </div>
+                    <div class="mobile-menu-block far-between">
+                        <p>Pendants</p>
+                        <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
+                    </div>
+                    <div class="mobile-menu-block far-between">
+                        <p>Spotlights</p>
+                        <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
+                    </div>
+                    <div class="mobile-menu-block far-between">
+                        <p>Vanity</p>
+                        <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile__menu-middle-middle">
+                <h2>About</h2>
+                <h2>Contact</h2>
+                <h2>Tract Order</h2>
+            </div>
+        </div>
+        <div class = "black-line"></div>
+        <div id = "mobile__menu-bottom" class="far-between">
+            <div>
+                <a>Login</a>
+                <a>Sign up</a>
+            </div>
+            <a>
+                Help Centre
+            </a>
+        </div>
+    </div>
+</body>
+</html>
