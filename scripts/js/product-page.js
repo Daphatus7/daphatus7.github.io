@@ -21,6 +21,10 @@ const componentsToLoad = [
         placeholderId: 'product-panel-placeholder'
     },
     {
+        url:'page-components/leave-a-review.html ',
+        placeholderId: 'leave-a-review-placeholder'
+    },
+    {
         url: 'page-components/footer.html',
         placeholderId: 'footer-placeholder'
     }
