@@ -40,7 +40,14 @@
     }
 }*/
 
-
+.page-number{
+    display: flex;
+    flex-direction: row;
+    font-size: var(--sub-major-font-size);
+    gap: 2vw;
+    padding: 7vh;
+    padding-bottom: 2vh;
+}
 .product-list-items {
     margin-top: 170px;
     display: grid;
