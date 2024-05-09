@@ -29,6 +29,8 @@ img{
 
 /*setup the structure so the logo can be centered*/
 .navigation__bar-left, .navigation__bar-right {
+    display: flex;
+    align-items: center;
     flex: 1;
     justify-content: flex-start;
     text-align: left;
@@ -37,6 +39,7 @@ img{
     justify-content: flex-end;
     text-align: right;
 }
+
 /* set nav bar left image */
 .navigation__bar-left > a{
     height: 2rem;
