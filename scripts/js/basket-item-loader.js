@@ -15,7 +15,7 @@ const basketItems = [
 //load the website components
 function displayBasketItems(basketItems) {
     let product_list = document.getElementsByClassName('basket-products')[0];
-    fetch('page-components/templates/basket-item-display-template.html')  
+    fetch('../page-components/templates/basket-item-display-template.html')  
         .then(response => response.text())
         .then(template => {
             basketItems.forEach(basketItem => {

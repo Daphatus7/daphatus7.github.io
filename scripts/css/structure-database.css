@@ -56,14 +56,14 @@ button{
     display: flex;
     justify-content: space-between;
 }
+/*creates border*/
 .inner-container
 {
     padding: 2vh 5vw 2vh 5vw;
 }
+
+/*all items lean left*/
 .lean-left{
     display: flex;
     justify-content: flex-start;
-}
-.full-width{
-    width: 100%;
 }

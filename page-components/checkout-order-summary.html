@@ -4,13 +4,60 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkout order summary</title>
     <link rel="stylesheet" href="../scripts/css/checkout-summary.css">
+    <link rel="stylesheet" href="../scripts/css/product-card.css">
+    <link rel="stylesheet" href="../scripts/css/font-database.css">
 </head>
 <body>
+<!--The right-hand side panel for checkout items-->
 <div id="checkout-summary-panel" class = "inner-container contrast-background">
+<!--    The heading-->
     <h1 class="heading">Order Summary</h1>
+<!--    The container to host all products-->
     <div class="product-display">
-        <!--to load product items by summary-item-loader-->
-        <div class="summary-items-placeholder"></div>
+        <!--item 1-->
+        <div class="product-display far-between">
+            <div class = "summary-image-container">
+                <img class = "basket-image" src="../images/flush-image.png" alt="">
+            </div>
+            <div class = "basket-product-information">
+                <div class = "basket-product-information-left">
+                    <div class="caption">Best Seller</div>
+                    <div class="product-name-text"> Zola Flush Light</div>
+                    <div class="product-id-text">Product ID:ZOLA3GLD</div>
+                    <div class="product-price-block ">
+                        <div class="currency">$</div>
+                        <div class="product__price">429.00</div>
+                    </div>
+                </div>
+                <div class = "basket-product-information-right">
+                    <p class = "description-text">Colour: Gold</p>
+                    <p class = "description-text">Qty: 1</p>
+                </div>
+            </div>
+        </div>
+
+        <!--item 2-->
+        <div class="product-display far-between">
+            <div class = "summary-image-container">
+                <img class = "basket-image" src="../images/flush-image.png" alt="">
+            </div>
+            <div class = "basket-product-information">
+                <div class = "basket-product-information-left">
+                    <div class="caption">Best Seller</div>
+                    <div class="product-name-text"> Zola Flush Light</div>
+                    <div class="product-id-text">Product ID:ZOLA3GLD</div>
+                    <div class="product-price-block ">
+                        <div class="currency">$</div>
+                        <div class="product__price">429.00</div>
+                    </div>
+                </div>
+                <div class = "basket-product-information-right">
+                    <p class = "description-text">Colour: Gold</p>
+                    <p class = "description-text">Qty: 1</p>
+                </div>
+            </div>
+        </div>
+
         <!--sub total-->
         <div class="far-between description">
             <p>Subtotal</p>

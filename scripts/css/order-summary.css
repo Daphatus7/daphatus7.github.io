@@ -9,13 +9,7 @@
     text-align: right;
     margin-right: 2vh;
 }
-.checkout-button{
-    margin-top: 20px;
-    width: 95%;
-    background-color: #4A4A4A;
-    font-size: var(--sub-major-font-size);
-    height: 50px;
-}
+
 
 p{
     margin-top: 1px;
