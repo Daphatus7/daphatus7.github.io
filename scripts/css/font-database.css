@@ -8,6 +8,7 @@
     --description-font-size: 14px;
     --sub-major-font-size: 18px;
     --major-font-size: 20px;
+    --sub-title-font-size:24px;
     --title-font-size: 28px;
     --extra-title-font-size: 48px;
     /*different font weight*/
@@ -49,6 +50,10 @@ body{
 .input-text{
     font-size: var(--description-font-size);
     font: var(--font-family);
+}
+.smaller-heading{
+    font-size: var(--sub-title-font-size);
+    font-weight: var(--bold-weight);
 }
 /*fonts for headings */
 .heading{
