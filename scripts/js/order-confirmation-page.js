@@ -11,6 +11,10 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
+        url:'page-components/progress-bar.html',
+        placeholderId: "progress-bar-placeholder"
+    },
+    {
         url: 'page-components/order-confirmation-panel.html',
         placeholderId: 'order-confirmation-page-placeholder'
     },

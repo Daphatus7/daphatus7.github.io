@@ -11,7 +11,9 @@
 }
 .checkout-button{
     margin-top: 20px;
-    width: 100%;
+    width: 95%;
+    background-color: #4A4A4A;
+    font-size: var(--sub-major-font-size);
     height: 50px;
 }
 
