@@ -19,8 +19,10 @@ img{
     /*    style*/
     background-color: #ffffff;
     color: #000000;
+    margin-bottom: 10px;
 }
 .navigation__bar__top{
+    padding-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,12 +36,15 @@ img{
     flex: 1;
     justify-content: flex-start;
     text-align: left;
+    gap: 5px;
 }
 .navigation__bar-right {
     justify-content: flex-end;
     text-align: right;
 }
-
+#globe{
+    margin: 0 0 0 2vw;
+}
 /* set nav bar left image */
 .navigation__bar-left > a{
     height: 2rem;
