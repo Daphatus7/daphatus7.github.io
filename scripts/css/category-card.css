@@ -36,3 +36,16 @@
     font-family: var(--font-family), serif;
     margin-top: 1vh;
 }
+
+/* scroll horizontal */
+@media (max-width: 768px) {
+    .category-card-container {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        flex-direction: row
+    }
+    .category-card {
+        display: inline-block;
+    }
+}
