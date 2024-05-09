@@ -108,6 +108,7 @@
 
 .footer-icons{
     height: 30px;
+    width: auto;
 }
 
 #receive-updates-button {
@@ -178,6 +179,10 @@
     height: auto;
     background-color: #000000;
     color: #FFFFFF;
+}
+.language-setting{
+    justify-content: center;
+    align-items: center;
 }
 /**/
 .footer-inner-container{
@@ -252,6 +257,11 @@
 }
 .footer-icons{
     height: 20px;
+}
+.footer-icons-globe{
+    height: 20px;
+    width: auto;
+    padding-top: 5px;
 }
 
 .far-between{
