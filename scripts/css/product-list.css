@@ -57,7 +57,7 @@
 }
 
 /*mobile grid version*/
-@media (max-width: 767px){
+@media (max-width: 768px){
     .product-list-items {
         grid-template-columns: repeat(2,1fr);
         transform: scale(1);
