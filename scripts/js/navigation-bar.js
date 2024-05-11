@@ -18,6 +18,7 @@ function hideMenu() {
     document.getElementById('navigation__bar_mobile').style.display = 'flex';
     //show the display banner
     document.getElementById('sale-banner').style.display = 'flex';
+    document.body.style.overflow = 'visible';
 }
 
 function loadProductPage()
