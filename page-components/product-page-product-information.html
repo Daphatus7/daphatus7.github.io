@@ -13,15 +13,10 @@
             justify-content: left;
             align-items: center;
             gap: 40px;
+            width: 80%;
             margin-top: 5vh;
             margin-bottom: 10vh;
             margin-left: 25px;
-        }
-        
-        .divider{
-            width: 100vw;
-            height: 1px;
-            background-color: #161616;
         }
 
         .product-information-sub-container {
@@ -37,15 +32,24 @@
         h1{
             margin-left: 2vw;
         }
+        h3{
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
         .subheadings{ /*font-databse dosent work*/
             font-weight: bold;
             font-size: 20px;
         }
 
+        @media (max-width: 768px){
+            .column2{
+                margin-top: 40px;
+            }
+
+        }
     </style>
 </head>
 <body>
-<div class="divider"></div>
 <div id="product-information-container">
     <h1 class="heading">Product Information</h1>
     <div id="product-information-body" class="sidebar-container">
@@ -63,19 +67,19 @@
                 <div class = "description-text">The Zola Flush Light is a click away from brightening your day. Add it to your cart, proceed with our secure checkout, and enjoy the convenience of quick shipping.</div>
             </div>
         </div>
-        <div class = "not-sidebar product-information-sub-container">
+        <div class = "not-sidebar product-information-sub-container column2">
             <div class="small-text-block">
                 <div class="subheadings">Craftsmanship</div>
                 <div class = "description-text">Each Zola Flush Light is meticulously crafted with precision and care, showcasing the clean lines and seamless curves that are hallmarks of contemporary design. The integrated LED lighting within its circular bands provides a continuous ring of illumination, enhancing the modern aesthetic while ensuring energy efficiency.</div>
             </div>
             <div class="small-text-block">
                 <div class = "subheadings">Specifications</div>
-                <div class = "description-text">Globe</div>
+                <h3 class = "subheading">Globe</h3>
                 <div class = "description-text">600x 0.2Watt 3000k LED (Integral)</div>
-                <div class = "description-text">Dimensions</div>
+                <h3 class = "subheading">Dimensions</h3>
                 <div class = "description-text">Height 145mm</div>
                 <div class = "description-text">Width 450mm</div>
-                <div class = "description-text">Wattage</div>
+                <h3 class = "subheading">Wattage</h3>
                 <div class = "description-text">54Watt LED</div>
             </div>
         </div>
