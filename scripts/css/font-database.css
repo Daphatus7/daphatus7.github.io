@@ -60,6 +60,11 @@ body{
     font-size: var(--title-font-size);
     font-weight: var(--bold-weight);
 }
+@media (max-width: 768px){
+    .heading{
+        font-size: var(--sub-title-font-size);
+    }
+}
 
 /*fonts for extra large headings*/
 .extra-heading{
