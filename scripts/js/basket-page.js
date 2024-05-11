@@ -22,6 +22,8 @@ const componentsToLoad = [
 //load the components listed above
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
+
+
 //fetch the page and insert it into the placeholder
 function fetchPage(url, placeholderId) {
     fetch(url)

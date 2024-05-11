@@ -3,6 +3,55 @@
 body{
     font-family: "Century Gothic", Arial, sans-serif;
 }
+.banner-text{
+    font-family: "Century Gothic", Arial, sans-serif;
+    display: flex;
+    font-size: var(--sub-description-font-size);
+    font-weight: var(--regular-weight);
+    align-self: center;
+    justify-content: end;
+}
+/*Desktop Layout*/
+@media (min-width: 768px) {
+    
+    /*Sales banner*/
+    #sale-banner {
+        z-index: 1000;
+        width: 100vw;
+        top:0;
+        /*style*/
+        background-color: #000000;
+        color: #ffffff;
+        /*alignment*/
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        /*frames*/
+        padding: 10px;
+    }
+}
+
+/*Mobile Layout*/
+@media (max-width: 768px) {
+    #sale-banner {
+        position: fixed;
+        z-index: 1000;
+        width: 100vw;
+        top:0;
+        /*style*/
+        background-color: #000000;
+        color: #ffffff;
+        /*alignment*/
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        /*frames*/
+        padding: 10px;
+    }
+}
+
+
+
 /*navigation bar overall*/
 .navigation__bar {
     display: flex;
@@ -52,12 +101,16 @@ body{
     /*center text*/
     vertical-align: middle;
 }
-.navigation__bar-left > img, .navigation__bar-right > img, .navigation__bar-middle > img{
+.navigation__bar-left > img, .navigation__bar-right > img{
     height: 1.5rem;
     width: auto;
     margin-right: 1rem;
 }
-
+.logo-image{
+    height: 1.5rem;
+    width: auto;
+    margin-right: 1rem;
+}
 /*navigation bar bottom*/
 /* Dropdown used code from workshop 10*/
 

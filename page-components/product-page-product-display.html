@@ -131,7 +131,7 @@
         </div>
         <div class="product-display__description sidebar-container">
             <div class = "sidebar">
-                <img id = "product__image" src="../images/zola2ltgoldtransparent%201.png" alt="">
+                <img id = "product__image" src="../images/light-gold-image.png" alt="">
             </div>
             <div class = "not-sidebar">
                 <div class = "product-display__description-panel ">
@@ -145,9 +145,9 @@
                         <div id="product-colour-block">
                             <div id="current-colour-name">Colour: Gold</div>
                             <div class="product-color-choices">
-                                <div class="circle" id="gold"></div>
-                                <div class="circle" id="black"></div>
-                                <div class="circle" id= "white"></div>
+                                <div class="circle" id="gold" onclick="changeToGold()"></div>
+                                <div class="circle" id="black" onclick="changeToBlack()"></div>
+                                <div class="circle" id= "white" onclick="changeToSilver()"></div>
                             </div>
                         </div>
                         <div id= "product-colour"> </div>
@@ -170,9 +170,9 @@
                         </div>
                         <div class= "add-to-cart-block">
                             <div class="quantity-button">
-                                <button class="quantity"><img src="../images/Plus%20sign.png"/></button>
-                                <div class="product-quantity">1</div>
-                                <button class="quantity"><img src="../images/Minus%20sign.png"/></button>
+                                <button class="quantity" onclick="decreaseQuantity()"><img src="../images/Plus%20sign.png"/></button>
+                                    <p id="product-quantity">1</p>
+                                <button class="quantity" onclick="increaseQuantity()"><img src="../images/Minus%20sign.png"/></button>
                             </div>
                             <button class="add-to-cart-button"> Add to Basket </button>
                         </div>

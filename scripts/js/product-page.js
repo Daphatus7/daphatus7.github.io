@@ -1,10 +1,6 @@
 // add the components that will need on be page
 const componentsToLoad = [
     {
-        url: 'page-components/sales-information.html',
-        placeholderId: 'sales-banner-placeholder'
-    },
-    {
         url: 'page-components/navigation-bar.html',
         placeholderId: 'navigation-bar-placeholder'
     },
@@ -40,4 +36,45 @@ function fetchPage(url, placeholderId) {
         .then(html => {
             document.getElementById(placeholderId).innerHTML = html;
         })
+}
+let quantity = 1;
+
+function increaseQuantity() {
+    let quantityDisplay = document.getElementById('product-quantity');
+    quantity += 1;
+    quantityDisplay.innerHTML = quantity;
+}
+
+function decreaseQuantity() {
+    let quantityDisplay = document.getElementById('product-quantity');
+    if (quantity > 1){
+        quantity -= 1;
+        quantityDisplay.innerHTML = quantity;
+    } 
+    else
+    {
+        quantityDisplay.innerHTML = quantity;
+    }
+}
+function changeToGold()
+{
+    changeColour("Gold", 'images/light-gold-image.png');
+
+}
+function changeToSilver()
+{
+    changeColour("Silver", 'images/light-black-image.jpeg');
+
+}
+function changeToBlack()
+{
+    changeColour("Black", 'images/light-silver-image.jpeg');
+}
+
+function changeColour(colour, imageUrl)
+{
+    let productImage = document.getElementById('product__image');
+    productImage.src = imageUrl;
+    let currColour = document.getElementById('current-colour-name');
+    currColour.innerHTML = "Colour: "+ colour;
 }

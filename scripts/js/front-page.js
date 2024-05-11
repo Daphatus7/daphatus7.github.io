@@ -5,10 +5,6 @@
 //list components that will need for the webpage
 const componentsToLoad = [
     {
-        url: 'page-components/sales-information.html',
-        placeholderId: 'sales-banner-placeholder'
-    },
-    {
         url: 'page-components/navigation-bar.html',
         placeholderId: 'navigation-bar-placeholder'
     },
