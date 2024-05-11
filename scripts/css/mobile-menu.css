@@ -1,10 +1,13 @@
-
-
 #mobile--menu-container{
+    position: absolute;
+    top: 0;
+    z-index: 2000;
     display: none;
     flex-wrap: wrap;
     flex-direction: column;
+    height: 100vh;
     padding: 25px;
+    background-color: #FAFAFA;
 }
 
 .mobile-menu-icon {
