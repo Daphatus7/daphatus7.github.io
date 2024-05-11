@@ -3,17 +3,21 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>feature-panel</title>
+
     <link rel="stylesheet" href="../scripts/css/structure-database.css">
+    <link rel="stylesheet" href="../scripts/css/font-database.css">
 </head>
 <style>
+    body{
+        padding-top: 0;
+    }
     #mobile--menu-container{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         padding: 25px;
     }
-    
-    
+
     .mobile-menu-icon {
         height: 24px;
     }
@@ -36,9 +40,68 @@
         font-size: 16px;
     }
     input::placeholder {
-        color: grey;
+        color: black;
+        font-size: 12px;
+        font-family: "Century Gothic", Arial, sans-serif;
     }
-    
+
+    #mobile-search-input{
+        background-color: #E6E7E8;
+        border: none;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 12px;
+        outline: none;
+        color: black;
+        margin-top: 6px;
+        margin-bottom: 10px;
+        border-radius: 50px;
+    }
+    #mobile__menu-bottom{
+        position: fixed;
+        bottom: 20px;
+        left: 2.5%;
+        width: 95%;
+    }
+
+    #bottom-divider{
+        position: fixed;
+        bottom: 50px;
+        left: 2.5%;
+        width: 95%;
+    }
+
+    #mobile__menu-middle-middle{
+        margin-top: 80px;
+    }
+
+    h2{
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .mobile-menu-block{
+        margin-top: 1vh;
+    }
+
+    #mobile__menu-bottom{
+        width: 95%;
+        left: 2.5%;
+
+    }
+
+    #mobile__menu-search-bar{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+
+    }
+
+    a{
+        margin-left: 5px;
+    }
+
 </style>
 <body>
     <div id="mobile--menu-container">
@@ -47,8 +110,9 @@
             <a>
                 <img class = "mobile-menu-icon" src="../images/close-button.png" alt="x-icon">
             </a>
-            <label>
+            <label id="search-bar">
                 <input id="mobile-search-input" type="search" placeholder="Light">
+
             </label>
         </div>
         <div class="black-line"></div>
@@ -56,23 +120,23 @@
             <div id="mobile__menu-middle-upper">
                 <div id= "menu-center">
                     <div class="mobile-menu-block far-between">
-                        <p>Exterior</p>
+                        <h2>Exterior</h2>
                         <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
                     </div>
                     <div class="mobile-menu-block far-between">
-                        <p>Interior</p>
+                        <h2>Interior</h2>
                         <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
                     </div>
                     <div class="mobile-menu-block far-between">
-                        <p>Pendants</p>
+                        <h2>Pendants</h2>
                         <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
                     </div>
                     <div class="mobile-menu-block far-between">
-                        <p>Spotlights</p>
+                        <h2>Spotlights</h2>
                         <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
                     </div>
                     <div class="mobile-menu-block far-between">
-                        <p>Vanity</p>
+                        <h2>Vanity</h2>
                         <a class="arrow-button" ><img class = "mobile-menu-icon" src="../images/arrow-button.png" alt="arrow-button"></a>
                     </div>
                 </div>
@@ -83,13 +147,13 @@
                 <h2>Tract Order</h2>
             </div>
         </div>
-        <div class = "black-line"></div>
+        <div class = "black-line" id="bottom-divider"></div>
         <div id = "mobile__menu-bottom" class="far-between">
             <div>
-                <a>Login</a>
-                <a>Sign up</a>
+                <a class="description">Login</a>
+                <a class="description">Sign up</a>
             </div>
-            <a>
+            <a class="description">
                 Help Centre
             </a>
         </div>
