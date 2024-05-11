@@ -8,7 +8,14 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
+img{
+    width: 95%;
+    ;
+}
+
 .basket-product-information-left {
     display: flex;
     flex-direction: column;
@@ -20,6 +27,16 @@
 }
 .basket-image-container{
     height: 80%;
+}
+.quantity-button-var2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid black;
+    border-radius: 20px;
+    height: 25px;
+    margin-bottom: 1vh;
+    width: 100px;
 }
 .quantity-button {
     display: flex;
