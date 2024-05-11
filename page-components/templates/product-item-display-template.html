@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        scale: 95%;
+        scale: 80%;
         overflow: hidden;
     }
     #product-item-display-bottom-container {
@@ -72,9 +72,26 @@
         border-radius: 50%;
         background-color: #E8BB47;
     }
+    .like-button{
+        display: flex;
+        height: 20px;
+        width: auto;
+        padding: 5px;
+        margin-top: 40px;
+        margin-left: auto;
+    }
+
+    @media (max-width: 768px) {
+        .add-to-cart-button-cross{
+            height: 30px;
+            width: auto;
+        }
+
+    }
 </style>
 <body>
 <div class="product-item-display-container">
+    <div><img class = 'like-button' src="../../images/heart-shape-icon.png"/></div>
     <div class="product-item-display-image-container">
         <img class="product-item-display-image" src="../../images/vanity-image.png" alt="item-image">
     </div>
