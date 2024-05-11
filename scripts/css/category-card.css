@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px;
+    padding: 0 20px 20px 0;
 }
 
 /*each card that consist of a image and a label*/
@@ -45,9 +45,13 @@
         display: flex;
         overflow-x: auto;
         flex-wrap: nowrap;
-        flex-direction: row
+        flex-direction: row;
+        gap: 60px;
     }
     .category-card {
         display: inline-block;
+    }
+    .category-card-label{
+        font-size: 12px;
     }
 }
