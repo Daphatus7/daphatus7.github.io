@@ -30,9 +30,6 @@ const componentsToLoad = [
     }
 ]
 
-
-
-
 // load the components listed above
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 

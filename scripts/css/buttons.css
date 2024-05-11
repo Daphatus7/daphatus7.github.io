@@ -53,3 +53,17 @@ button{
     padding: 10px 20px;
     color: #FFFFFF;
 }
+
+#mobile-menu-button{
+    /*size*/
+    height: 24px;
+    width: 24px;
+}
+#mobile-menu-button :hover{
+    cursor: pointer;
+}
+/*adjust the image size*/
+#mobile-menu-button >img {
+    height: 24px;
+    width: 24px;
+}

@@ -3,10 +3,6 @@
 body{
     font-family: "Century Gothic", Arial, sans-serif;
 }
-img{
-
-
-}
 /*navigation bar overall*/
 .navigation__bar {
     display: flex;
@@ -71,13 +67,13 @@ ol, ul {
     margin: 0;
     padding: 0;
 }
+/*select all ul in nav*/
 nav > ul{
     cursor: pointer;
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
-
 nav li{
     padding: 0.5em 1em;
     width: 7em;
@@ -94,6 +90,7 @@ nav ul ul{
     transition: 0.3s;
 }
 
+/*when hovering li*/
 nav li:hover ul{
     cursor: pointer;
     transform: scale(1,1);
@@ -123,4 +120,11 @@ nav li:hover ul{
     .navigation__bar {
         display: none;
     }
+
+    
 }
+
+#show-menu{
+    display: none;
+}
+
