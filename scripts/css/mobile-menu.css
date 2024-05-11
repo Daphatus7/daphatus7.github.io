@@ -1,3 +1,5 @@
+
+
 #mobile--menu-container{
     position: fixed;
     top: 0;
@@ -7,6 +9,7 @@
     flex-direction: column;
     height: 100vh;
     padding: 25px;
+    height: 100vh;
     background-color: #FAFAFA;
 }
 
