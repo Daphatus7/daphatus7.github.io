@@ -2,11 +2,6 @@
 
 
 //load the website components
-fetch('page-components/sales-information.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('sales-banner-placeholder').innerHTML = html;
-    })
 fetch('page-components/navigation-bar.html')
     .then(response => response.text())
     .then(html => {

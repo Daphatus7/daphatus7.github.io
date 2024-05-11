@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="../scripts/css/structure-database.css">
     <link rel="stylesheet" href="../scripts/css/navigation-bar.css">
     <link rel="stylesheet" href="../scripts/css/mobile-menu.css">
+
 </head>
 
 <body>
+<div id="sale-banner">
+    <div class="banner-text">ON SALE 30% OFF</div>
+</div>
 <div class="navigation__bar">
     <!--        navigation-bar-top-->
         <div class="navigation__bar__top">
@@ -20,7 +24,9 @@
                 <a href="">Contact</a>
             </div>
             <div class=  "navigation__bar-middle">
-                <img class="logo-image" src="../images/Courgar%20Lighting%20Logo.png" alt="">
+                <a id= "home-page-button" onclick="loadHomePage()">
+                    <img class="logo-image" src="../images/Courgar%20Lighting%20Logo.png" alt="">
+                </a>
             </div>
             <div class = "navigation__bar-right">
                 <img src="../images/navbarmagnify.png" alt=""/>
@@ -86,15 +92,19 @@
         <!--        navigation-bar-top-->
         <div class="navigation__bar__top">
             <div class = "navigation__bar-left">
-                <a class = "" onClick="showMenu()">
+                <div id="mobile__menu-button" onClick="showMenu()">
                     <img class="mobile-menu-icon" src="../images/menu-icon.png" alt="action-icon"/>
-                </a>
+                </div>
             </div>
             <div class=  "navigation__bar-middle">
-                <img class="logo-image" src="../images/Courgar%20Lighting%20Logo.png" alt="">
+                <a onclick="loadHomePage()">
+                    <img class="logo-image" src="../images/Courgar%20Lighting%20Logo.png" alt="">
+                </a>
             </div>
             <div class = "navigation__bar-right">
-                <img src="../images/cart-icon.png" height="100" width="100"/>
+                <a onclick="loadProductPage()">
+                    <img class="mobile-menu-icon" src="../images/cart-icon.png" alt=""/>
+                </a>
             </div>
         </div>
     </div>
@@ -108,7 +118,6 @@
             </a>
             <label id="search-bar">
                 <input id="mobile-search-input" type="search" placeholder="Light">
-
             </label>
         </div>
         <div class="black-line"></div>
