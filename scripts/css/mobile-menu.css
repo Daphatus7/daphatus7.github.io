@@ -1,5 +1,5 @@
 #mobile--menu-container{
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 2000;
     display: none;
