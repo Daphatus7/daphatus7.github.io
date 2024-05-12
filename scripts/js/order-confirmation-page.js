@@ -25,7 +25,8 @@ const componentsToLoad = [
 ]
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
-function fetchPage(url, placeholderId) {
+function fetchPage(url, placeholderId) 
+{
     fetch(url)
         .then(response => response.text())
         .then(html => {

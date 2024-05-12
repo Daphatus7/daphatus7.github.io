@@ -1,5 +1,5 @@
 /*Desktop */
-@media (min-width: 768px)
+@media (min-width: 913px)
 {
     body{
         margin: 0;
@@ -7,7 +7,7 @@
     }
 }
 /*Mobile*/
-@media (max-width: 768px)
+@media (max-width: 913px)
 {
     body{
         margin: 0;
@@ -15,16 +15,6 @@
         height: auto;
     }
 }
-
-.placeholder {
-    overflow: hidden;
-}
-.sidebar-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
 .sidebar{
     flex-basis: 30rem;
     flex-grow: 1;
@@ -36,6 +26,17 @@
     flex-grow: 999;
     min-width: 50%;
 }
+
+.placeholder {
+    overflow: hidden;
+}
+.sidebar-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 
 #gold{
     background-color: #E8BB47
