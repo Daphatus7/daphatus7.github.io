@@ -21,7 +21,7 @@ function hideMenu() {
     document.body.style.overflow = 'visible';
 }
 
-function loadProductPage()
+function loadBasketPage()
 {
     window.location.href = 'basket-page.html';
 }
@@ -30,3 +30,5 @@ function loadHomePage()
 {
     window.location.href = 'index.html';
 }
+
+f
