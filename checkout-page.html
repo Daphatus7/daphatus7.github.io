@@ -37,17 +37,14 @@
         border-bottom: 1px solid #000000;
         margin: 5px 0;
 
+
+
+    @media (max-width: 913px){
+
+
     }
 
-    .empty{
-        width: 100%;
-        height: 1px;
-    }
-    #card-info{
-        width: 100%;
-        height: 50px;
-        border: none;
-        outline: 1px solid black;
+    h2{
         margin-top: 30px;
         background-color: transparent;
         padding-left: 10px;
@@ -89,7 +86,7 @@
         <form id= "billing__information" class = "sidebar" action="order-confirmation-page.html">
             <div class = "inner-container" id="checkout-info-container">
                 <div id="contact" class="summary-category">
-                    <h2 class="heading">Contact</h2>
+                    <div class="heading">Contact</div>
                     <div class="billing-information-block">
                         <h3 class="description-text">Phone Number</h3>
                         <label for="phone-number"></label><input class="checkout-input" type="text" id="phone-number" placeholder="">
@@ -100,7 +97,7 @@
                     </div>
                 </div>
                 <div id="delivery-address" class="summary-category">
-                    <h2 class="heading">Delivery Address</h2>
+                    <div class="heading">Delivery Address</div>
                     <div class="billing-information-block">
                         <!--divider-->
                         <div class="equal-divider-container">
@@ -180,12 +177,12 @@
         </form>
 <!--        Order Summary table-->
         <div class ="not-sidebar">
-            <div id= "checkout-order-items-placeholder"></div>
+            <div id= "checkout-order-items-placeholder" class="inner-container"></div>
         </div>
         <div class = "sidebar">
             <div class="far-between sidebar-container">
-                <div class="sidebar">
-                    <a class="checkout-button" href="order-confirmation-page.html">Checkout</a>
+                <div class="sidebar" id="checkout-button-section">
+                    <button class="checkout-button" href="order-confirmation-page.html">Checkout</button>
                 </div>
                 <div class="empty non-sidebar"></div>
             </div>

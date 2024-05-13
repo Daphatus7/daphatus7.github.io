@@ -62,9 +62,10 @@
         height: 50px;
     }
 }
-/*mobile*/
-@media (max-width: 768px){
+/*Desktop*/
+@media (min-width: 768px){
     .checkout-button{
+        width: 100%;
         margin-left: 5%;
         margin-right:5%;
         width: 90%;
