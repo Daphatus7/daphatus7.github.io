@@ -61,7 +61,9 @@ h3{
     padding-top: 30px;
     margin-left: 10%;
 }
-
+.summary-category{
+    margin-bottom: 50px;
+}
 /*at desktop*/
 @media (min-width: 768px)
 {
