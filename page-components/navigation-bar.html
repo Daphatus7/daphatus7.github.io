@@ -120,12 +120,14 @@
     <div id="mobile--menu-container">
         <div id = "mobile__menu-search-bar" class="far-between">
             <!--            x icon-->
-            <a  onClick="hideMenu()">
-                <img class="mobile-menu-icon" src="../images/close-button.png" alt="action-icon"/>
-            </a>
-            <label id="search-bar">
-                <input id="mobile-search-input" type="search" placeholder="Light">
-            </label>
+            <div class="search-bar-top">
+                <a  onClick="hideMenu()">
+                    <img id="cross-sign" class="mobile-menu-icon" src="../images/cross-sign-icon.png" alt="action-icon"/>
+                </a>
+                <label id="search-bar">
+                    <input id="mobile-search-input" type="search" placeholder="Light">
+                </label>
+            </div>
         </div>
         <div class="black-line"></div>
         <div id="mobile__menu-middle">

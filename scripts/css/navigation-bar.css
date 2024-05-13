@@ -3,33 +3,25 @@
 body{
     font-family: "Century Gothic", Arial, sans-serif;
 }
-.banner-text{
-    font-family: "Century Gothic", Arial, sans-serif;
+
+
+/*Sales banner*/
+#sale-banner {
+    z-index: 1000;
+    width: 100vw;
+    top:0;
+    height: 20px;
+    /*style*/
+    background-color: #000000;
+    color: #ffffff;
+    /*alignment*/
     display: flex;
-    font-size: var(--sub-description-font-size);
-    font-weight: var(--regular-weight);
-    align-self: center;
-    justify-content: end;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /*frames*/
 }
-/*Desktop Layout*/
-@media (min-width: 768px) {
-    
-    /*Sales banner*/
-    #sale-banner {
-        z-index: 1000;
-        width: 100vw;
-        top:0;
-        /*style*/
-        background-color: #000000;
-        color: #ffffff;
-        /*alignment*/
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        /*frames*/
-        padding: 10px;
-    }
-}
+
 
 /*Mobile Layout*/
 @media (max-width: 768px) {
@@ -38,19 +30,22 @@ body{
         z-index: 1000;
         width: 100vw;
         top:0;
+        height: 31px;
         /*style*/
         background-color: #000000;
         color: #ffffff;
         /*alignment*/
         display: flex;
-        text-align: center;
         justify-content: center;
+        align-items: center;
         /*frames*/
-        padding: 10px;
     }
 }
 
-
+.banner-text{
+    font-size: var(--sub-description-font-size);
+    font-weight: 800;
+}
 
 /*navigation bar overall*/
 .navigation__bar {
@@ -104,13 +99,21 @@ body{
 .navigation__bar-left > img, .navigation__bar-right > a, .navigation__bar-right > a> img{
     height: 1.5rem;
     width: auto;
-    margin-right: 1rem;
+}
+
+/*Mobile*/
+@media (max-width: 390px){
+    .navigation__bar-left > img, .navigation__bar-right > a, .navigation__bar-right > a> img{
+        height: 2rem;
+        width: auto;
+        margin-right: 3px;
+    }
+
 }
 
 .logo-image {
     height: 1.5rem;
     width: auto;
-    margin-right: 1rem;
 }
 /*navigation bar bottom*/
 /* Dropdown used code from workshop 10*/
