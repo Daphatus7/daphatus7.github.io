@@ -55,8 +55,7 @@
 /*Desktop*/
 @media (min-width: 768px){
     .checkout-button{
-        width: 44vw;
-        margin: 1% 3vw 0 3vw;
+        width: 100%;
     }
 }
 
