@@ -116,6 +116,19 @@ body{
     width: auto;
 }
 /*navigation bar bottom*/
+
+#navigation__bar__bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+#navigation__bar__bottom:hover{
+    cursor: pointer;
+    z-index: 1;
+    transition: height 0.3s;
+}
+
+
 /* Dropdown used code from workshop 10*/
 
 /*remove all style*/
@@ -137,6 +150,7 @@ nav li{
     background-color: #ffffff;
     color: #000000;
     transform: translateX(-1em);
+    
 }
 
 nav ul ul{
@@ -152,6 +166,9 @@ nav li:hover ul{
     cursor: pointer;
     transform: scale(1,1);
     transition: 0.2s;
+}
+nav li:hover font {
+    color: #ffffff;
 }
     
 #navigation__bar_mobile{
@@ -177,8 +194,6 @@ nav li:hover ul{
     .navigation__bar {
         display: none;
     }
-
-    
 }
 
 #show-menu{
