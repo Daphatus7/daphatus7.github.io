@@ -76,20 +76,48 @@ button{
     font-family: "Century Gothic", Arial, sans-serif;
     outline: none;
     border: none;
-    background: #161616;
+    background: #1e1e1e;
+    transition-duration: 0.4s;
     font-size: 10px;
     font-weight: 100;
     padding: 10px 20px;
     color: #FFFFFF;
 }
 button:hover{
+    transform: scale(1.01);
     cursor: pointer;
-    opacity: 0.8;
+    background-color: black;
 }
+button:active{
+    background-color: black;
+}
+
 a:hover{
-    opacity: 0.8;
-    transition: opacity 0.3s ease
+    transform: scale(1.01);
+    cursor: pointer;
+    background-color: black;
 }
+a:active{
+    background-color: black;
+}
+
+.button-translucent{
+    margin: 1vw;
+    background: none;
+    border:1px solid black;
+    width: 30%;
+    color: black;
+}
+.button-translucent:hover{
+    color: white;
+    background-color: #1e1e1e;
+}
+
+.button-translucent:active{
+    color: white;
+    background-color: #1e1e1e;
+}
+
 
 #mobile-menu-button{
     /*size*/
