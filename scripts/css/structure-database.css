@@ -1,5 +1,5 @@
 /*Desktop */
-@media (min-width: 913px)
+@media (min-width: 430px)
 {
     body{
         margin: 0;
@@ -7,7 +7,7 @@
     }
 }
 /*Mobile*/
-@media (max-width: 913px)
+@media (max-width: 430px)
 {
     body{
         margin: 0;

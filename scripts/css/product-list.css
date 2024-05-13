@@ -76,33 +76,7 @@
     }
 }
 
-
-
-/*!*!*mobile flexbox version*!*/
-/*@media (max-width: 767px) {*/
-/*    .product-list-items {*/
-/*        height: fit-content;*/
-/*        display: flex;*/
-/*        flex-wrap: wrap;*/
-/*        justify-content: space-evenly;*/
-/*        align-items: center;*/
-/*        width: 100%;*/
-/*    }*/
-/*}*/
 .filter-button{
     font-size: 0.7rem;
     margin: 0;
 }
-
-
-/*/*mobile flexbox version
-@media (max-width: 767px) {
-    .product-list-items {
-        height: fit-content;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-    }
-}*/
