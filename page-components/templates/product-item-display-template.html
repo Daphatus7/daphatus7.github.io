@@ -6,12 +6,24 @@
     <title>product-item-display</title>
 </head>
 <style>
-    .product-item-display-image-container {
+    .product-item-display-background{
+        cursor: pointer;
+        transition: 0.1s ease-out;
+    }
+    .product-item-display-background:hover {
+        opacity: 0.7;   
+        scale: 1.05;
+        transition: 0.2s ease-in;
+        background-color: black;
+    }
+    
+    .product-item-display-image-container{
         display: flex;
         align-items: center;
         justify-content: center;
         scale: 80%;
         overflow: hidden;
+
     }
     
     #product-item-display-bottom-container {
@@ -76,8 +88,9 @@
 
 </style>
 <body>
-<div class="product-item-display-container">
-    <div><img class ='like-button' onclick="likeItem()"  src="../../images/heart_icon_new.png" height="88" width="88"/></div>
+<div class="product-item-display-container" onclick="clickedOn(this, name)">
+    <div class = "product-item-display-background">
+    <div><img class ='like-button' onclick="on()"  src="../../images/heart_icon_new.png" height="88" width="88"/></div>
     <div class="product-item-display-image-container">
         <img class="product-item-display-image" src="../../images/vanity-image.png" alt="item-image">
     </div>
@@ -103,7 +116,7 @@
         </div>
         <img class="add-to-cart-button-cross" src="../../images/add-icon.png" alt="">
     </div>
-        
+    </div>
 </div>
 </body>
 </html>

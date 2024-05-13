@@ -30,5 +30,3 @@ function loadHomePage()
 {
     window.location.href = 'index.html';
 }
-
-f

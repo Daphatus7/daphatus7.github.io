@@ -54,25 +54,28 @@ const products = [
     
 ];
 
+function clickedOn(product, event){
+    console.log(product);
+}
+
+let product_item;
+
 //load the website components
-function displayProducts(products) 
-{
+function displayProducts(products) {
     let product_list = document.getElementsByClassName('product-list-items')[0];
     fetch('page-components/templates/product-item-display-template.html')
         .then(response => response.text())
         .then(template => 
         {
-            products.forEach(product => {
-                let productDisplay = document.createElement('div');
-                productDisplay.innerHTML = template;
-                productDisplay.querySelector(".product-name-text")
-                    .innerHTML = product.name;
-                productDisplay.querySelector(".price")
-                    .innerHTML = product.price;
-                productDisplay.querySelector(".product-item-display-image")
-                    .src = product.imagePath;
-                product_list.appendChild(productDisplay);
-            })
+            for(let i = 0; i < products.length; i++)
+            {
+                let productItem = template.replace('{{product-name}}', products[i].name)
+                    .replace('{{product-image}}', products[i].imagePath)
+                    .replace('{{product-price}}', products[i].price)
+                    .replace('{{product-id}}', i);
+                product_list.innerHTML += productItem;
+                product_item[i] = productItem;
+            }
         })
 }
 
