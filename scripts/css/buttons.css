@@ -17,7 +17,7 @@
 
 /*add to cart*/
 .add-to-cart-button{
-    
+
     display: flex;
     /*size*/
     height: 50px;
@@ -62,10 +62,9 @@
         height: 50px;
     }
 }
-/*Desktop*/
-@media (min-width: 768px){
+/*mobile*/
+@media (max-width: 768px){
     .checkout-button{
-        width: 100%;
         margin-left: 5%;
         margin-right:5%;
         width: 90%;
@@ -121,4 +120,3 @@ a:hover{
     }
 
 }
-
