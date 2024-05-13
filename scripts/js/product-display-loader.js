@@ -1,4 +1,3 @@
-
 //define a list of product information
 const products = [
     {
@@ -56,11 +55,13 @@ const products = [
 ];
 
 //load the website components
-function displayProducts(products) {
+function displayProducts(products) 
+{
     let product_list = document.getElementsByClassName('product-list-items')[0];
     fetch('page-components/templates/product-item-display-template.html')
         .then(response => response.text())
-        .then(template => {
+        .then(template => 
+        {
             products.forEach(product => {
                 let productDisplay = document.createElement('div');
                 productDisplay.innerHTML = template;

@@ -101,12 +101,13 @@ body{
     /*center text*/
     vertical-align: middle;
 }
-.navigation__bar-left > img, .navigation__bar-right > img{
+.navigation__bar-left > img, .navigation__bar-right > a, .navigation__bar-right > a> img{
     height: 1.5rem;
     width: auto;
     margin-right: 1rem;
 }
-.logo-image{
+
+.logo-image {
     height: 1.5rem;
     width: auto;
     margin-right: 1rem;

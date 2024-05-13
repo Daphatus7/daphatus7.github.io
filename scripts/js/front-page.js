@@ -1,7 +1,5 @@
-//The program
 
-
-
+// the load the components of the website
 //list components that will need for the webpage
 const componentsToLoad = [
     {
@@ -42,10 +40,17 @@ const componentsToLoad = [
 componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
 //fetch the page and insert it into the placeholder
-function fetchPage(url, placeholderId) {
+function fetchPage(url, placeholderId) 
+{
     fetch(url)
         .then(response => response.text())
-        .then(html => {
+        .then(html => 
+        {
             document.getElementById(placeholderId).innerHTML = html;
         })
+}
+
+function loadNewCollections()
+{
+    window.location.href = 'product-list-page.html';
 }

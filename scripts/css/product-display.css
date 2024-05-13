@@ -5,8 +5,6 @@
     border-bottom: 1px solid #000000;
 }
 
-
-
 .basket-product-information {
     display: flex;
     justify-content: space-between;
@@ -14,9 +12,8 @@
     margin-left: 20px;
     margin-bottom: 10px;
 }
-img{
+.basket-image{
     width: 95%;
-    ;
 }
 
 .basket-product-information-left {
