@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product page</title>
-    <link rel="stylesheet" href="../scripts/css/structure-database.css">
-    <link rel="stylesheet" href="../scripts/css/font-database.css">
-    <link rel="stylesheet" href="../scripts/css/product-list.css"> 
-    <link rel="stylesheet" href="../scripts/css/buttons.css">
-    <script src="../scripts/js/product-page.js"></script>
-    <script src="../scripts/js/extra-items.js"></script>
-    <script src="../scripts/js/navigation-bar.js"></script>
+    <link rel="stylesheet" href="scripts/css/structure-database.css">
+    <link rel="stylesheet" href="scripts/css/font-database.css">
+    <link rel="stylesheet" href="scripts/css/product-list.css"> 
+    <link rel="stylesheet" href="scripts/css/buttons.css">
+    <script src="scripts/js/product-page.js"></script>
+    <script src="scripts/js/extra-items.js"></script>
+    <script src="scripts/js/navigation-bar.js"></script>
 
 </head>
 <style>
@@ -36,8 +36,54 @@
         }
     }
 
+    
+    /*An overlay for add to basket effect*/
+    #add-to-cart-effect{
+        position: fixed; /* Make the overlay fixed */
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 30%;
+        margin: 40%;
+        /*hide when not interacting*/
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        z-index: 100;
+    }
+    #add-to-cart-effect.visible{
+        display: flex;
+        opacity: 1;
+    }
+    #add-to-cart-effect.hide{
+        display: none;
+        opacity: 0;
+        transition: ease-out 0.3s;
+    }
 </style>
 <body>
+
+    <div id = "add-to-cart-effect">
+        <div class = "far-between">
+           <h1 class="title"> Item Added to Basket</h1>
+           <img src="images/cross-sign-icon.png" alt="cross sign">
+        </div>
+        <div class = "far-between">
+            <p>
+                Subtotal
+            </p>
+            <p>
+                $678.18
+            </p>
+        </div>
+        <div class="far-between">
+            <button>View Cart</button>
+            <button>Continue Shopping</button>
+        </div>
+        
+    </div>
     <section id = "navigation-bar-placeholder">2</section>
     <section id = "product-page-product-display-placeholder"></section>
     <section id= "product-page-product-information-placeholder"></section>

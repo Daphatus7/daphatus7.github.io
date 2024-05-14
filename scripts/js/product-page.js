@@ -58,17 +58,17 @@ function decreaseQuantity() {
 }
 function changeToGold()
 {
-    changeColour("Gold", 'images/light-gold-image.png');
+    changeColour("Gold", 'images/light-gold-image.jpg');
 
 }
 function changeToSilver()
 {
-    changeColour("Silver", 'images/light-black-image.jpeg');
+    changeColour("Silver", 'images/light-black-image.jpg');
 
 }
 function changeToBlack()
 {
-    changeColour("Black", 'images/light-silver-image.jpeg');
+    changeColour("Black", 'images/light-silver-image.jpg');
 }
 
 function changeColour(colour, imageUrl)
@@ -77,4 +77,19 @@ function changeColour(colour, imageUrl)
     productImage.src = imageUrl;
     let currColour = document.getElementById('current-colour-name');
     currColour.innerHTML = "Colour: "+ colour;
+}
+
+function addToBasket()
+{
+    
+    document.getElementById('add-to-cart-effect').classList.add('visible');
+    document.getElementById('add-to-cart-effect').classList.remove('hide');
+    //hide the cart in 2s
+    setTimeout(()=>hideAddToCartEffect(), 2000);
+    //show the navigation bar
+}
+function hideAddToCartEffect()
+{
+    document.getElementById('add-to-cart-effect').classList.add('hide');
+    
 }

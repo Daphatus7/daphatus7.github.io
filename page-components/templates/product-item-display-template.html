@@ -11,10 +11,9 @@
         transition: 0.1s ease-out;
     }
     .product-item-display-background:hover {
-        opacity: 0.7;   
-        scale: 1.05;
+        opacity: 0.9;   
+        scale: 1.02;
         transition: 0.2s ease-in;
-        background-color: black;
     }
     
     .product-item-display-image-container{
@@ -85,12 +84,20 @@
         border-radius: 50%;
         background-color: #E8BB47;
     }
-
 </style>
+<script>
+    function liked()
+    {
+        console("liked");
+    }
+</script>
 <body>
-<div class="product-item-display-container" onclick="clickedOn(this, name)">
+<div class="product-item-display-container">
     <div class = "product-item-display-background">
-    <div><img class ='like-button' onclick="on()"  src="../../images/heart_icon_new.png" height="88" width="88"/></div>
+<!--        Like button-->
+        <div onclick="liked()">
+            <img class ='unchecked'  src="../../images/heart-icon-unchecked.png" height="44" width="44" alt="Unliked" />
+        </div>
     <div class="product-item-display-image-container">
         <img class="product-item-display-image" src="../../images/vanity-image.png" alt="item-image">
     </div>
@@ -114,7 +121,9 @@
                 <div class="product-review-count">(2)</div>
             </div>
         </div>
-        <img class="add-to-cart-button-cross" src="../../images/add-icon.png" alt="">
+        <a >
+            <img class="add-to-cart-button-cross" src="../../images/add-icon.png" alt="">
+        </a>
     </div>
     </div>
 </div>

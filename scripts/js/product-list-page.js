@@ -18,8 +18,6 @@ fetch('page-components/footer.html')
         document.getElementById('footer-placeholder').innerHTML = html;
     })
 
-
-
 //define a list of product information
 const products = [
     {

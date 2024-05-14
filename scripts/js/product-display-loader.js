@@ -54,11 +54,11 @@ const products = [
     
 ];
 
-function clickedOn(product, event){
-    console.log(product);
+function clickedOn(){
+    console.log("click");
 }
 
-let product_item;
+let product_items;
 
 //load the website components
 function displayProducts(products) {
@@ -74,7 +74,8 @@ function displayProducts(products) {
                     .replace('{{product-price}}', products[i].price)
                     .replace('{{product-id}}', i);
                 product_list.innerHTML += productItem;
-                product_item[i] = productItem;
+                productItem.innerHTML.addEventListener('click', () => clickedOn());
+                product_items[i] = productItem;
             }
         })
 }

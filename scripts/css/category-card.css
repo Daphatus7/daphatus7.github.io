@@ -26,7 +26,6 @@
     flex-direction: column;
     width: 280px;
     height: auto;
-    overflow: hidden;
     /*make the grid adjust automatically based on the*/
     flex: 1 1 150px; 
 }
@@ -36,11 +35,17 @@
     overflow: hidden;
 }
 
-.category-card:hover > img{
-    transform: scale(1.2);
-    overflow: hidden;
-    transition: transform 0.5s, overflow 0.5s
+@media (min-width: 768px) {
+    .category-card {
+        overflow: hidden;
+    }
+    .category-card:hover > img{
+        transform: scale(1.2);
+        overflow: hidden;
+        transition: transform 0.5s, overflow 0.5s
+    }
 }
+
 
 .category-card > img {
     height: auto;

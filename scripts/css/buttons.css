@@ -94,10 +94,8 @@ button:active{
 a:hover{
     transform: scale(1.01);
     cursor: pointer;
-    background-color: black;
 }
 a:active{
-    background-color: black;
 }
 
 .button-translucent{
