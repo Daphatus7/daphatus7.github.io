@@ -144,7 +144,6 @@ function likeButton(displayClicked)
         buttonIcon.src = "images/heart-icon-checked.png";
     }
 }
-
 //load the website components
 function displayProducts(products) {
     productDisplays = document.getElementsByClassName('product-list-items')[0];
@@ -175,6 +174,7 @@ function displayProducts(products) {
                 }
                 // set num of reviews
                 addStars(productDisplay.querySelector(".product-rating"), products[i].numberOfStars);
+                // add review count
                 addNumberOfReviews(productDisplay.querySelector(".product-review-count"), products[i].numberOfReviews);
 
                 productDisplay.id = i;
