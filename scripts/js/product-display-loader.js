@@ -1,84 +1,85 @@
-//define a list of product information
-const products = [
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },    
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },    
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-        numberOfStars: 4
-    },    
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-    },
-    
-];
-
-function clickedOn(){
-    console.log("click");
-}
-
-let product_items;
-
-//load the website components
-function displayProducts(products) {
-    let product_list = document.getElementsByClassName('product-list-items')[0];
-    fetch('page-components/templates/product-item-display-template.html')
-        .then(response => response.text())
-        .then(template => 
-        {
-            for(let i = 0; i < products.length; i++)
-            {
-                let productItem = template.replace('{{product-name}}', products[i].name)
-                    .replace('{{product-image}}', products[i].imagePath)
-                    .replace('{{product-price}}', products[i].price)
-                    .replace('{{product-id}}', i);
-                product_list.innerHTML += productItem;
-                productItem.innerHTML.addEventListener('click', () => clickedOn());
-                product_items[i] = productItem;
-            }
-        })
-}
-
-//load the product list
-addEventListener('DOMContentLoaded', () => displayProducts(products));
+// //define a list of product information
+// const products = [
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },    
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },    
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//         numberOfStars: 4
+//     },    
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//     {
+//         name: "Zola Flush Light",
+//         imagePath: "images/flush-image.png",
+//         price: "300",
+//     },
+//    
+// ];
+//
+// function clickedOn(){
+//     console.log("click");
+// }
+//
+// let product_items;
+// let like_buttons
+// //load the website components
+// function displayProducts(products) {
+//     let product_list = document.getElementsByClassName('product-list-items')[0];
+//     fetch('page-components/templates/product-item-display-template.html')
+//         .then(response => response.text())
+//         .then(template => 
+//         {
+//             for(let i = 0; i < products.length; i++)
+//             {
+//                 let productItem = template.replace('{{product-name}}', products[i].name)
+//                     .replace('{{product-image}}', products[i].imagePath)
+//                     .replace('{{product-price}}', products[i].price)
+//                     .replace('{{product-id}}', i);
+//                
+//                 product_list.innerHTML += productItem;
+//                 productItem.innerHTML.addEventListener('click', () => clickedOn());
+//                 product_items[i] = productItem;
+//             }
+//         })
+// }
+//
+// //load the product list
+// addEventListener('DOMContentLoaded', () => displayProducts(products));

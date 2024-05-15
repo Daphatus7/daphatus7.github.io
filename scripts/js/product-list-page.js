@@ -18,81 +18,165 @@ fetch('page-components/footer.html')
         document.getElementById('footer-placeholder').innerHTML = html;
     })
 
+
 //define a list of product information
 const products = [
     {
         name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        imagePath: "images/zola-flush-light.png",
+        price: "429",
+        numberOfStars: 3,
+        numberOfReviews: 5,
+        colour: ["Gold","Black","Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        name: "Cassie Table Lamp",
+        imagePath: "images/cassie-table-lamp.png",
+        price: "173",
+        numberOfStars: 3,
+        numberOfReviews: 5,
+        colour: ["Brown","Grey"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
-        numberOfStars: 4
+        name: "Aero Pendant Light",
+        imagePath: "images/aero-pendant-light.png",
+        price: "170",
+        numberOfStars: 4,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        name: "Artemis Spotlight",
+        imagePath: "images/artemis-spotlight.png",
+        price: "429",
+        numberOfStars: 2,
+        numberOfReviews: 1,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        name: "Bern Pendant Light",
+        imagePath: "images/bern-pendant-light.png",
+        price: "329",
+        numberOfStars: 4,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        name: "Cassie Pendant Light",
+        imagePath: "images/cassie-pendant-light.png",
+        price: "450",
+        numberOfStars: 5,
+        numberOfReviews: 23,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        name: "Cassie Batten Light",
+        imagePath: "images/cassie-batten-light.png",
+        price: "320",
+        numberOfStars: 1,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
-        price: "300",
+        name: "Clovelly Pendant Light",
+        imagePath: "images/clovelly-pendant-light.png",
+        price: "375",
+        numberOfStars: 4,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
+        name: "Garman Batten Light",
+        imagePath: "images/garman-batten-light.png",
         price: "300",
+        numberOfStars: 5,
+        numberOfReviews: 63,
+        colour: ["Gold", "Silver"]
     },
     {
-        name: "Zola Flush Light",
-        imagePath: "images/flush-image.png",
+        name: "Hutton Batten Light",
+        imagePath: "images/hutton-batten-light.png",
+        price: "329",
+        numberOfStars: 4,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
+    },
+    {
+        name: "Jean Pendant Light",
+        imagePath: "images/jean-pendant-light.png",
+        price: "217",
+        numberOfStars: 4,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
+    },
+    {
+        name: "Julia Pendant Light",
+        imagePath: "images/julia-pendant-light.png",
         price: "300",
+        numberOfStars: 4,
+        numberOfReviews: 5,
+        colour: ["Gold", "Silver"]
     },
 
 ];
 
+let productDisplays;
+
+function clickedOn(id){
+    // console.log(productDisplays.children[id].querySelector(".product-name-text").innerHTML + " was clicked");
+}
+function clickedOnLikeButton(id)
+{
+    likeButton(productDisplays.children[id]);
+}
+
+function likeButton(displayClicked)
+{
+    let buttonIcon = displayClicked.querySelector(".like-button");
+    console.log(buttonIcon.src)
+    if (buttonIcon.id === "heart-icon-checked")
+    {
+        buttonIcon.id = "heart-icon-unchecked";
+        buttonIcon.src = "images/heart-icon-unchecked.png";
+    } else
+    {
+        buttonIcon.id = "heart-icon-checked";
+        buttonIcon.src = "images/heart-icon-checked.png";
+    }
+}
+
 //load the website components
 function displayProducts(products) {
-    let product_list = document.getElementsByClassName('product-list-items')[0];
+    productDisplays = document.getElementsByClassName('product-list-items')[0];
     fetch('page-components/templates/product-item-display-template.html')
         .then(response => response.text())
         .then(template => {
-            products.forEach(product => {
+
+            //load the product list from the given specs
+            for (let i = 0; i < products.length; i++) {
                 let productDisplay = document.createElement('div');
                 productDisplay.innerHTML = template;
+                
+                // set name
                 productDisplay.querySelector(".product-name-text")
-                    .innerHTML = product.name;
+                    .innerHTML = products[i].name;
+                // price
                 productDisplay.querySelector(".price")
-                    .innerHTML = product.price;
+                    .innerHTML = products[i].price;
+                // image
                 productDisplay.querySelector(".product-item-display-image")
-                    .src = product.imagePath;
-                product_list.appendChild(productDisplay);
-            })
-        })
+                    .src = products[i].imagePath;
+                // set available colours
+                // set reviews
+                // set stars
+                productDisplay.id = i;
+                productDisplay.querySelector(".like-button").addEventListener('click', 
+                    (event) => clickedOnLikeButton(productDisplay.id));
+                productDisplay.addEventListener('click', (event) => clickedOn(productDisplay.id));
+                productDisplays.appendChild(productDisplay);
+            }
+        }
+        )
 }
-
 //load the product list
 addEventListener('DOMContentLoaded', () => displayProducts(products));

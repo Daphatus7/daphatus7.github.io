@@ -79,17 +79,25 @@ function changeColour(colour, imageUrl)
     currColour.innerHTML = "Colour: "+ colour;
 }
 
+let cartEffectTimerHandle;
+const delay = 2000;
 function addToBasket()
 {
-    
     document.getElementById('add-to-cart-effect').classList.add('visible');
     document.getElementById('add-to-cart-effect').classList.remove('hide');
     //hide the cart in 2s
-    setTimeout(()=>hideAddToCartEffect(), 2000);
+    if (cartEffectTimerHandle)
+    {
+        cartEffectTimerHandle = setTimeout(()=>hideAddToCartEffect(), delay);
+    }
     //show the navigation bar
 }
 function hideAddToCartEffect()
 {
     document.getElementById('add-to-cart-effect').classList.add('hide');
-    
+    document.getElementById('add-to-cart-effect').classList.remove('visible');
+    if(cartEffectTimerHandle)
+    {
+        clearTimeout(cartEffectTimerHandle);
+    }
 }
