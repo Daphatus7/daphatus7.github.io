@@ -154,7 +154,9 @@ function displayProducts(products) {
 
             //load the product list from the given specs
             for (let i = 0; i < products.length; i++) {
+                //create a div
                 let productDisplay = document.createElement('div');
+                //assign this div with template
                 productDisplay.innerHTML = template;
                 
                 // set name
@@ -167,8 +169,14 @@ function displayProducts(products) {
                 productDisplay.querySelector(".product-item-display-image")
                     .src = products[i].imagePath;
                 // set available colours
-                // set reviews
-                // set stars
+                for (let j = 0; j < products[i].colour.length; j++)
+                {
+                    addProductColour(productDisplay.querySelector(".colour-selection"), getColour(products[i].colour[j]));
+                }
+                // set num of reviews
+                addStars(productDisplay.querySelector(".product-rating"), products[i].numberOfStars);
+                addNumberOfReviews(productDisplay.querySelector(".product-review-count"), products[i].numberOfReviews);
+
                 productDisplay.id = i;
                 productDisplay.querySelector(".like-button").addEventListener('click', 
                     (event) => clickedOnLikeButton(productDisplay.id));
@@ -177,6 +185,56 @@ function displayProducts(products) {
             }
         }
         )
+}
+
+//convert colour to required format
+function getColour(colour)
+{
+    switch (colour)
+    {
+        case "Gold":
+            return "gold";
+        case "Black":
+            return "black";
+        case "Silver":
+            return "silver";
+        case "Brown":
+            return "brown";
+        case "Grey":
+            return "grey";
+        default:
+            return "white";
+    }
+}
+// add colour element to the product display
+function addProductColour(ColourGrid, colour)
+{
+    fetch('page-components/templates/colour-circle-template.html')
+        .then(response => response.text()
+            .then(template => {
+                let colourDisplay = document.createElement('div');
+                colourDisplay.innerHTML = template;
+                colourDisplay.getElementsByClassName("colour-selection-circle")[0].classList.add(colour);
+                ColourGrid.appendChild(colourDisplay);
+            }
+            ))
+}
+
+const totalPossibleStars = 5;
+function addStars(productRatingElement, numberOfStarts)
+{
+    for (let i = 0; i < numberOfStarts; i++)
+    {                   
+        productRatingElement.innerHTML += '&#9733;';
+    }
+    for (let i = numberOfStarts; i < totalPossibleStars; i++)
+    {
+        productRatingElement.innerHTML += '&#9734;';
+    }
+}
+function addNumberOfReviews(reviewElement, numberOfReviews)
+{
+    reviewElement.innerHTML = `(${numberOfReviews})`;
 }
 //load the product list
 addEventListener('DOMContentLoaded', () => displayProducts(products));
