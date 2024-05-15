@@ -13,6 +13,12 @@
     padding: 5vw;
     height: 100vh;
     background-color: #ffffff;
+    /*animation*/
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+#mobile__menu-button{
+    cursor: pointer;
 }
 
 .search-bar-top{
@@ -48,7 +54,7 @@
     padding: 25px 0;
 }
 #mobile-search-input {
-    width: 300px;
+    width: 78vw;
     border: 1px solid black;
     border-radius: 10px;
     background-color: transparent;
@@ -72,16 +78,26 @@ input::placeholder {
     margin-bottom: 10px;
     border-radius: 50px;
 }
+
+#mobile-search-icon{
+    position: absolute;
+    right: 31px;
+    top: 38px;
+    width: 8vw;
+    height: auto;
+
+
+}
 #mobile__menu-bottom{
     position: fixed;
-    bottom: 20px;
+    bottom: 60px;
     left: 2.5%;
     width: 95%;
 }
 
 #bottom-divider{
     position: fixed;
-    bottom: 50px;
+    bottom: 88px;
     left: 2.5%;
     width: 95%;
 }

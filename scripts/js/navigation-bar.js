@@ -1,24 +1,48 @@
 /*when open mobile menu*/ 
 function showMenu() {
-    // show mobile menu
-    document.getElementById('mobile--menu-container').style.display = 'flex';
-    //hide the navigation bar
-    document.getElementById('navigation__bar_mobile').style.display = 'none';
-    //hide the banner
-    document.getElementById('sale-banner').style.display = 'none';
+    let navBar = document.getElementById("navigation__bar_mobile");
+    let menu = document.getElementById(`mobile--menu-container`);
+    let saleBanner = document.getElementById('sale-banner');
+
+    menu.style.display = 'flex';
+    menu.offsetHeight;
+    menu.style.transform = 'translateX(0%)';
+
+    navBar.style.display = 'none';
+    saleBanner.style.display = 'none';
     document.body.style.overflow = 'hidden';
+
+    // // show mobile menu
+    // document.getElementById('mobile--menu-container').style.display = 'flex';
+    // //hide the navigation bar
+    // document.getElementById('navigation__bar_mobile').style.display = 'none';
+    // //hide the banner
+    // document.getElementById('sale-banner').style.display = 'none';
+    // document.body.style.overflow = 'hidden';
 
 }
 
 /*when close mobile menu*/
 function hideMenu() {
-    // hide mobile menu
-    document.getElementById('mobile--menu-container').style.display = 'none';
-    //show the navigation bar
-    document.getElementById('navigation__bar_mobile').style.display = 'flex';
-    //show the display banner
-    document.getElementById('sale-banner').style.display = 'flex';
-    document.body.style.overflow = 'visible';
+    let menu =document.getElementById('mobile--menu-container')
+    let navBar = document.getElementById('navigation__bar_mobile')
+    let saleBanner = document.getElementById('sale-banner');
+
+    // animation
+    menu.style.transform = 'translateX(-100%)';
+
+    //only hid after animation finished
+    menu.addEventListener('transitionend', function() {
+        // Hide the menu after it slides out
+        menu.style.display = 'none';
+
+        // Show the navigation bar and banner
+        navBar.style.display = 'flex';
+        saleBanner.style.display = 'flex';
+
+        // Allow body scrolling again
+        document.body.style.overflow = 'visible';
+    }, { once: true });
 }
 
 function loadBasketPage()
