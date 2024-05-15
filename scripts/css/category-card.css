@@ -21,6 +21,7 @@
 
 /*each card that consist of a image and a label*/
 .category-card {
+    transition: ease-in-out 0.5s;
     position: relative;
     display: flex;
     flex-direction: column;

@@ -43,14 +43,34 @@
         #soren-description-text{
             text-align: center;
         }
+
+        /*mobile optimization*/
+        @media (max-width: 430px){
+            #tertiary-visual{
+                width: 95vw;
+            }
+            .mobile-caption{
+                display: block;
+                margin-left: auto;
+                padding: 8px;
+            }
+
+            #tertiarytextelement{
+                display: none;
+            }
+
+        }
+
+
     </style>
 </head>
 
 <body>
 <div id="container">
-    <img id="visual" src="../images/LR.jpg"/>
+    <img id="tertiary-visual" src="../images/LR.jpg"/>
+    <div class="sub-description mobile-caption">Shop Our 2024 Autumn/Winter Collection ></div>
     <div id="tertiarytextelement">
-        <div style="font-size: 40px; font-weight: 700;">Soren Collection</div>
+        <div id="tertiary-panel-title" style="font-size: 40px; font-weight: 700;">Soren Collection</div>
         <div id="soren-description-text" class="description">a testament to the timeless beauty of French modernity, with a nod to minimalist design and a whisper of avant-garde allure.</div>
         <button id="shopnow">Shop Now</button>
         <button class="button-translucent">Learn More</button>

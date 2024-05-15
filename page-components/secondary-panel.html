@@ -5,11 +5,13 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <style>
-        #visual{
+        #secondary-visual{
             width: 100%;
             display: block;
         }
-        #textelement{
+
+
+        #text-element{
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -35,16 +37,50 @@
         #sub-text{
             margin-bottom: 5px;
         }
+        .mobile-caption{
+            display: none;
+        }
+
+        /*mobile optimization*/
+        @media (max-width: 430px){
+            #secondary-visual{
+                height: 40vh;
+                width: auto;
+            }
+            #secondary-panel-description{
+                display: none;
+            }
+            #text-element{
+                position: relative;
+                width: 85vw;
+                padding-top: 1vh;
+                padding-left: 2vw;
+                transform: scale(0.85);
+                transform-origin: top left;
+            }
+            #secondary-panel-date{
+                display: none;
+            }
+            #shop-arrival-button{
+                width: 125%;
+            }
+            .mobile-caption{
+                display: block;
+                margin-left: auto;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
 <div id="container">
-    <img src="../images/LightLivingAWOI-scaled.png" id="visual"/>
-    <div id="textelement">
+    <img src="../images/LightLivingAWOI-scaled.png" id="secondary-visual"/>
+    <div class="sub-description mobile-caption">New products ></div>
+    <div id="text-element">
         <div class="extra-heading">SHINE FRESH</div>
-        <div class="heading">13/4</div>
+        <div id="secondary-panel-date" class="heading">13/4</div>
         <div id="sub-text" class="subheading">Redefine Your Radiance with Our New Arrivals</div>
-        <div class="description">Whether you're redecorating, upgrading, or simply looking for that perfect lighting accent, our New Arrivals section is the place to start. Be the first to showcase the newest designs that are sure to brighten and transform any space. Browse, be inspired, and light up your life with the latest</div>
+        <div id="secondary-panel-description" class="description">Whether you're redecorating, upgrading, or simply looking for that perfect lighting accent, our New Arrivals section is the place to start. Be the first to showcase the newest designs that are sure to brighten and transform any space. Browse, be inspired, and light up your life with the latest</div>
         <button id="shop-arrival-button">Shop New Arrivals</button>
     </div>
 </div>

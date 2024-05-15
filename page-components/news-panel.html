@@ -7,6 +7,7 @@
         #news-panel-container{
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             margin-top: 7vh;
             margin-right: 1vh;
             margin-bottom: 10vh;
@@ -33,12 +34,19 @@
             margin-left: 5vw;
             margin-right: 2vw;
         }
+        @media (max-width: 430px) {
+            #news-panel-text__block{
+                padding-top: 2vh;
+                padding-left: 5vw;
+            }
+        }
+
     </style>
 </head>
 <body>
 <div id="news-panel-container">
-    <img id="main-visual" src="../images/news_panel_mainvisual.png">
-    <div id="news-panel-text__block">
+    <img id="main-visual" class="not-sidebar" src="../images/news_panel_mainvisual.png">
+    <div id="news-panel-text__block" class="sidebar">
         <div class="subheading">March 2023</div>
         <div class="heading">Expert Corner:</div>
         <div class="heading">Lighting Tips & Trick</div>

@@ -156,6 +156,7 @@ nav li{
 
 nav ul ul{
     transform: scale(1,0);
+    width: 100px;
     transform-origin: top center;
     position: absolute;
     top:100%;
