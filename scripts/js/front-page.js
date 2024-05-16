@@ -1,4 +1,5 @@
 
+
 // the load the components of the website
 //list components that will need for the webpage
 const componentsToLoad = [
@@ -54,3 +55,4 @@ function loadNewCollections()
 {
     window.location.href = 'product-list-page.html';
 }
+
