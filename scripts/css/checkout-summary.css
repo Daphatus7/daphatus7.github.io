@@ -1,7 +1,7 @@
 #checkout-summary-panel {
-    padding-left: 40px;
-    padding-right: 40px;
-
+    border-top: 5px solid #161616;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 .terms-conditions{
     text-align: right;
@@ -18,6 +18,14 @@
     margin-top: 30px;
     background-color: transparent;
     padding-left: 10px;
+}
+
+/*desktop optimization*/
+@media (min-width: 1367px) {
+    #checkout-summary-panel {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
 }
 .summary-item-divider{
     margin-top: 15px;
