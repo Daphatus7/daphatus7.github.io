@@ -14,6 +14,15 @@
 <div id="sale-banner">
     <div class="banner-text">ON SALE 30% OFF</div>
 </div>
+<div id="navigation__bar__overlay">
+    <div id="overlay-wrapper">
+        <input id="desktop-search" type="search" placeholder="Light">
+        <img id="desktop-search-button" src="../images/search-white.png"/>
+        <a onclick="closeSearch()">
+            <img id="close-button" src="../images/cross-white.png"/>
+        </a>
+    </div>
+</div>
 <div class="navigation__bar">
     <!--        navigation-bar-top-->
         <div class="navigation__bar__top">
@@ -29,7 +38,7 @@
                 </a>
             </div>
             <div class = "navigation__bar-right">
-                <a>
+                <a onclick="loadSearch()">
                     <img src="../images/navbarmagnify.png" alt=""/>
                 </a>
                 <a onclick="loadBasketPage()">
@@ -94,6 +103,7 @@
             </ul>
         </nav>
     </div>
+
 <!--    Mobile version of navigation bar-->
 <div id="navigation__bar_mobile">
         <!--        navigation-bar-top-->

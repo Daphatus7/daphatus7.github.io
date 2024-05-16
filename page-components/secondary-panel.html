@@ -19,13 +19,21 @@
             background-color: rgba(255, 255, 255, 0.49);
             padding: 5vw;
         }
-        #container{
+        #secondary-container{
             position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background-color: rgba(255, 255, 255, 0.49);;
+            height: 858.62px;
+            background-image: url("images/LightLivingAWOI-scaled.png");
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
         }
         #shop-arrival-button{
             margin-top: 2vh;
@@ -73,8 +81,8 @@
     </style>
 </head>
 <body>
-<div id="container">
-    <img src="../images/LightLivingAWOI-scaled.png" id="secondary-visual"/>
+<div id="secondary-container">
+<!--    <img src="../images/LightLivingAWOI-scaled.png" id="secondary-visual"/>-->
     <div class="sub-description mobile-caption">New products ></div>
     <div id="text-element">
         <div class="extra-heading">SHINE FRESH</div>

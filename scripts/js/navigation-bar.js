@@ -44,6 +44,21 @@ function hideMenu() {
         document.body.style.overflow = 'visible';
     }, { once: true });
 }
+function loadSearch(){
+    let searchBar = document.getElementById('navigation__bar__overlay')
+    searchBar.style.display = 'block'
+    requestAnimationFrame(() => {
+        searchBar.style.transform = 'translateY(-20%)'; // Then move it into view
+    });
+}
+function closeSearch(){
+    let searchBar = document.getElementById('navigation__bar__overlay')
+    searchBar.style.transform = 'translateY(-150%)';
+    searchBar.addEventListener('transitionend', function() {
+        searchBar.style.display = 'none';
+    }, { once: true });
+
+}
 
 function loadBasketPage()
 {

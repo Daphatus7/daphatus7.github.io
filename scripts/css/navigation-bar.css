@@ -47,6 +47,45 @@ body{
     font-weight: 800;
 }
 
+#navigation__bar__overlay{
+    margin-top: 16px;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    height: 90px;
+    background-color: black;
+    /*animation*/
+    transform: translateY(-150%);
+    transition: transform 0.2s ease-in-out;
+}
+
+#desktop-search-button{
+    width: 2vw;
+}
+
+#overlay-wrapper{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 380px;
+    justify-content: center;
+    align-items: flex-end;
+}
+#close-button{
+    padding-left: 340px;
+    width: 25px;
+}
+#desktop-search{
+    color: white;
+    font-family: "Century Gothic", Arial, sans-serif;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 50%;
+    border-bottom: 2px solid white;
+}
+
 /*navigation bar overall*/
 .navigation__bar {
     display: flex;
