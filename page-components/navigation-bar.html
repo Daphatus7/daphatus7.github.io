@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../scripts/css/structure-database.css">
     <link rel="stylesheet" href="../scripts/css/navigation-bar.css">
     <link rel="stylesheet" href="../scripts/css/mobile-menu.css">
-
 </head>
 
 <body>
@@ -53,55 +52,65 @@
 <!--        dropdown menu-->
         <nav id="navigation__bar__bottom">
             <ul>
-                <li>
-                    Exterior
+                <li class="nav-category" onmouseenter="openDropmenu()" onmouseleave="closeDropmenu()">
+                    <a>Exterior</a>
                     <ul>
-                        <li>Modern Exteriors</li>
-                        <li>New Exteriors</li>
-                        <li>White exteriors</li>
-                        <li>Traditional exteriors</li>
-                        <li>Spotlight exteriors</li>
+                        <li class="nav-elements">Modern Exteriors</li>
+                        <li class="nav-elements">New Exteriors</li>
+                        <li class="nav-elements">White exteriors</li>
+                        <li class="nav-elements">Traditional exteriors</li>
+                        <li class="nav-elements">Spotlight exteriors</li>
                     </ul>
                 </li>
-                <li>
+                <li class="nav-category" onmouseenter="openDropmenu()" onmouseleave="closeDropmenu()">
                     Flush
                     <ul>
-                        <li>New Flush</li>
-                        <li>Ceiling</li>
-                        <li>Batten Fix</li>
-                        <li>Oysters</li>
+                        <li class="nav-elements">New Flush</li>
+                        <li class="nav-elements">Ceiling</li>
+                        <li class="nav-elements">Batten Fix</li>
+                        <li class="nav-elements">Oysters</li>
                     </ul>
                 </li>
-                <li>
+                <li class="nav-category" onmouseenter="openDropmenu()" onmouseleave="closeDropmenu()">
                     Pendants
                     <ul>
-                        <li>New Pendants</li>
-                        <li>Modern Pendants</li>
-                        <li>Glass Pendants</li>
-                        <li>Traditional Pendants</li>
-                        <li>Metal Pendant</li>
+                        <li class="nav-elements">New Pendants</li>
+                        <li class="nav-elements">Modern Pendants</li>
+                        <li class="nav-elements">Glass Pendants</li>
+                        <li class="nav-elements">Traditional Pendants</li>
+                        <li class="nav-elements">Metal Pendant</li>
                     </ul>
                 </li>
-                <li>
+                <li class="nav-category" onmouseenter="openDropmenu()" onmouseleave="closeDropmenu()">
+                    Spotlights
+                    <ul>
+                        <li class="nav-elements" >New Spotlights</li>
+                        <li class="nav-elements">White Spotlight</li>
+                        <li class="nav-elements">Black Spotlight</li>
+                        <li class="nav-elements">Halogen Spotlight</li>
+                    </ul>
+                </li>
+                <li class="nav-category" onmouseenter="openDropmenu()" onmouseleave="closeDropmenu()">
                     Table & Floor
                     <ul>
-                        <li>New Table & Floor</li>
-                        <li>Traditional Table Lamp</li>
-                        <li>Modern table Lamp</li>
-                        <li>Floor Stand Lamp</li>
+                        <li class="nav-elements">New Table & Floor</li>
+                        <li class="nav-elements">Traditional Table Lamp</li>
+                        <li class="nav-elements">Modern table Lamp</li>
+                        <li class="nav-elements">Floor Stand Lamp</li>
                     </ul>
                 </li>
-                <li>
+                <li class="nav-category" onmouseenter="openDropmenu()" onmouseleave="closeDropmenu()">
                     Vanity
                     <ul>
-                        <li>New Vanity</li>
-                        <li>White Vanity</li>
-                        <li>Black Vanity</li>
-                        <li>Chrome Vanity</li>
+                        <li class="nav-elements">New Vanity</li>
+                        <li class="nav-elements">White Vanity</li>
+                        <li class="nav-elements">Black Vanity</li>
+                        <li class="nav-elements">Chrome Vanity</li>
                     </ul>
                 </li>
             </ul>
         </nav>
+        <div id="drop-background">1</div>
     </div>
 
 <!--    Mobile version of navigation bar-->
@@ -184,5 +193,6 @@
             </a>
         </div>
     </div>
+<script src="scripts/js/navigation-bar.js"></script>
 </body>
 </html>

@@ -69,3 +69,23 @@ function loadHomePage()
 {
     window.location.href = 'index.html';
 }
+
+
+function openDropmenu(){
+    let dropdownBackgrounds = document.getElementById('drop-background');
+    dropdownBackgrounds.style.display = 'block';
+}
+
+function closeDropmenu(){
+    let dropdownBackgrounds = document.getElementById('drop-background');
+    dropdownBackgrounds.style.display = 'none';
+}
+
+// document.querySelectorAll('.nav-category').forEach(item => {
+//     item.addEventListener('mouseenter', () => {
+//         document.getElementById('dropdown-background').style.display = 'block';
+//     });
+//     item.addEventListener('mouseleave', () => {
+//         document.getElementById('dropdown-background').style.display = 'none';
+//     });
+// });
