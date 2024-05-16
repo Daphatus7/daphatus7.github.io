@@ -15,6 +15,9 @@
         height: auto;
     }
 }
+a{
+    text-decoration: none;
+}
 .sidebar{
     flex-basis: 30rem;
     flex-grow: 1;
