@@ -7,9 +7,8 @@
     <style>
         #secondary-visual{
             width: 100%;
-            display: block;
+            display: none;
         }
-
 
         #text-element{
             position: absolute;
@@ -33,7 +32,6 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-
         }
         #shop-arrival-button{
             margin-top: 2vh;
@@ -54,6 +52,12 @@
             #secondary-visual{
                 height: 40vh;
                 width: auto;
+                display: block;
+            }
+            #secondary-container{
+                margin-top: 40px;
+                background-image: none;
+                height: 500px;
             }
             #secondary-panel-description{
                 display: none;
@@ -82,7 +86,7 @@
 </head>
 <body>
 <div id="secondary-container">
-<!--    <img src="../images/LightLivingAWOI-scaled.png" id="secondary-visual"/>-->
+    <img src="../images/LightLivingAWOI-scaled.png" id="secondary-visual"/>
     <div class="sub-description mobile-caption">New products ></div>
     <div id="text-element">
         <div class="extra-heading">SHINE FRESH</div>

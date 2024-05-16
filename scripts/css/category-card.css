@@ -1,7 +1,7 @@
 /*The outer frame of the panel*/
 .card-panel {
     width: 92vw;
-    padding: 4vh 4vw 6vh 4vw;
+    padding: 3vh 4vw 3vh 4vw;
 }
 
 .title {
