@@ -1,7 +1,6 @@
-
-
-
 //load the website components
+
+
 fetch('page-components/navigation-bar.html')
     .then(response => response.text())
     .then(html => {
@@ -17,7 +16,6 @@ fetch('page-components/footer.html')
     .then(html => {
         document.getElementById('footer-placeholder').innerHTML = html;
     })
-
 
 //define a list of product information
 const products = [
@@ -172,12 +170,17 @@ function displayProducts(products) {
                 {
                     addProductColour(productDisplay.querySelector(".colour-selection"), getColour(products[i].colour[j]));
                 }
+                productDisplay.id = i;
+
                 // set num of reviews
                 addStars(productDisplay.querySelector(".product-rating"), products[i].numberOfStars);
                 // add review count
                 addNumberOfReviews(productDisplay.querySelector(".product-review-count"), products[i].numberOfReviews);
+                
 
-                productDisplay.id = i;
+                productDisplay.querySelector(".add-to-cart-button-cross").addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay.id));
+                productDisplays.appendChild(productDisplay);
+                
                 productDisplay.querySelector(".like-button").addEventListener('click', 
                     (event) => clickedOnLikeButton(productDisplay.id));
                 productDisplay.addEventListener('click', (event) => clickedOn(productDisplay.id));
@@ -236,5 +239,26 @@ function addNumberOfReviews(reviewElement, numberOfReviews)
 {
     reviewElement.innerHTML = `(${numberOfReviews})`;
 }
+
+let basketItems ={};
+
+localStorage.setItem('basketItems', JSON.stringify(basketItems));
+
+//add product to basket
+function onAddToCardCrossClicked(id)
+{
+    //if the item is already in the basket, increase the quantity
+    if(basketItems[products[id].name]) {
+        basketItems[products[id].name] += 1;
+    } else {
+        //if the item is not in the basket, add as new item.
+        basketItems[products[id].name] = 1;
+    }
+    localStorage.setItem('basketItems', JSON.stringify(basketItems));
+}
+
+
+
+
 //load the product list
 addEventListener('DOMContentLoaded', () => displayProducts(products));

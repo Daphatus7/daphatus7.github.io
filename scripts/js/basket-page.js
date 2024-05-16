@@ -1,3 +1,5 @@
+console.log(localStorage.getItem('basketItems'));
+
 //list components that will need for the page
 const componentsToLoad = [
     {
@@ -19,8 +21,16 @@ const componentsToLoad = [
 
 ]
 
+addEventListener('DOMContentLoaded', () => loadPage());
+
+function loadPage()
+{
+    //load Page Elements
+    componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
+    loadBasketItem(basketItems);
+}
+
 //load the components listed above
-componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
 
 
@@ -30,5 +40,33 @@ function fetchPage(url, placeholderId) {
         .then(response => response.text())
         .then(html => {
             document.getElementById(placeholderId).innerHTML = html;
+        })
+}
+
+function getBasketItems() {
+    // Get the JSON string from localStorage
+    const basketItemString = localStorage.getItem('basketItems');
+    // Convert the JSON string back to a tuple list (or an empty list if null)
+    const localBasketItem = basketItemString ? JSON.parse(basketItemString) : [];
+    console.log(localBasketItem);
+}
+
+//load the website components
+function loadBasketItem(basketItems) {
+    let product_list = document.getElementsByClassName('basket-products')[0];
+    fetch('../page-components/templates/basket-item-display-template.html')
+        .then(response => response.text())
+        .then(template => {
+            basketItems.forEach(basketItem => {
+                let productDisplay = document.createElement('div');
+                productDisplay.innerHTML = template
+                productDisplay.querySelector(".product-name-text")
+                    .innerHTML = basketItem.name;
+                productDisplay.querySelector(".product__price")
+                    .innerHTML = basketItem.price;
+                productDisplay.querySelector(".basket-image")
+                    .src = basketItem.imagePath;
+                product_list.appendChild(productDisplay);
+            })
         })
 }
