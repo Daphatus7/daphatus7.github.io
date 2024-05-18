@@ -10,7 +10,7 @@
     height: 50px;
     transition: width 0.3s ease, background-color 0.3s ease;
 }
-.proceed-to-checkout-button{
+.proceed-to-checkout-button {
     display: flex;
     justify-content: center;
     align-items: center;
