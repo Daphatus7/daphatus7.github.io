@@ -115,10 +115,10 @@ a:active{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    gap: 3vw;
+    gap: 4vw;
     border: 1px solid black;
     width: 35%;
-    height: 50px;
+    height: 49px;
     background-color: white;
 }
 

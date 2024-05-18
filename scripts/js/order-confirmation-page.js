@@ -33,3 +33,8 @@ function fetchPage(url, placeholderId)
             document.getElementById(placeholderId).innerHTML = html;
         })
 }
+
+function loadIndexPage()
+{
+    window.location.href = 'index.html';
+}

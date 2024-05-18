@@ -161,6 +161,11 @@
     font-size: var(--description-font-size);
 }
 
+.footer-information{
+    margin-top: 50px;
+
+}
+
 /*Mobile Optimization*/
 
 /**/
@@ -302,9 +307,6 @@
     margin-right: 2vh;
 }
 
-.quantity-button {
-    border-radius: 20px;
-}
 .quantity {
     margin: 0;
 }
@@ -369,7 +371,18 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
+#add-to-basket-buttons{
+    margin-top:30px;
+}
+#add-to-cart-price-block{
+    margin-top: 30px;
+}
+@media(max-width: 391){
+    #add-to-cart-effect{
+        width:400px
+    }
 
+}
 
 /*product list -------------*/
 .product-list-panel {

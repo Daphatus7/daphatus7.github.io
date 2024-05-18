@@ -11,9 +11,6 @@
 </head>
 <style>
     /*this causes issue with the website overall alignment*/
-    .product-list-items{
-        margin: 0 0 170px;
-    }
 
     .series-panel{
         padding-top: 5vh;
@@ -62,6 +59,13 @@
         }
     }
 
+    @media (max-width: 391px) {
+        #add-to-cart-effect {
+            height: 220px;
+            width: 310px;
+        }
+    }
+
     #add-to-cart-effect-background{
         position: absolute;
         background-color: rgba(0, 0, 0, 0.29);
@@ -80,7 +84,8 @@
         transition: ease-out 0.3s;
     }
     #add-to-cart-cross-sign{
-        height: 2rem;
+        margin-top: 7px;
+        height: 2vh;
     }
     #add-to-cart-background{
         position: fixed;
@@ -99,7 +104,7 @@
            <h1 class="heading" style="margin: 0"> Item Added to Basket</h1>
            <img src="images/cross-sign-icon.png" id="add-to-cart-cross-sign" onclick="hideAddToCartEffect()">
         </div>
-        <div class = "far-between">
+        <div id="add-to-cart-price-block" class = "far-between">
             <p class =>
                 Subtotal
             </p>
@@ -107,9 +112,9 @@
                 $678.18
             </p>
         </div>
-        <div class="far-between">
-            <button class = "add-to-cart-button" src="../basket-page.html">View Cart</button>
-            <button class = "add-to-cart-button" onclick="hideAddToCartEffect()">Continue Shopping</button>
+        <div id="add-to-basket-buttons" class="far-between">
+            <button class = "add-to-cart-button white description" src="../basket-page.html">View Cart</button>
+            <button class = "add-to-cart-button white description" onclick="hideAddToCartEffect()">Continue Shopping</button>
         </div>
         </div>
     </div>
