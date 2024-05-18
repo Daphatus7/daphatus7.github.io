@@ -114,3 +114,8 @@ function loadBasketItem(items) {
 }
 
 addEventListener('DOMContentLoaded', () => loadPage());
+
+function loadCheckoutPage()
+{
+    window.location.href = 'checkout-page.html';
+}

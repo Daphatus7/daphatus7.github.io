@@ -31,7 +31,10 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
 }
-
+#checkout-summary-panel-basket-page{
+    margin-left: 0;
+    margin-right: 0;
+}
 
 
 /*Category-card*/
@@ -89,7 +92,6 @@
 }
 .terms-conditions{
     margin-top: 20px;
-    margin-right: 2vw;
 }
 .promotion-input-text{
     margin-top: 30px;

@@ -13,6 +13,7 @@ footer {
 }
 
 .checkout-input {
+    color: black;
     border-bottom: 1px solid #000000;
 }
 
@@ -28,7 +29,7 @@ footer {
 
 /*checkout-summary*/
 
-#checkout-summary-panel {
+#checkout-summary-panel-basket-page {
     border-top: 5px solid #161616;
 }
 .terms-conditions{
@@ -77,6 +78,9 @@ footer {
     color: white;
     /*border*/
     border: 1px solid white;
+}
+#email-input::placeholder{
+    color: white;
 }
 /*mobile CSS*/
 
@@ -207,7 +211,6 @@ h2{
 .colour-selection-circle{
     outline: 1px solid #7B7575;
 }
-
 
 
 /*product list -------------*/
