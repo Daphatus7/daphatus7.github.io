@@ -83,3 +83,255 @@ body{
     line-height: normal;
     margin: 0;
 }
+
+
+
+
+
+/*The outer frame of the panel*/
+.card-panel {
+    /*Spacing*/
+    width: 92vw;
+    padding: 3vh 4vw 3vh 4vw;
+}
+
+.title {
+    /*fonts*/
+    font-size: 1.5em;
+    font-weight: 800;
+    /*spacing*/
+    padding-bottom: 2vh;
+    margin: 0;
+    width: 92vw;
+}
+/*the card container for all cards*/
+.category-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px 20px 0;
+}
+
+/*each card that consist of a image and a label*/
+.category-card {
+    /*animation*/
+    transition: ease-in-out 0.5s;
+    /*layout*/
+    position: relative;
+    display: flex;
+    /*make the grid adjust automatically based on the*/
+    flex: 1 1 150px;
+
+    flex-direction: column;
+    /*spacing*/
+    width: 280px;
+    height: auto;
+}
+
+
+/*Category-card*/
+
+.category-card-label {
+    font-size: 1rem;
+    font-family: var(--font-family), serif;
+}
+
+/* scroll horizontal */
+@media (max-width: 768px) {
+    .category-card-label{
+        font-size: 12px;
+    }
+}
+
+footer {
+    font-size: var(--main-font-size);
+    font-style: normal;
+    font-weight: 700;
+}
+
+/*checkout page*/
+h2{
+    margin: 0;
+}
+
+h3{
+    font-weight: 300;
+}
+
+
+/*checkout-summary*/
+#checkout-summary-panel {
+    border-top: 5px solid #161616;
+}
+.terms-conditions{
+    text-align: right;
+    font-size: 12px;
+}
+
+/*footer -----------------*/
+
+.footer{
+    font-family: var(--font-family),serif;
+}
+
+#footer-bottom {
+    font-size: var(--sub-description-font-size);
+}
+#helps{
+    font-size: 10px;
+    text-align: right;
+}
+#Newsletter{
+    /*top line*/
+    font-family: "Century Gothic", Arial, sans-serif;
+}
+#newsletter-text{
+    text-align: right;
+}
+
+#follow-us {
+    font-size: var(--sub-description-font-size);
+}
+
+#email-input {
+    font-size: 10px;
+}
+
+#footer-container{
+    font-size: var(--description-font-size);
+}
+
+.footer__mobile__top p{
+    font-size: var(--description-font-size);
+    color: #000000;
+    font-weight: 300;
+}
+.footer__mobile__bottom p{
+    font-size: var(--sub-description-font-size);
+    font-weight: 300;
+}
+
+#mobile-newsletter-title{
+    text-align: center;
+}
+
+.newsletter{
+    font-family: "Century Gothic", Arial, sans-serif;
+}
+
+
+/*mobile menu-------------------*/
+
+#mobile-search-input {
+    font-size: 16px;
+}
+input::placeholder {
+    font-size: 12px;
+    font-family: "Century Gothic", Arial, sans-serif;
+}
+
+h2{
+    font-weight: 400;
+}
+
+/*order summary ----------*/
+
+#total-amount{
+    font-size: var(--sub-major-font-size);
+    font-weight: var(--bold);
+}
+.summary-title{
+    font-size: var(--major-font-size);
+}
+.total-items{
+    text-align: right;
+}
+
+/*product card ------------- */
+
+.product-quantity {
+    font-size: 20px;
+}
+.caption{
+    font-size: 10px;
+    font-weight: var(--bold);
+}
+.product-id-text{
+    font-size: 8px;
+}
+.currency {
+    font-size: 10px;
+}
+.product__price {
+    font-size: 18px;
+}
+.edit-button {
+    font-size: 10px;
+    text-decoration-line: underline;
+}
+.product-name-text{
+    font-size: 18px;
+}
+
+
+/*product-display ----------*/
+.quantity-button {
+    outline: 1px solid black;
+}
+
+.product-quantity {
+    font-size: 14px;
+}
+.caption{
+    font-size: 10px;
+    font-weight: var(--bold);
+}
+.product-id-text{
+    font-size: 8px;
+}
+.currency {
+    font-size: 10px;
+}
+.product__price {
+    font-size: 18px;
+}
+.edit-button {
+    font-size: 12px;
+    text-decoration-line: underline;
+}
+.product-name-text{
+    font-size: 18px;
+}
+
+/*product list -------------*/
+.filter-button {
+    font-size: 1em;
+    font-style: normal;
+}
+.page-number{
+    font-size: var(--sub-major-font-size);
+}
+
+/*desk top version*/
+@media (min-width: 768px) {
+    .product-name-text {
+        font-size: 16px;
+    }
+}
+
+/*tabletop grid version*/
+@media (max-width: 912px){
+    .product-name-text {
+        font-size: 16px;
+    }
+}
+/*mobile*/
+@media (max-width: 768px){
+    .product-name-text {
+        font-size: 15.5px;
+    }
+}
+
+.filter-button{
+    font-size: 0.7rem;
+}

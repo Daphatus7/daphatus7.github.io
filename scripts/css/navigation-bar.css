@@ -255,23 +255,3 @@ nav li:hover font {
 #show-menu{
     display: none;
 }
-
-
-
-/*!*new menu try*!*/
-/*.dropdown-contents{*/
-/*    display: flex;*/
-/*    position: absolute;*/
-/*    left:0;*/
-/*    flex-direction: column;*/
-/*    margin-top: 55px;;*/
-/*    !*display: none;*!*/
-/*    height: 200px;*/
-/*    width: 100%;*/
-/*    background-color: #E8BB47;*/
-/*}*/
-/*.dropdown-elements{*/
-/*    color: black;*/
-/*    padding-top: 20px;*/
-/*}*/
-
