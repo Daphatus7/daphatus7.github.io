@@ -36,12 +36,14 @@
     
     /*An overlay for add to basket effect*/
     #add-to-cart-effect{
-        position: fixed; /* Make the overlay fixed */
-        top: 0;
-        left: 0;
-        width: 40%;
-        height: 40%;
-        margin: 20% 30% 20% 30%;
+        position: fixed;
+        height: 150px;
+        width: 300px;
+        padding: 20px;
+        /*position*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         /*hide when not interacting*/
         display: none;
         flex-wrap: wrap;
@@ -49,7 +51,22 @@
         justify-content: center;
         align-items: center;
         background-color: white;
-        opacity: 0;
+        opacity: 1;
+        z-index: 100;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    }
+    @media (min-width: 911px) {
+        #add-to-cart-effect {
+            height: 200px;
+            width: 360px;
+        }
+    }
+
+    #add-to-cart-effect-background{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.29);
+        width: 100vw;
+        height: 100vh;
         z-index: 100;
     }
     #add-to-cart-effect.visible{
@@ -62,13 +79,25 @@
         opacity: 0;
         transition: ease-out 0.3s;
     }
+    #add-to-cart-cross-sign{
+        height: 2rem;
+    }
+    #add-to-cart-background{
+        position: fixed;
+        top: 0;
+        left: 0;
+        color: #1e1e1e;
+        height: 100vh;
+        width: 100vw;
+    }
 </style>
 <body>
 
     <div id = "add-to-cart-effect">
+        <div style="z-index: 2">
         <div class = "far-between">
-           <h1 class="heading"> Item Added to Basket</h1>
-           <img src="images/cross-sign-icon.png" alt="cross sign">
+           <h1 class="heading" style="margin: 0"> Item Added to Basket</h1>
+           <img src="images/cross-sign-icon.png" id="add-to-cart-cross-sign" onclick="hideAddToCartEffect()">
         </div>
         <div class = "far-between">
             <p class =>
@@ -82,7 +111,7 @@
             <button class = "add-to-cart-button" src="../basket-page.html">View Cart</button>
             <button class = "add-to-cart-button" onclick="hideAddToCartEffect()">Continue Shopping</button>
         </div>
-        
+        </div>
     </div>
     <section id = "navigation-bar-placeholder">2</section>
     <section id = "product-page-product-display-placeholder"></section>
