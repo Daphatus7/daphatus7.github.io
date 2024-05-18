@@ -85,6 +85,12 @@
 }
 /*mobile*/
 @media (max-width: 845px){
+    .quantity-button{
+        width: 100%;
+    }
+    .add-to-cart-button{
+        width: 100%;
+    }
 }
 
 button{
@@ -101,6 +107,7 @@ button{
 button:hover{
     transform: scale(1.01);
     cursor: pointer;
+    color: white;
     background-color: black;
 }
 button:active{

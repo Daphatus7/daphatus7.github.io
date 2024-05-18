@@ -141,13 +141,16 @@
     /*color*/
     background-color: #161616;
     font-size: 10px;
-    color: white;
     margin-top: 2vh;
     margin-bottom: 2vh;
     /*border*/
     border: 1px solid white;
     outline: none;
     border-radius: 0;
+}
+input::placeholder {
+    color: white; /* Replace #909090 with any color you prefer */
+    opacity: 1; /* Optional: Ensures consistent opacity across browsers */
 }
 /*mobile CSS*/
 .logo-black{
