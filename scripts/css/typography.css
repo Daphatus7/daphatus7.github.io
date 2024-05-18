@@ -1,6 +1,5 @@
 
 :root {
-
     /* define different font sizes*/
     font-size: 16px;
     --main-font-size: 16px;
@@ -75,11 +74,14 @@ body{
 .extra-heading{
     font-size: var(--extra-title-font-size);
     font-weight: var(--bold-weight);
-
-    color: #000;
     font-style: normal;
     line-height: normal;
     margin: 0;
+}
+
+input::placeholder {
+    font-size: 12px;
+    font-family: "Century Gothic", Arial, sans-serif;
 }
 
 

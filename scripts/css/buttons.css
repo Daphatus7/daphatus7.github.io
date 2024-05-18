@@ -1,3 +1,4 @@
+/*basestyle*/
 button{
     font-family: "Century Gothic", Arial, sans-serif;
     outline: none;
@@ -23,9 +24,8 @@ a:hover{
     transform: scale(1.01);
     cursor: pointer;
 }
-a:active{
-}
 
+/*modifiers*/
 .button--translucent{
     margin: 1vw;
     background: none;
@@ -43,30 +43,7 @@ a:active{
     background-color: #1e1e1e;
 }
 
-
-#mobile-menu-button{
-    /*size*/
-    height: 24px;
-    width: 24px;
-}
-#mobile-menu-button :hover{
-    cursor: pointer;
-}
-/*adjust the image size*/
-#mobile-menu-button >img {
-    height: 24px;
-    width: 24px;
-}
-.like-button{
-    display: flex;
-    height: 20px;
-    width: auto;
-    padding: 5px;
-    margin-top: 40px;
-    margin-left: auto;
-}
-
-.checkout-button{
+.button--large{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,22 +54,6 @@ a:active{
     width: 100%;
     height: 50px;
     transition: width 0.3s ease, background-color 0.3s ease;
-}
-.proceed-to-checkout-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #4A4A4A;
-    font-size: var(--sub-major-font-size);
-    color: white;
-    margin-top: 20px;
-    width: 100%;
-    height: 50px;
-    transition: width 0.3s ease, background-color 0.3s ease;
-}
-.checkout-button :hover{
-    opacity: 0.8;
-    width: 90%;
 }
 
 /*add to cart*/
@@ -124,13 +85,7 @@ a:active{
 
 /*Desktop*/
 @media (min-width: 1367px){
-    .quantity-button{
-        width: 100%;
-    }
-    .add-to-cart-button{
-        width: 100%;
-    }
-    .checkout-button {
+    .button--large {
         display: flex;
         width: 480px;
         justify-content: center;
@@ -141,18 +96,8 @@ a:active{
         margin-right: 3%;
         height: 50px;
     }
-
-    .proceed-to-checkout-button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #4A4A4A;
-        font-size: var(--sub-major-font-size);
-        margin-top: 20px;
-        margin-right: 3%;
-        height: 50px;
-    }
 }
+
 /*mobile*/
 @media (max-width: 845px){
     .quantity-button{
@@ -161,14 +106,9 @@ a:active{
     .add-to-cart-button{
         width: 100%;
     }
-}
 
-
-
-@media (max-width: 768px) {
     .add-to-cart-button-cross{
         height: 30px;
         width: auto;
     }
-
 }

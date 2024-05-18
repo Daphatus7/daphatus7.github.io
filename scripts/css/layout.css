@@ -463,8 +463,13 @@ input[type="search"]::-webkit-search-cancel-button {
     align-items: flex-end;
 }
 
-.quantity-button {
-
+.like-button{
+    display: flex;
+    height: 20px;
+    width: auto;
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: auto;
 }
 
 .remove-button {
