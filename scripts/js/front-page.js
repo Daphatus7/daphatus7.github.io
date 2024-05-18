@@ -1,5 +1,4 @@
 
-
 // the load the components of the website
 //list components that will need for the webpage
 const componentsToLoad = [

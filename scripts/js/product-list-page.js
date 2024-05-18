@@ -1,24 +1,36 @@
 //load the website components
+function loadProductListPage(){
 
+    //load website components
+    loadWebsiteComponents();
 
-fetch('page-components/navigation-bar.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('navigation-bar-placeholder').innerHTML = html;
-    })
-fetch('page-components/product-list-intro.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('product-list-intro-placeholder').innerHTML = html;
-    })
-fetch('page-components/footer.html')
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-    })
+    //temp solution: load items to inventory
+    localStorage.setItem('productInventory', JSON.stringify(productInventory));
+    
+    //load website items
+    displayProducts(productInventory);
+}
+
+function loadWebsiteComponents(){
+    fetch('page-components/navigation-bar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation-bar-placeholder').innerHTML = html;
+        })
+    fetch('page-components/product-list-intro.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('product-list-intro-placeholder').innerHTML = html;
+        })
+    fetch('page-components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+        })
+}
 
 //define a list of product information
-const products = [
+const productInventory = [
     {
         name: "Zola Flush Light",
         imagePath: "images/zola-flush-light.png",
@@ -148,9 +160,9 @@ function displayProducts(products) {
     fetch('page-components/templates/product-item-display-template.html')
         .then(response => response.text())
         .then(template => {
-
+            
             //load the product list from the given specs
-            for (let i = 0; i < products.length; i++) {
+            for (let i = 0; i < productInventory.length; i++) {
                 //create a div
                 let productDisplay = document.createElement('div');
                 //assign this div with template
@@ -158,24 +170,24 @@ function displayProducts(products) {
                 
                 // set name
                 productDisplay.querySelector(".product-name-text")
-                    .innerHTML = products[i].name;
+                    .innerHTML = productInventory[i].name;
                 // price
                 productDisplay.querySelector(".price")
-                    .innerHTML = products[i].price;
+                    .innerHTML = productInventory[i].price;
                 // image
                 productDisplay.querySelector(".product-item-display-image")
-                    .src = products[i].imagePath;
+                    .src = productInventory[i].imagePath;
                 // set available colours
-                for (let j = 0; j < products[i].colour.length; j++)
+                for (let j = 0; j < productInventory[i].colour.length; j++)
                 {
-                    addProductColour(productDisplay.querySelector(".colour-selection"), getColour(products[i].colour[j]));
+                    addProductColour(productDisplay.querySelector(".colour-selection"), getColour(productInventory[i].colour[j]));
                 }
                 productDisplay.id = i;
 
                 // set num of reviews
-                addStars(productDisplay.querySelector(".product-rating"), products[i].numberOfStars);
+                addStars(productDisplay.querySelector(".product-rating"), productInventory[i].numberOfStars);
                 // add review count
-                addNumberOfReviews(productDisplay.querySelector(".product-review-count"), products[i].numberOfReviews);
+                addNumberOfReviews(productDisplay.querySelector(".product-review-count"), productInventory[i].numberOfReviews);
                 
 
                 productDisplay.querySelector(".add-to-cart-button-cross").addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay.id));
@@ -240,7 +252,7 @@ function addNumberOfReviews(reviewElement, numberOfReviews)
     reviewElement.innerHTML = `(${numberOfReviews})`;
 }
 
-let basketItems ={};
+let basketItems = {};
 
 localStorage.setItem('basketItems', JSON.stringify(basketItems));
 
@@ -248,17 +260,15 @@ localStorage.setItem('basketItems', JSON.stringify(basketItems));
 function onAddToCardCrossClicked(id)
 {
     //if the item is already in the basket, increase the quantity
-    if(basketItems[products[id].name]) {
-        basketItems[products[id].name] += 1;
+    if(basketItems[productInventory[id].name]) {
+        basketItems[productInventory[id].name] += 1;
     } else {
         //if the item is not in the basket, add as new item.
-        basketItems[products[id].name] = 1;
+        basketItems[productInventory[id].name] = 1;
     }
     localStorage.setItem('basketItems', JSON.stringify(basketItems));
 }
 
 
-
-
 //load the product list
-addEventListener('DOMContentLoaded', () => displayProducts(products));
+addEventListener('DOMContentLoaded', () => loadProductListPage());
