@@ -1,35 +1,4 @@
-//load the website components
-function loadProductListPage(){
-
-    //load website components
-    loadWebsiteComponents();
-
-    //temp solution: load items to inventory
-    localStorage.setItem('productInventory', JSON.stringify(productInventory));
-    
-    //load website items
-    displayProducts(productInventory);
-}
-
-function loadWebsiteComponents(){
-    fetch('page-components/navigation-bar.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('navigation-bar-placeholder').innerHTML = html;
-        })
-    fetch('page-components/product-list-intro.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('product-list-intro-placeholder').innerHTML = html;
-        })
-    fetch('page-components/footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer-placeholder').innerHTML = html;
-        })
-}
-
-//define a list of product information
+let productDisplays;
 const productInventory = [
     {
         name: "Zola Flush Light",
@@ -129,8 +98,45 @@ const productInventory = [
     },
 
 ];
+const totalPossibleStars = 5;
+let basketItems = {};
+localStorage.setItem('basketItems', JSON.stringify(basketItems));
 
-let productDisplays;
+/**
+ * load the page
+ */
+function loadPage(){
+
+    //load website components
+    loadWebsiteComponents();
+
+    //temp solution: load items to inventory
+    localStorage.setItem('productInventory', JSON.stringify(productInventory));
+    
+    //load website items
+    displayProducts(productInventory);
+}
+addEventListener('DOMContentLoaded', () => loadPage());
+function loadWebsiteComponents(){
+    fetch('page-components/navigation-bar.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('navigation-bar-placeholder').innerHTML = html;
+        })
+    fetch('page-components/product-list-intro.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('product-list-intro-placeholder').innerHTML = html;
+        })
+    fetch('page-components/footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer-placeholder').innerHTML = html;
+        })
+}
+
+//define a list of product information
+
 
 function clickedOn(id){
     // console.log(productDisplays.children[id].querySelector(".product-name-text").innerHTML + " was clicked");
@@ -234,7 +240,6 @@ function addProductColour(ColourGrid, colour)
             ))
 }
 
-const totalPossibleStars = 5;
 function addStars(productRatingElement, numberOfStarts)
 {
     for (let i = 0; i < numberOfStarts; i++)
@@ -251,9 +256,7 @@ function addNumberOfReviews(reviewElement, numberOfReviews)
     reviewElement.innerHTML = `(${numberOfReviews})`;
 }
 
-let basketItems = {};
 
-localStorage.setItem('basketItems', JSON.stringify(basketItems));
 
 //add product to basket
 function onAddToCardCrossClicked(id)
@@ -270,4 +273,3 @@ function onAddToCardCrossClicked(id)
 
 
 //load the product list
-addEventListener('DOMContentLoaded', () => loadProductListPage());

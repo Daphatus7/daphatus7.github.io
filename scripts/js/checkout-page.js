@@ -1,3 +1,5 @@
+import { getInventory, getBasketItems, getInventoryProduct, updateBasketItem, packBasketItems } from '../js/inventory-module.js';
+
 
 //list components that will need for the page
 const componentsToLoad = [
@@ -19,17 +21,21 @@ const componentsToLoad = [
     }
 ]
 
-addEventListener('DOMContentLoaded', () => loadPage());
 
 
 let productInventory = null;
 let basketItems = [];
 let product_list = [];
+addEventListener('DOMContentLoaded', () => loadPage());
 
 function loadPage() {
-    
-    loadInventory();
-    getBasketItems();
+
+    //load Page Elements
+    productInventory = getInventory();
+    //load basket items
+    basketItems = getBasketItems(productInventory);
+    //load components
+    //load Basket visual
     componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
     loadSummaryItem();
     updateOrderSummary();
@@ -73,42 +79,6 @@ function loadSummaryItem() {
                 product_list.appendChild(productDisplay);
             }
         });
-}
-
-/**
- * get basket items from local storage
- */
-function getBasketItems() {
-    // Get the JSON string from localStorage
-    let basketItemString = localStorage.getItem('basketItems');
-    // Convert the JSON string back to a tuple list (or an empty list if null)
-    let localBasketItems = basketItemString ? JSON.parse(basketItemString) : {};
-    let keys = Object.keys(localBasketItems);
-    for (let i = 0; i < keys.length; i++) {
-        let key = keys[i];
-        let quantity = localBasketItems[key];
-        basketItems.push([getInventoryProduct(key), quantity]);
-    }
-}
-
-function loadInventory() {
-    let inventoryItemString = localStorage.getItem('productInventory');
-    //if not null get the data from the string or a list
-    productInventory = inventoryItemString ? JSON.parse(inventoryItemString) : [];
-}
-
-/**
- * fetch the data from inventory database
- * @param productName
- * @returns {*|null}
- */
-function getInventoryProduct(productName) {
-    for (let i = 0; i < productInventory.length; i++) {
-        if (productInventory[i].name === productName) {
-            return productInventory[i];
-        }
-    }
-    return null;
 }
 
 /**

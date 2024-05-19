@@ -36,10 +36,20 @@ const componentsToLoad = [
     }
 ]
 
-//load the components listed above
-componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
+/**
+ * load the components listed above
+ */
+addEventListener("DOMContentLoaded", () => loadPage());
+function loadPage()
+{
+    componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
+}
 
-//fetch the page and insert it into the placeholder
+/**
+ * fetch the page and insert it into the placeholder
+ * @param url
+ * @param placeholderId
+ */
 function fetchPage(url, placeholderId) 
 {
     fetch(url)

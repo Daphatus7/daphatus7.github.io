@@ -52,10 +52,6 @@ function loadIndexPage()
     window.location.href = 'index.html';
 }
 
-
-
-
-
 function updateOrderSummary(){
     let total = 0;
     for(let i = 0; i < basketItems.length; i++) {

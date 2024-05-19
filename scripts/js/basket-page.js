@@ -1,3 +1,5 @@
+import { getInventory, getBasketItems, getInventoryProduct, updateBasketItem, packBasketItems } from '../js/inventory-module.js';
+
 //list components that will need for the page
 const componentsToLoad = [
     {
@@ -19,18 +21,23 @@ let productInventory = null;
 let basketItems = [];
 let product_list = [];
 addEventListener('DOMContentLoaded', () => loadPage());
-
 function loadPage()
 {
-    //load Page Elements
-    loadInventory();
-    //load components
     componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
+    
+    //load Page Elements
+    productInventory = getInventory();
     //load basket items
-    getBasketItems();
+    basketItems = getBasketItems(productInventory);
+    //load components 
+
     //load Basket visual
     loadBasketItem();
     updateOrderSummary();
+    
+    //bind keys
+    document.querySelector("#checkout-button").addEventListener('click', () => loadCheckoutPage());
+
 }
 
 //fetch the page and insert it into the placeholder
@@ -42,61 +49,18 @@ function fetchPage(url, placeholderId) {
         })
 }
 
-/**
- * get basket items from local storage
- */
-function getBasketItems() {
-    // Get the JSON string from localStorage
-    let basketItemString = localStorage.getItem('basketItems');
-    // Convert the JSON string back to a tuple list (or an empty list if null)
-    let localBasketItems = basketItemString ? JSON.parse(basketItemString) : {};
-    let keys = Object.keys(localBasketItems);
-    for (let i = 0; i < keys.length; i++) {
-        let key = keys[i];
-        let quantity = localBasketItems[key];
-        basketItems.push([getInventoryProduct(key), quantity]);
-    }
-}
-
-function loadInventory() {
-    let inventoryItemString = localStorage.getItem('productInventory');
-    //if not null get the data from the string or a list
-    productInventory = inventoryItemString ? JSON.parse(inventoryItemString) : [];
-}
-
-/**
- * fetch the data from inventory database
- * @param productName
- * @returns {*|null}
- */
-function getInventoryProduct(productName) {
-    for (let i = 0; i < productInventory.length; i++) {
-        if (productInventory[i].name === productName) {
-            return productInventory[i];
-        }
-    }
-    return null;
-}
-
-/**
- * save changes in the basket
- */
-function updateBasketItem() {
-    localStorage.setItem('basketItems', JSON.stringify(packBasketItems()));
-}
-
 
 function removeItem(id) {
     //remove item from basket
     basketItems.splice(id, 1);
-    updateBasketItem();
+    updateBasketItem(basketItems);
     //update visual
     loadBasketItem(basketItems);
 }
 
 function increaseQuantity(id) {
     basketItems[id][1]+=1;
-    updateBasketItem();
+    updateBasketItem(basketItems);
     //update visual
     updateQuantity(id,basketItems[id][1]);
 }
@@ -109,7 +73,7 @@ function decreaseQuantity(id) {
         //remove item from basket
         removeItem(id);
     } else {
-        updateBasketItem();
+        updateBasketItem(basketItems);
         //update visual
     }
     updateQuantity(id,basketItems[id][1]);
@@ -119,19 +83,6 @@ function updateQuantity(id, quantity)
 {
     updateOrderSummary();
     product_list.children[id].querySelector(".product-quantity").innerText = quantity;
-}
-
-/**
- * add basket items into a tuple that can be used in local storage
- * (name, quantity)
- * @returns {{}}
- */
-function packBasketItems() {
-    let packedBasketItems = {};
-    for (let i = 0; i < basketItems.length; i++) {
-        packedBasketItems[basketItems[i][0].name] = basketItems[i][1];
-    }
-    return packedBasketItems;
 }
 
 function updateOrderSummary() {
@@ -147,7 +98,6 @@ function updateOrderSummary() {
     document.getElementById("order-gst").innerText = `$${(total * gst).toFixed(2)}`;
     document.getElementById("order-total").innerText = `$${(total + shipping + total * gst).toFixed(2)}`;
 }
-
 
 //load the website components
 function loadBasketItem() {
@@ -179,5 +129,4 @@ function loadCheckoutPage()
 {
     window.location.href = 'checkout-page.html';
 }
-
 
