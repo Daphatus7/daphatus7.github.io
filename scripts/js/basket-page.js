@@ -9,10 +9,6 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/basket-order-summary.html',
-        placeholderId: 'basket-summary-placeholder'
-    },
-    {
         url: 'page-components/footer.html',
         placeholderId: 'footer-placeholder'
     }
@@ -31,9 +27,8 @@ function loadPage()
     basketItems = getBasketItems();
     //load Basket visual
     loadBasketItem(basketItems);
-
+    updateOrderSummary();
 }
-//load the components listed above
 
 //fetch the page and insert it into the placeholder
 function fetchPage(url, placeholderId) {
@@ -69,14 +64,45 @@ function getProductInventory(productName) {
             return productInventory[i];
         }
     }
+    return null;
 }
 
 function removeItem(id) {
     //remove item from basket
     basketItems.splice(id, 1);
-    localStorage.setItem('basketItems', JSON.stringify(packBasketItems()));
+    updateBasketItem();
     //update visual
     loadBasketItem(basketItems);
+}
+
+function increaseQuantity(id) {
+    basketItems[id][1]+=1;
+    updateBasketItem();
+    //update visual
+    updateQuantity(id,basketItems[id][1]);
+}
+
+function updateBasketItem() {
+    localStorage.setItem('basketItems', JSON.stringify(packBasketItems()));
+}
+
+function decreaseQuantity(id) {
+    basketItems[id][1]-=1;
+    let remain = basketItems[id][1];
+    if (remain === 0) {
+        //remove item from basket
+        removeItem(id);
+    } else {
+        updateBasketItem();        
+        //update visual
+    }
+    updateQuantity(id,basketItems[id][1]);
+}
+
+function updateQuantity(id, quantity)
+{
+    updateOrderSummary();
+    product_list.children[id].querySelector(".product-quantity").innerText = quantity;
 }
 
 function packBasketItems() {
@@ -85,17 +111,29 @@ function packBasketItems() {
         packedBasketItems[basketItems[i][0].name] = basketItems[i][1];
     }
     return packedBasketItems;
+}
 
+function updateOrderSummary() {
+    let total = 0;
+    for(let i = 0; i < basketItems.length; i++) {
+        //quantity * price
+        total += basketItems[i][1] * basketItems[i][0].price;
+    }
+    let shipping = 30;
+    let gst = 0.1;
+    document.getElementById("order-subtotal").innerText = `$${total.toFixed(2)}`;
+    document.getElementById("order-shipping").innerText = `$${shipping.toFixed(2)}`;
+    document.getElementById("order-gst").innerText = `$${(total * gst).toFixed(2)}`;
+    document.getElementById("order-total").innerText = `$${(total + shipping + total * gst).toFixed(2)}`;
 }
 
 
+let product_list = [];
 //load the website components
 function loadBasketItem(items) {
-    let product_list = document.getElementsByClassName('basket-products')[0];
-    
+    product_list = document.getElementsByClassName('basket-products')[0];
     //hard remove all elements
     product_list.innerHTML = "";
-    
     //load items
     fetch('../page-components/templates/basket-item-display-template.html')
         .then(response => response.text())
@@ -109,14 +147,19 @@ function loadBasketItem(items) {
                 productDisplay.querySelector(".basket-image").src = items[i][0].imagePath;
                 productDisplay.id = i;
                 productDisplay.querySelector(".remove-button").addEventListener('click', () => removeItem(productDisplay.id));
+                productDisplay.querySelector(".quantity-icon-plus").addEventListener('click', () => increaseQuantity(productDisplay.id));
+                productDisplay.querySelector(".quantity-icon-minus").addEventListener('click', () => decreaseQuantity(productDisplay.id));
+
                 product_list.appendChild(productDisplay);
             }
         });
 }
 
-addEventListener('DOMContentLoaded', () => loadPage());
 
 function loadCheckoutPage()
 {
     window.location.href = 'checkout-page.html';
 }
+
+
+addEventListener('DOMContentLoaded', () => loadPage());

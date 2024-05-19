@@ -4,8 +4,6 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket Page</title>
     <link rel="stylesheet" href="scripts/css/main.css">
-
-    <script src="/scripts/js/basket-item-loader.js"></script>
     <script src="/scripts/js/basket-page.js"></script>
     <script src="/scripts/js/navigation-bar.js"></script>
 
@@ -26,8 +24,34 @@
 <!--    basket summary-->
     <div id = "right__container">
         <div id="item-count" class="input-text">2 items</div>
-        <div id= "basket-summary-placeholder" class = "not-sidebar"></div>
-    </div>
+            <div id="checkout-summary-panel-basket-page" class = "inner-container contrast-background not-sidebar">
+                <h1 class="heading">Your Order Summary</h1>
+                <div class="product-display">
+                    <div class = "summary-image-container">
+                    </div>
+                    <div id="checkout-order-items-placeholder"></div>
+                    <!--Summery-->
+                    <div class="far-between description">
+                        <p>Subtotal</p>
+                        <p id = "order-subtotal">$602.00</p>
+                    </div>
+                    <div class="far-between description">
+                        <p>Shipping</p>
+                        <p id = "order-shipping">$45.80</p>
+                    </div>
+                    <div class="far-between description">
+                        <p>GST</p>
+                        <p id= "order-gst">$30.35</p>
+                    </div>
+                    <div class="black-line"></div>
+                    <div class="far-between description" id="total-amount">
+                        <p class="subheading" style="font-size: 25px">Total</p>
+                        <p class="subheading" id= "order-total" style="font-size: 25px; font-weight: 400">$647.80</p>
+                    </div>
+                </div>
+            </div>
+            <a class = "button--large" onclick="loadCheckoutPage()">Proceed to Checkout</a>
+        </div>
 </section>
 <!--Footer-->
 <div id = "footer-placeholder">10</div>

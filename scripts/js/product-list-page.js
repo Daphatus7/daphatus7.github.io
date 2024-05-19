@@ -189,7 +189,6 @@ function displayProducts(products) {
                 // add review count
                 addNumberOfReviews(productDisplay.querySelector(".product-review-count"), productInventory[i].numberOfReviews);
                 
-
                 productDisplay.querySelector(".add-to-cart-button-cross").addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay.id));
                 productDisplays.appendChild(productDisplay);
                 
