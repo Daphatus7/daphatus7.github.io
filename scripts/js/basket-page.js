@@ -78,6 +78,7 @@ function removeItem(id) {
     //update visual
     loadBasketItem(basketItems);
 }
+
 function packBasketItems() {
     let packedBasketItems = {};
     for (let i = 0; i < basketItems.length; i++) {

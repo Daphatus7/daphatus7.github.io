@@ -47,11 +47,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
-#gold{
-    background-color: #E8BB47
-}
-
-
 /*use when 2 components in the far opposite*/
 .far-between{
     display: flex;
@@ -465,19 +460,14 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .like-button{
     display: flex;
-    height: 20px;
-    width: auto;
+    height: 30px;
+    width: 30px;
     padding: 5px;
     margin-top: 40px;
     margin-left: auto;
 }
 
 .remove-button {
-    height: 15px;
-}
-
-.like-button {
-    width: 15px;
     height: 15px;
 }
 .product-price-block {
@@ -531,12 +521,6 @@ input[type="search"]::-webkit-search-cancel-button {
 .remove-button {
     height: 15px;
 }
-
-.like-button {
-    width: 15px;
-    height: 15px;
-}
-
 
 .quantity-icon-plus{
     width: 1vh;
@@ -641,4 +625,304 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-top: 30px;
     margin-left: 10%;
     padding-bottom: 30px;
+}
+
+
+/*tertiary-panel*/
+
+#tertiarytextelement{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    width: 50vw;
+}
+.tertiary-visual{
+    display: none;
+}
+#tertiary-container{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 926px;
+    background-image: url("images/LR.jpg");
+    /*parallax*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#shopnow{
+    width: 30%;
+}
+#learnmore{
+    width: 30%;
+}
+
+/*mobile optimization*/
+@media (max-width: 430px){
+    #tertiary-visual{
+        display: block;
+        width: 95vw;
+    }
+    .mobile-caption{
+        display: block;
+        margin-left: auto;
+        padding: 8px;
+    }
+    #tertiary-container{
+        background-image: none;
+        height: 300px;
+    }
+
+    #tertiarytextelement{
+        display: none;
+    }
+}
+
+
+
+
+/*progress bar ---------------------------*/
+.progress-bar-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+}
+.black-line {
+    width: 100%;
+}
+.progress-bar-container > img{
+    width: 40px;
+    height: auto;
+}
+
+
+
+/*product-page-product-information------------------*/
+#product-information-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+}
+
+.product-information-sub-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-color-choices > .colour-selection-circle{
+    width: 30px;
+    height: 30px;
+}
+
+
+/*product page product display -----------------*/
+
+.product-display__breadcrumb{
+    font-size: var(--description-font-size);
+    margin-left: 3%;
+}
+
+.product-display__description-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#product__image {
+    width: 100%;
+    height: 90%;
+}
+.product-color-choices{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+
+.add-to-cart-block{
+    display: flex;
+    flex-direction: row;
+}
+.product-price-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-description-text{
+    width: 95%;
+}
+
+
+.quantity{
+    background-color: transparent;
+}
+/*mobile optimization*/
+@media screen and (max-width: 768px){
+    .add-to-cart-block{
+        flex-direction: column;
+    }
+}
+
+
+/*An overlay for add to basket effect*/
+#add-to-cart-effect{
+    position: fixed;
+    height: 150px;
+    width: 300px;
+    /*position*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*hide when not interacting*/
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 100;
+}
+@media (min-width: 911px) {
+    #add-to-cart-effect {
+        height: 200px;
+        width: 360px;
+    }
+}
+
+@media (max-width: 391px) {
+    #add-to-cart-effect {
+        height: 220px;
+        width: 310px;
+    }
+}
+
+#add-to-cart-effect-background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+#add-to-cart-effect.visible{
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1;
+}
+#add-to-cart-effect.hide{
+    display: none;
+    opacity: 0;
+    transition: ease-out 0.3s;
+}
+#add-to-cart-cross-sign{
+    height: 2vh;
+}
+
+
+/*product list intro --------------------*/
+
+.product-list-intro-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+.product-list-intro-image {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-list-intro-text{
+    width: 50%;
+}
+
+/*Mobile optimization*/
+@media (max-width: 768px) {
+    .product-list-intro-text{
+        width: 90%;
+    }
+}
+
+.product-list-intro-title-text{
+    margin-bottom: 0;
+    margin-top: 6vh;
+
+}
+
+
+/*order confirmation panel ------------------------*/
+
+#confirmation__shipment__description{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*news panel---------------------*/
+
+#news-panel-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.text{
+    width: 80%;
+}
+#main-visual{
+    width: 60vw;
+    height: auto;
+}
+
+/*leave a review ------------------- */
+.review-container{
+    display: flex;
+    width: 100vw;
+    height: 300px;
+    background-color: #FAFAFA;
+    justify-content: center;
+    align-items: center;
+}
+.review-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    outline: 1px solid black;
+    width: 50%;
+    height: 70%;
+}
+#review-text{
+    text-align: center;
+    padding: 20px 60px 0px;
+}
+h1{
+    margin-bottom: 0;
+}
+h2{
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/*mobile optimization*/
+@media (max-width: 768px){
+    .review-panel{
+        width: 80%;
+    }
 }

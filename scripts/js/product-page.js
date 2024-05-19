@@ -63,12 +63,12 @@ function changeToGold()
 }
 function changeToSilver()
 {
-    changeColour("Silver", 'images/light-black-image.jpg');
+    changeColour("Silver", 'images/light-silver-image.jpg');
 
 }
 function changeToBlack()
 {
-    changeColour("Black", 'images/light-silver-image.jpg');
+    changeColour("Black", 'images/light-black-image.jpg');
 }
 
 function changeColour(colour, imageUrl)

@@ -336,3 +336,144 @@ h2{
 .filter-button{
     font-size: 0.7rem;
 }
+
+
+/*tertiary-panel*/
+
+#soren-description-text{
+    text-align: center;
+}
+
+
+/*product-page-product-information------------------*/
+.subheadings{ /*font-databse dosent work*/
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+/*product page product display -----------------*/
+
+.product-display__breadcrumb{
+    font-size: var(--description-font-size);
+}
+
+#product-ID{
+    font-size: 10px;
+}
+#current-colour-name{
+    font-size: 14px;
+}
+#product-name{
+    font-size: var(--title-font-size);
+    font-weight: 800;
+}
+.currency{
+    font-size: 14px;
+}
+
+.product-price{
+    font-size: var(--title-font-size);
+}
+
+/*description*/
+.product-description-title{
+    font-size: var(--title-font-size);
+    font-weight: 600;
+}
+
+.product-description-text{
+    font-size: var(--description-font-size);
+}
+
+
+
+/*product list intro --------------------*/
+
+.product-list-intro-text{
+    text-align: center;
+}
+
+/*Mobile optimization*/
+@media (max-width: 768px) {
+    .product-list-intro-text{
+        text-align: center;
+    }
+}
+
+.product-list-intro-title-text{
+    font-size: 2.5rem;
+
+}
+
+@media (max-width: 767px) {
+    .product-list-intro-text{
+        font-size: 0.8rem;
+    }
+}
+
+/*news panel---------------------*/
+
+.heading{
+    font-size: 28px;
+    font-weight: 700;
+}
+.text{
+    margin-top: 2vh;
+    font-size: 13px;
+    font-weight: 400;
+}
+.secondary-text{
+    text-decoration-line: underline;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+
+/*leave a review ------------------- */
+.review-container{
+    display: flex;
+    width: 100vw;
+    height: 300px;
+    background-color: #FAFAFA;
+    justify-content: center;
+    align-items: center;
+}
+.review-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    outline: 1px solid black;
+    width: 50%;
+    height: 70%;
+}
+#review-text{
+    text-align: center;
+    padding: 20px 60px 0px;
+}
+h1{
+    margin-bottom: 0;
+}
+h2{
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.star-rating{
+    color:grey;
+    font-size: 40px;
+}
+/*mobile optimization*/
+@media (max-width: 768px){
+    .review-panel{
+        width: 80%;
+    }
+    h2{
+        font-size: 12px;
+    }
+
+}

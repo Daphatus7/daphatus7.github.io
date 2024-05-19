@@ -1,85 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <style>
-        #tertiarytextelement{
-            position: absolute;
-            align-items: center;
-            display: flex;
-            justify-items: center;
-            flex-direction: column;
-            width: 50vw;
-            background-color: rgba(255, 255, 255, 0.20);
-            padding: 5vw;
-        }
-        #tertiary-visual{
-            display: none;
-        }
-        #tertiary-container{
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 926px;
-            background-image: url("images/LR.jpg");
-            background-color: rgba(255, 255, 255, 0.49);
-            /*parallax*/
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        #shopnow{
-            margin-top: 2vw;
-            width: 30%;
-        }
-        #learnmore{
-            margin: 1vw;
-            background: none;
-            border:1px solid black;
-            width: 30%;
-            color: black;
-        }
-
-        #soren-description-text{
-            text-align: center;
-        }
-
-        /*mobile optimization*/
-        @media (max-width: 430px){
-            #tertiary-visual{
-                display: block;
-                width: 95vw;
-            }
-            .mobile-caption{
-                display: block;
-                margin-left: auto;
-                padding: 8px;
-            }
-            #tertiary-container{
-                background-image: none;
-                height: 300px;
-            }
-
-            #tertiarytextelement{
-                display: none;
-            }
-
-        }
-
-
-    </style>
 </head>
-
 <body>
 <div id="tertiary-container">
-    <img id="tertiary-visual" src="../images/LR.jpg"/>
+    <img class="tertiary-visual" src="../images/LR.jpg"/>
     <div class="sub-description mobile-caption">Shop Our 2024 Autumn/Winter Collection ></div>
     <div id="tertiarytextelement">
         <div id="tertiary-panel-title" style="font-size: 40px; font-weight: 700;">Soren Collection</div>

@@ -1,10 +1,34 @@
+
+
+
 :root{
     --black: #000000;
     --white: #FFFFFF;
     --offwhite: #FAFAFA;
     --grey:#7B7575;
     --dark-grey:#6a6a6a;
+    --gold:#E8BB47;
+    --silver:#C0C0C0;
+    --brown:#B69A7A;
 }
+
+
+.gold{
+    background-color: var(--gold);
+}
+.black{
+    background-color: var(--black);
+}
+.grey {
+    background-color: var(--dark-grey);
+}
+.silver{
+    background-color: var(--silver);
+}
+.brown{
+    background-color: var(--brown);
+}
+
 
 .black-text{
     color: var(--black);
@@ -112,9 +136,6 @@ footer {
     color: var(--white);
 }
 
-.black-line {
-    border-bottom: 0.5px solid var(--black);
-}
 .white-line{
     border-bottom: 0.5px solid var(--white);
 }
@@ -179,7 +200,6 @@ input::placeholder {
     color: var(--black);
 }
 .colour-selection-circle{
-
     outline: 1px solid var(--grey);
 }
 
@@ -209,14 +229,57 @@ input::placeholder {
 .edit-button {
     color: var(--black);
 }
-.colour-selection-circle{
-    outline: 1px solid var(--grey);
-}
-
 
 /*product list -------------*/
 .filter-button {
     background-color: var(--white);
     color: var(--black);
     border: solid 1px var(--black);
+}
+
+
+/*tertiary-panel*/
+
+#tertiarytextelement{
+    background-color: rgba(255, 255, 255, 0.20);
+}
+#tertiary-container {
+    background-color: rgba(255, 255, 255, 0.49);
+}
+
+#learnmore{
+    border:1px solid black;
+    color: black;
+}
+
+
+
+/*product page product display -----------------*/
+.quantity{
+    color: black;
+}
+
+
+/*An overlay for add to basket effect*/
+#add-to-cart-effect{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    background-color: var(--white);
+}
+
+
+/*leave a review ------------------- */
+.review-container{
+
+    background-color: #FAFAFA;
+
+}
+.review-panel{
+
+    background-color: #FFF;
+    outline: 1px solid black;
+
+}
+
+.star-rating{
+    color:grey;
 }
