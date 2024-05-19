@@ -78,7 +78,9 @@ footer {
     outline: 1px solid var(--black);
     background-color: transparent;
 }
-
+#checkout-summary-panel {
+    border-top: 5px solid #161616;
+}
 
 /*footer*/
 /*desk top*/
@@ -181,6 +183,9 @@ input::placeholder {
 
 
 /*product card ------------- */
+.quantity{
+    background-color: transparent;
+}
 .quantity-button {
     outline: 1px solid var(--black);
 }
@@ -269,15 +274,11 @@ input::placeholder {
 
 /*leave a review ------------------- */
 .review-container{
-
     background-color: #FAFAFA;
-
 }
 .review-panel{
-
     background-color: #FFF;
     outline: 1px solid black;
-
 }
 
 .star-rating{

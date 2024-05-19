@@ -84,11 +84,6 @@ input[type="search"]::-webkit-search-cancel-button {
     .category-card {
         overflow: hidden;
     }
-    .category-card:hover{
-        transform: scale(1.05);
-        overflow: hidden;
-        transition: transform 0.5s, overflow 0.5s
-    }
 }
 
 
@@ -113,8 +108,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 /*checkout page*/
-
-
 .equal-divider-container {
     display: flex;
     flex-direction: row;
@@ -126,7 +119,6 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 30px;
     outline: none;
-    border-bottom: 1px solid black;
 }
 
 .empty{
@@ -336,9 +328,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /*mobile menu-------------------*/
-
-
-
 #mobile--menu-container{
     position: fixed;
     top: 0;
@@ -347,7 +336,6 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-wrap: wrap;
     flex-direction: column;
     height: 100vh;
-    /*padding: 25px;*/
     background-color: #ffffff;
     /*animation*/
     transform: translateX(-100%);
@@ -462,9 +450,6 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     height: 30px;
     width: 30px;
-    padding: 5px;
-    margin-top: 40px;
-    margin-left: auto;
 }
 
 .remove-button {
@@ -558,9 +543,7 @@ input[type="search"]::-webkit-search-cancel-button {
     align-items: center;
     width: 95%;
 }
-.filter-button {
-    padding: 10px 20px;
-}
+
 .page-number{
     display: flex;
     flex-direction: row;
@@ -620,15 +603,11 @@ input[type="search"]::-webkit-search-cancel-button {
     }
 }
 
-/*confirmation page*/
-#progress-bar-placeholder{
-    padding-top: 30px;
-    margin-left: 10%;
-    padding-bottom: 30px;
-}
-
 
 /*tertiary-panel*/
+#soren-description-text{
+    text-align: center;
+}
 
 #tertiarytextelement{
     position: absolute;
@@ -638,9 +617,18 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-direction: column;
     width: 50vw;
 }
+
 .tertiary-visual{
     display: none;
 }
+@media(max-width: 391px){
+    .tertiary-visual{
+        width: 100vw;
+        height: auto;
+        display: block;
+    }
+}
+
 #tertiary-container{
     overflow: hidden;
     position: relative;
@@ -649,7 +637,7 @@ input[type="search"]::-webkit-search-cancel-button {
     align-items: center;
     flex-direction: column;
     height: 926px;
-    background-image: url("images/LR.jpg");
+    background-image: url('images/LR.jpg');
     /*parallax*/
     background-attachment: fixed;
     background-position: center;
@@ -764,10 +752,6 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 95%;
 }
 
-
-.quantity{
-    background-color: transparent;
-}
 /*mobile optimization*/
 @media screen and (max-width: 768px){
     .add-to-cart-block{
@@ -822,7 +806,6 @@ input[type="search"]::-webkit-search-cancel-button {
 #add-to-cart-effect.hide{
     display: none;
     opacity: 0;
-    transition: ease-out 0.3s;
 }
 #add-to-cart-cross-sign{
     height: 2vh;
@@ -859,11 +842,6 @@ input[type="search"]::-webkit-search-cancel-button {
     }
 }
 
-.product-list-intro-title-text{
-    margin-bottom: 0;
-    margin-top: 6vh;
-
-}
 
 
 /*order confirmation panel ------------------------*/
@@ -872,7 +850,6 @@ input[type="search"]::-webkit-search-cancel-button {
     display: flex;
     flex-direction: row;
 }
-
 
 /*news panel---------------------*/
 
@@ -893,36 +870,40 @@ input[type="search"]::-webkit-search-cancel-button {
 .review-container{
     display: flex;
     width: 100vw;
-    height: 300px;
-    background-color: #FAFAFA;
     justify-content: center;
     align-items: center;
+    height: fit-content;
 }
+
+
 .review-panel{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #FFF;
-    outline: 1px solid black;
     width: 50%;
     height: 70%;
 }
 #review-text{
     text-align: center;
-    padding: 20px 60px 0px;
-}
-h1{
-    margin-bottom: 0;
-}
-h2{
-    font-weight: 400;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 0;
 }
 /*mobile optimization*/
 @media (max-width: 768px){
     .review-panel{
         width: 80%;
     }
+}
+
+/*category card*/
+.category-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-card {
+    /*layout*/
+    position: relative;
+    display: flex;
+    /*make the grid adjust automatically based on the*/
+    flex: 1 1 150px;
+    flex-direction: column;
 }

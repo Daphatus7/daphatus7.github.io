@@ -84,50 +84,13 @@ input::placeholder {
     font-family: "Century Gothic", Arial, sans-serif;
 }
 
-
-
-
-
 /*The outer frame of the panel*/
-.card-panel {
-    /*Spacing*/
-    width: 92vw;
-    padding: 3vh 4vw 3vh 4vw;
-}
 
 .title {
     /*fonts*/
     font-size: 1.5em;
     font-weight: 800;
-    /*spacing*/
-    padding-bottom: 2vh;
-    margin: 0;
-    width: 92vw;
 }
-/*the card container for all cards*/
-.category-card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 0 20px 20px 0;
-}
-
-/*each card that consist of a image and a label*/
-.category-card {
-    /*animation*/
-    transition: ease-in-out 0.5s;
-    /*layout*/
-    position: relative;
-    display: flex;
-    /*make the grid adjust automatically based on the*/
-    flex: 1 1 150px;
-
-    flex-direction: column;
-    /*spacing*/
-    width: 280px;
-    height: auto;
-}
-
 
 /*Category-card*/
 
@@ -160,9 +123,6 @@ h3{
 
 
 /*checkout-summary*/
-#checkout-summary-panel {
-    border-top: 5px solid #161616;
-}
 .terms-conditions{
     text-align: right;
     font-size: 12px;
@@ -276,10 +236,6 @@ h2{
 
 
 /*product-display ----------*/
-.quantity-button {
-    outline: 1px solid black;
-}
-
 .product-quantity {
     font-size: 14px;
 }
@@ -335,13 +291,6 @@ h2{
 
 .filter-button{
     font-size: 0.7rem;
-}
-
-
-/*tertiary-panel*/
-
-#soren-description-text{
-    text-align: center;
 }
 
 
@@ -432,46 +381,16 @@ h2{
 
 
 /*leave a review ------------------- */
-.review-container{
-    display: flex;
-    width: 100vw;
-    height: 300px;
-    background-color: #FAFAFA;
-    justify-content: center;
-    align-items: center;
-}
-.review-panel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFF;
-    outline: 1px solid black;
-    width: 50%;
-    height: 70%;
-}
-#review-text{
-    text-align: center;
-    padding: 20px 60px 0px;
-}
-h1{
-    margin-bottom: 0;
-}
 h2{
     font-weight: 400;
     font-size: 20px;
-    margin-top: 10px;
-    margin-bottom: 0;
 }
 
 .star-rating{
-    color:grey;
     font-size: 40px;
 }
 /*mobile optimization*/
 @media (max-width: 768px){
-    .review-panel{
-        width: 80%;
-    }
     h2{
         font-size: 12px;
     }

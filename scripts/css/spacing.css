@@ -3,7 +3,12 @@
     margin: 0 5vw 0 1vw;
 }
 
-
+.title {
+    /*spacing*/
+    padding-bottom: 2vh;
+    margin: 0;
+    width: 92vw;
+}
 
 
 
@@ -46,7 +51,7 @@
 
 /* scroll horizontal */
 @media (max-width: 768px) {
-    .category-card-container {
+    .category-card {
        gap: 60px;
     }
 }
@@ -641,4 +646,51 @@ h1{
 h2{
     margin-top: 10px;
     margin-bottom: 0;
+}
+
+.review-container{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#review-star{
+    padding-bottom: 20px;
+}
+/*category card*/
+.card-panel {
+    /*Spacing*/
+    width: 92vw;
+    padding: 3vh 4vw 3vh 4vw;
+}
+.title {
+    padding-bottom: 2vh;
+    margin: 0;
+    width: 92vw;
+}
+.category-card-container {
+    gap: 20px;
+    padding: 0 20px 20px 0;
+}
+.category-card {
+    /*spacing*/
+    width: 280px;
+    height: auto;
+    margin-right: 40px;
+}
+
+/*confirmation page*/
+#progress-bar-placeholder{
+    padding-top: 30px;
+    margin-left: 10%;
+    padding-bottom: 30px;
+}
+
+.like-button{
+    padding: 5px;
+    margin-top: 40px;
+    margin-left: auto;
+}
+
+.filter-button {
+    padding: 10px 20px;
 }

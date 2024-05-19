@@ -1,0 +1,16 @@
+﻿/*category card*/
+.category-card {
+    /*animation*/
+    transition: ease-in-out 0.5s;
+}
+
+
+#add-to-cart-effect.hide{
+    transition: ease-out 0.3s;
+}
+
+.category-card:hover{
+    transform: scale(1.05);
+    overflow: hidden;
+    transition: transform 0.5s, overflow 0.5s
+}

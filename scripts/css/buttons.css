@@ -87,7 +87,6 @@ a:hover{
 @media (min-width: 1367px){
     .button--large {
         display: flex;
-        width: 480px;
         justify-content: center;
         align-items: center;
         background-color: #4A4A4A;
