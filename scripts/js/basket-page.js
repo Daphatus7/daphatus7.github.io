@@ -17,16 +17,19 @@ const componentsToLoad = [
 
 let productInventory = null;
 let basketItems = [];
+let product_list = [];
+addEventListener('DOMContentLoaded', () => loadPage());
+
 function loadPage()
 {
     //load Page Elements
-    setInventory();
+    loadInventory();
     //load components
     componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
     //load basket items
-    basketItems = getBasketItems();
+    getBasketItems();
     //load Basket visual
-    loadBasketItem(basketItems);
+    loadBasketItem();
     updateOrderSummary();
 }
 
@@ -39,6 +42,9 @@ function fetchPage(url, placeholderId) {
         })
 }
 
+/**
+ * get basket items from local storage
+ */
 function getBasketItems() {
     // Get the JSON string from localStorage
     let basketItemString = localStorage.getItem('basketItems');
@@ -48,17 +54,22 @@ function getBasketItems() {
     for (let i = 0; i < keys.length; i++) {
         let key = keys[i];
         let quantity = localBasketItems[key];
-        basketItems.push([getProductInventory(key), quantity]);
+        basketItems.push([getInventoryProduct(key), quantity]);
     }
-    return basketItems;
 }
 
-function setInventory() {
+function loadInventory() {
     let inventoryItemString = localStorage.getItem('productInventory');
+    //if not null get the data from the string or a list
     productInventory = inventoryItemString ? JSON.parse(inventoryItemString) : [];
 }
 
-function getProductInventory(productName) {
+/**
+ * fetch the data from inventory database
+ * @param productName
+ * @returns {*|null}
+ */
+function getInventoryProduct(productName) {
     for (let i = 0; i < productInventory.length; i++) {
         if (productInventory[i].name === productName) {
             return productInventory[i];
@@ -66,6 +77,14 @@ function getProductInventory(productName) {
     }
     return null;
 }
+
+/**
+ * save changes in the basket
+ */
+function updateBasketItem() {
+    localStorage.setItem('basketItems', JSON.stringify(packBasketItems()));
+}
+
 
 function removeItem(id) {
     //remove item from basket
@@ -82,9 +101,6 @@ function increaseQuantity(id) {
     updateQuantity(id,basketItems[id][1]);
 }
 
-function updateBasketItem() {
-    localStorage.setItem('basketItems', JSON.stringify(packBasketItems()));
-}
 
 function decreaseQuantity(id) {
     basketItems[id][1]-=1;
@@ -93,7 +109,7 @@ function decreaseQuantity(id) {
         //remove item from basket
         removeItem(id);
     } else {
-        updateBasketItem();        
+        updateBasketItem();
         //update visual
     }
     updateQuantity(id,basketItems[id][1]);
@@ -105,6 +121,11 @@ function updateQuantity(id, quantity)
     product_list.children[id].querySelector(".product-quantity").innerText = quantity;
 }
 
+/**
+ * add basket items into a tuple that can be used in local storage
+ * (name, quantity)
+ * @returns {{}}
+ */
 function packBasketItems() {
     let packedBasketItems = {};
     for (let i = 0; i < basketItems.length; i++) {
@@ -128,9 +149,8 @@ function updateOrderSummary() {
 }
 
 
-let product_list = [];
 //load the website components
-function loadBasketItem(items) {
+function loadBasketItem() {
     product_list = document.getElementsByClassName('basket-products')[0];
     //hard remove all elements
     product_list.innerHTML = "";
@@ -138,18 +158,17 @@ function loadBasketItem(items) {
     fetch('../page-components/templates/basket-item-display-template.html')
         .then(response => response.text())
         .then(template => {
-            for (let i = 0; i < items.length; i++) {
+            for (let i = 0; i < basketItems.length; i++) {
                 let productDisplay = document.createElement('div');
                 productDisplay.innerHTML = template;
-                productDisplay.querySelector(".product-name-text").innerText = items[i][0].name;
-                productDisplay.querySelector(".product__price").innerText = items[i][0].price;
-                productDisplay.querySelector(".product-quantity").innerText = items[i][1];
-                productDisplay.querySelector(".basket-image").src = items[i][0].imagePath;
+                productDisplay.querySelector(".product-name-text").innerText = basketItems[i][0].name;
+                productDisplay.querySelector(".product__price").innerText = basketItems[i][0].price;
+                productDisplay.querySelector(".product-quantity").innerText = basketItems[i][1];
+                productDisplay.querySelector(".basket-image").src = basketItems[i][0].imagePath;
                 productDisplay.id = i;
                 productDisplay.querySelector(".remove-button").addEventListener('click', () => removeItem(productDisplay.id));
                 productDisplay.querySelector(".quantity-icon-plus").addEventListener('click', () => increaseQuantity(productDisplay.id));
                 productDisplay.querySelector(".quantity-icon-minus").addEventListener('click', () => decreaseQuantity(productDisplay.id));
-
                 product_list.appendChild(productDisplay);
             }
         });
@@ -162,4 +181,3 @@ function loadCheckoutPage()
 }
 
 
-addEventListener('DOMContentLoaded', () => loadPage());

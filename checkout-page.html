@@ -4,7 +4,6 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkout page</title>
     <link rel="stylesheet" href="scripts/css/main.css">
-
     <script src="scripts/js/checkout-page.js"></script>
     <script src="scripts/js/navigation-bar.js"></script>
 </head>
@@ -172,8 +171,33 @@
         </form>
 <!--        Order Summary table-->
         <div class ="not-sidebar">
-            <div id= "checkout-order-items-placeholder" class="inner-container"></div>
+            <div id="checkout-summary-panel-basket-page" class = "inner-container contrast-background">
+                <h1 class="heading">Your Order Summary</h1>
+                <div class="product-display">
+                    <div class="checkout-items"></div>
+                    <!--Summery-->
+                    <div class="far-between description">
+                        <p>Subtotal</p>
+                        <p id = "order-subtotal">$602.00</p>
+                    </div>
+                    <div class="far-between description">
+                        <p>Shipping</p>
+                        <p id = "order-shipping">$45.80</p>
+                    </div>
+                    <div class="far-between description">
+                        <p>GST</p>
+                        <p id = "order-gst">$30.35</p>
+                    </div>
+                    <div class="black-line"></div>
+                    <div class="far-between description" id="total-amount">
+                        <p class="subheading" style="font-size: 25px">Total</p>
+                        <p class="subheading" id="order-total" style="font-size: 25px; font-weight: 400">$647.80</p>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+<!--        checkout button-->
         <div class = "sidebar">
             <div class="far-between sidebar-container">
                 <div class="sidebar inner-container" id="checkout-button-section">
