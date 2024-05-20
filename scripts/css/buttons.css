@@ -111,3 +111,10 @@ a:hover{
         width: auto;
     }
 }
+
+#increase-quantity-button{
+    cursor: pointer;
+}
+#decrease-quantity-button{
+    cursor: pointer;
+}
