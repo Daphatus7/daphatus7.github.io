@@ -34,7 +34,6 @@ const delay = 2000;
 let quantity = 1;
 
 
-
 addEventListener('DOMContentLoaded', () => loadPage());
 function loadPage() {
     componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
@@ -49,8 +48,10 @@ function getSelectedProduct() {
 
 function loadSelectedProduct(selectedProduct) {
     console.log("selected product " + selectedProduct.imagePath);
-    console.log(document.getElementById("product__image"));
-    document.getElementById("product__image").src = selectedProduct.imagePath;
+    let placeholderId = document.getElementById("product-page-product-display-placeholder");
+    console.log(placeholderId);
+    console.log(placeholderId.getElementById("product__image"));
+    // placeholderId.querySelector("#product__image").src = selectedProduct.imagePath;
 }
 
 
