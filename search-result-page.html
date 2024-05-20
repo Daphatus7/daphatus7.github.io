@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-list-page</title>
+    <link rel="stylesheet" href="scripts/css/main.css">
+
+    <script src="scripts/js/product-list-page.js"></script>
+    <script src="scripts/js/navigation-bar.js"></script>
+</head>
+<body>
+<!--Navigation bar-->
+<section id = "navigation-bar-placeholder"></section>
+<!--intro-->
+<div id="desktop-search-bar">
+    <input id="desktop-search-input" type="search" placeholder="    Light">
+    <img id="desktop-search-icon" src="images/search-icon.png" onclick="loadSearchPage()"/>
+</div>
+<div id="search-content-display">"Light"</div>
+<!-- the product list panel-->
+<section class = "product-list-panel">
+<!--    Filters-->
+    <div class="filters-panel">
+        <div id="filters-left">
+            <button class="filter-button">
+                Price Range
+            </button>
+            <button class="filter-button">
+                Colour
+            </button>
+            <button class="filter-button">
+                Size
+            </button>
+        </div>
+        <div id="filters-right">
+            <button class="filter-button">
+                Sort by
+            </button>
+        </div>
+    </div>
+<!--    Items, which are loaded dynamically, and be able to load data based on inventory database-->
+    <div class="product-list-items">
+    </div>
+<!--    compensation to fix an issue with layout-->
+    <div class="compensation"></div>
+    <div class="page-number">
+        <div style="font-weight: 600">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div id="arrow-icon">></div>
+    </div>
+</section>
+<section id = "footer-placeholder"></section>
+</body>
+</html>

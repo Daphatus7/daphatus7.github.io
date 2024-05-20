@@ -399,3 +399,14 @@ h2{
     }
 
 }
+
+#desktop-search-input{
+    font-size: 16px;
+}
+
+#search-content-display{
+    font-size: var(--extra-title-font-size);
+}
+#desktop-search::placeholder{
+    color: white;
+}

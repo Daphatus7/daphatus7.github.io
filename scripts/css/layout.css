@@ -906,3 +906,29 @@ input[type="search"]::-webkit-search-cancel-button {
     flex: 1 1 150px;
     flex-direction: column;
 }
+
+#desktop-search-icon{
+    position: absolute;
+    width: 2rem;
+    height: auto;
+    right: 3vw;
+}
+
+#desktop-search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 100vw;
+}
+
+#desktop-search-input{
+    border: none;
+    width: 96vw;
+    height: 40px;
+    border-radius: 10px;
+}
+#search-content-display{
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+}

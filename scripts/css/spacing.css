@@ -694,3 +694,7 @@ h2{
 .filter-button {
     padding: 10px 20px;
 }
+
+#desktop-search-bar{
+    padding-bottom: 4vh;
+}
