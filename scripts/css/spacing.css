@@ -67,8 +67,9 @@
     margin: 5px 0;
 }
 
+
+
 #card-info{
-    margin-top: 30px;
     padding-left: 10px;
     border-radius: 20px;
 }
@@ -401,7 +402,6 @@
     padding-bottom: 2vh;
 }
 .product-list-items {
-    margin-top: 170px;
     gap: 100px;
     row-gap: 50px;
     margin-bottom: 20px;

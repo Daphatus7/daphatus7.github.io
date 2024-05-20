@@ -121,7 +121,10 @@ h3{
     font-weight: 300;
 }
 
+.description-text{
+    font-size: var(--description-font-size);
 
+}
 /*checkout-summary*/
 .terms-conditions{
     text-align: right;
