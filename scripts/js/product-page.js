@@ -5,10 +5,6 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
-        url: 'page-components/product-page-product-display.html',
-        placeholderId: 'product-page-product-display-placeholder'
-    },
-    {
         url: 'page-components/product-page-product-information.html',
         placeholderId: 'product-page-product-information-placeholder'
     },
@@ -32,12 +28,28 @@ let cartEffectTimerHandle;
 const delay = 2000;
 // default qty
 let quantity = 1;
-
+let addToBasketButton;
 
 addEventListener('DOMContentLoaded', () => loadPage());
 function loadPage() {
     componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
     getSelectedProduct();
+    bindButtons();
+}
+
+
+/**
+ * bind buttons for the page
+ */
+function bindButtons() {
+    document.getElementById('decrease-quantity-button').
+    addEventListener('click', () => decreaseQuantity());
+    document.getElementById('increase-quantity-button').
+    addEventListener('click', () => increaseQuantity());
+    addToBasketButton = document.getElementById('add-to-basket');
+    addToBasketButton.addEventListener('click', () => addToBasket());
+    document.getElementById('add-to-cart-cross-sign').
+    addEventListener('click', () => hideAddToCartEffect());
 }
 
 function getSelectedProduct() {
@@ -48,10 +60,10 @@ function getSelectedProduct() {
 
 function loadSelectedProduct(selectedProduct) {
     console.log("selected product " + selectedProduct.imagePath);
-    let placeholderId = document.getElementById("product-page-product-display-placeholder");
-    console.log(placeholderId);
-    console.log(placeholderId.getElementById("product__image"));
-    // placeholderId.querySelector("#product__image").src = selectedProduct.imagePath;
+    document.getElementById("product__image").src = selectedProduct.imagePath;
+    document.getElementById("product-name").innerText = selectedProduct.name;
+    // document.getElementsByClassName("price-name")[0].innerText = selectedProduct.price;
+
 }
 
 
@@ -109,6 +121,7 @@ function changeColour(colour, imageUrl)
 
 function addToBasket()
 {
+    console.log("addToBasket");
     document.getElementById('add-to-cart-effect').classList.add('visible');
     document.getElementById('add-to-cart-effect').classList.remove('hide');
     //hide the cart in 2s
