@@ -138,9 +138,19 @@ function loadWebsiteComponents(){
 //define a list of product information
 
 
+/**
+ * clicked on item by item id in the page - > which maps to the name of the item
+ * add the selected product to load
+ * @param id
+ */
 function clickedOn(id){
-    // console.log(productDisplays.children[id].querySelector(".product-name-text").innerHTML + " was clicked");
+    //load a website based on item clicked on
+    //put item pick into product pag
+    let productPageItem = productInventory[id];
+    localStorage.setItem('selectedProduct', JSON.stringify(productPageItem));
+    window.location.href = 'product-page.html';
 }
+
 function clickedOnLikeButton(id)
 {
     likeButton(productDisplays.children[id]);

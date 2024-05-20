@@ -6,13 +6,16 @@
     <link rel="stylesheet" href="scripts/css/main.css">
 
     <script src="scripts/js/product-list-page.js"></script>
-    <script src="scripts/js/product-display-loader.js"></script>
     <script src="scripts/js/navigation-bar.js"></script>
 </head>
 <body>
-<div id = "navigation-bar-placeholder">2</div>
-<div id = "product-list-intro-placeholder">3</div>
-<div class = "product-list-panel">
+<!--Navigation bar-->
+<section id = "navigation-bar-placeholder"></section>
+<!-- intro nto the category-->
+<section id = "product-list-intro-placeholder"></section>
+<!-- the product list panel-->
+<section class = "product-list-panel">
+<!--    Filters-->
     <div class="filters-panel">
         <div id="filters-left">
             <button class="filter-button">
@@ -31,8 +34,10 @@
             </button>
         </div>
     </div>
+<!--    Items, which are loaded dynamically, and be able to load data based on inventory database-->
     <div class="product-list-items">
     </div>
+<!--    compensation to fix an issue with layout-->
     <div class="compensation"></div>
     <div class="page-number">
         <div style="font-weight: 600">1</div>
@@ -42,6 +47,7 @@
         <div>5</div>
         <div id="arrow-icon">></div>
     </div>
-</div><div id = "footer-placeholder"></div>
+</section>
+<section id = "footer-placeholder"></section>
 </body>
 </html>

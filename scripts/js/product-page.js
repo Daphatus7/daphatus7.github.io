@@ -26,8 +26,35 @@ const componentsToLoad = [
     }
 ]
 
+//remove cart effect time handle
+let cartEffectTimerHandle;
+// delay on using add to cart effect
+const delay = 2000;
+// default qty
+let quantity = 1;
+
+
+
+addEventListener('DOMContentLoaded', () => loadPage());
+function loadPage() {
+    componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
+    getSelectedProduct();
+}
+
+function getSelectedProduct() {
+    let selectedProductString = localStorage.getItem("selectedProduct");
+    let selectedProduct = selectedProductString ? JSON.parse(selectedProductString) : {};
+    loadSelectedProduct(selectedProduct);
+}
+
+function loadSelectedProduct(selectedProduct) {
+    console.log("selected product " + selectedProduct.imagePath);
+    console.log(document.getElementById("product__image"));
+    document.getElementById("product__image").src = selectedProduct.imagePath;
+}
+
+
 // load the components listed above
-componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
 
 // fetch the page and insert it into the placeholder
 function fetchPage(url, placeholderId) {
@@ -37,7 +64,6 @@ function fetchPage(url, placeholderId) {
             document.getElementById(placeholderId).innerHTML = html;
         })
 }
-let quantity = 1;
 
 function increaseQuantity() {
     let quantityDisplay = document.getElementById('product-quantity');
@@ -79,8 +105,7 @@ function changeColour(colour, imageUrl)
     currColour.innerHTML = "Colour: "+ colour;
 }
 
-let cartEffectTimerHandle;
-const delay = 2000;
+
 function addToBasket()
 {
     document.getElementById('add-to-cart-effect').classList.add('visible');
