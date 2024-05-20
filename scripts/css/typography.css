@@ -336,10 +336,7 @@ h2{
     font-size: var(--description-font-size);
 }
 
-
-
 /*product list intro --------------------*/
-
 .product-list-intro-text{
     text-align: center;
 }
@@ -363,7 +360,6 @@ h2{
 }
 
 /*news panel---------------------*/
-
 .heading{
     font-size: 28px;
     font-weight: 700;
