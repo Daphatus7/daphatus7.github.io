@@ -46,12 +46,7 @@
         justify-content: start;
         padding-top: 0.5vw;
     }
-    .add-to-cart-button-cross {
-        background-color: #ffffff;
-        width: 36px;
-        height: 36px;
-        font-style: normal;
-    }
+
     .price {
         font-size: 24px;
     }
@@ -82,6 +77,27 @@
         justify-content: end;
         padding: 0.5vw;
     }
+
+    .checkmark-icon{
+        position: absolute;
+        display: none;
+        right: 0;
+        opacity: 0;
+        transition: ease-in-out 0.2s;
+    }
+    .add-to-cart-button-cross {
+        background-color: #ffffff;
+        width: 36px;
+        height: 36px;
+        font-style: normal;
+        transition: ease-in-out 0.2s;
+        opacity: 1;
+    }
+
+    .add-icon{
+        transition: ease-in-out 0.2s;
+
+    }
 </style>
 
 <body>
@@ -110,9 +126,11 @@
                 <div class="product-review-count">(2)</div>
             </div>
         </div>
+
         <div class = "add-to-cart-button-cross">
-            <img src="../../images/add-icon.png" alt="">
+            <img class = "add-icon" src="../../images/add-icon.png" >
         </div>
+
     </div>
     </div>
 </div>

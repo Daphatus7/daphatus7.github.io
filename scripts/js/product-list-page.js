@@ -206,7 +206,7 @@ function displayProducts(products) {
                 addNumberOfReviews(productDisplay.querySelector(".product-review-count"), productInventory[i].numberOfReviews);
                 
                 productDisplay.querySelector(".add-to-cart-button-cross").
-                addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay.id));
+                addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay, productDisplay.id));
                 productDisplays.appendChild(productDisplay);
                 
                 productDisplay.querySelector(".like-button").addEventListener('click', 
@@ -270,8 +270,21 @@ function addNumberOfReviews(reviewElement, numberOfReviews)
 
 
 //add product to basket
-function onAddToCardCrossClicked(id)
+function onAddToCardCrossClicked(productDisplay,id)
 {
+    //animation
+    const cross = productDisplay.querySelector(".add-icon");
+
+    cross.style.opacity = 0;
+
+    setTimeout(() => {
+        cross.src = '../../images/checkmark.png';
+        cross.style.width = '35px'
+        // Bring opacity back to 1
+        cross.style.opacity = 1;
+    }, 300); // Matches the transition time
+
+
     //if the item is already in the basket, increase the quantity
     if(basketItems[productInventory[id].name]) {
         basketItems[productInventory[id].name] += 1;
@@ -280,7 +293,9 @@ function onAddToCardCrossClicked(id)
         basketItems[productInventory[id].name] = 1;
     }
     localStorage.setItem('basketItems', JSON.stringify(basketItems));
+
 }
 
+fu
 
 //load the product list
