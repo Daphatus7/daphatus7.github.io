@@ -161,12 +161,12 @@ body{
     display: flex;
     margin-top: 8px;
     width: 70%;
-    z-index: 2;
+    z-index: 3;
     justify-content: space-around;
 }
 #navigation__bar__bottom:hover{
     cursor: pointer;
-    z-index: 1;
+    z-index: 3;
     transition: height 0.3s;
 }
 
@@ -197,9 +197,11 @@ nav > ul{
 #drop-background{
     width: 100vw;
     height: 160px;
-    color: white;
+    background-color: white;
     z-index: 2;
     display: none;
+    top: 114px;
+    position: absolute;
 }
 
 .nav-elements{
