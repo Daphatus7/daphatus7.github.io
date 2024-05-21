@@ -44,12 +44,17 @@ function loadPage() {
     currProduct = getSelectedProduct();
     loadSelectedProduct(currProduct);
     bindButtons();
+    pageLayout();
+}
+
+/**
+ * Move
+ */
+function pageLayout() {
     document.querySelector(".product-list-panel").style.marginTop = "-125px";
     document.querySelector(".product-list-panel").style.alignItems = "flex-start";
     document.querySelector(".product-list-panel").style.marginLeft = "160px";
-    
 }
-
 
 /**
  * bind buttons for the page
