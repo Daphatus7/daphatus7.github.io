@@ -1,3 +1,6 @@
+import { getInventory, getBasketItems, getInventoryProduct, updateBasketItem, packBasketItems, addBasketItem } from '../js/inventory-module.js';
+
+
 // add the components that will need on be page
 const componentsToLoad = [
     {
@@ -29,12 +32,22 @@ const delay = 2000;
 // default qty
 let quantity = 1;
 let addToBasketButton;
+let productInventory = null;
+let basketItems = [];
+let currProduct = null;
 
 addEventListener('DOMContentLoaded', () => loadPage());
 function loadPage() {
+    productInventory = getInventory();
+    basketItems = getBasketItems(productInventory);
     componentsToLoad.forEach(component => fetchPage(component.url, component.placeholderId));
-    getSelectedProduct();
+    currProduct = getSelectedProduct();
+    loadSelectedProduct(currProduct);
     bindButtons();
+    document.querySelector(".product-list-panel").style.marginTop = "-125px";
+    document.querySelector(".product-list-panel").style.alignItems = "flex-start";
+    document.querySelector(".product-list-panel").style.marginLeft = "160px";
+    
 }
 
 
@@ -42,28 +55,38 @@ function loadPage() {
  * bind buttons for the page
  */
 function bindButtons() {
+    // bind decrease qty button
     document.getElementById('decrease-quantity-button').
     addEventListener('click', () => decreaseQuantity());
+    // bind inc qty button
     document.getElementById('increase-quantity-button').
     addEventListener('click', () => increaseQuantity());
+    //bind add to basket button
     addToBasketButton = document.getElementById('add-to-basket');
     addToBasketButton.addEventListener('click', () => addToBasket());
+    //bind to overlay basket notification button
     document.getElementById('add-to-cart-cross-sign').
     addEventListener('click', () => hideAddToCartEffect());
+    //bind continue shopping button
+    document.getElementById('continue_shopping_button').
+    addEventListener('click', () => hideAddToCartEffect());
+    //bind view_cart_button
+    document.getElementById('view_cart_button').
+        addEventListener('click', ()=> loadBasketPage());
 }
 
 function getSelectedProduct() {
     let selectedProductString = localStorage.getItem("selectedProduct");
-    let selectedProduct = selectedProductString ? JSON.parse(selectedProductString) : {};
-    loadSelectedProduct(selectedProduct);
+    currProduct = selectedProductString ? JSON.parse(selectedProductString) : {};
+    return currProduct;
 }
 
 function loadSelectedProduct(selectedProduct) {
     console.log("selected product " + selectedProduct.imagePath);
     document.getElementById("product__image").src = selectedProduct.imagePath;
     document.getElementById("product-name").innerText = selectedProduct.name;
-    // document.getElementsByClassName("price-name")[0].innerText = selectedProduct.price;
-
+    document.getElementById("product__price").innerText = selectedProduct.price;
+    document.getElementById('effect_price').innerText = selectedProduct.price;
 }
 
 
@@ -121,7 +144,17 @@ function changeColour(colour, imageUrl)
 
 function addToBasket()
 {
-    console.log("addToBasket");
+    addBasketItem(productInventory, basketItems, currProduct.name);
+    console.log(basketItems);
+    // if (basketItems.contains(currProduct.name)) {
+    //     basketItems.push([currProduct],1);
+    //     console.log(currProduct);
+    // } else {
+    //     basketItems[currProduct.name][1]+=1;
+    // }
+    updateBasketItem(basketItems);
+    //update visual
+    // updateBasketItem()
     document.getElementById('add-to-cart-effect').classList.add('visible');
     document.getElementById('add-to-cart-effect').classList.remove('hide');
     //hide the cart in 2s
