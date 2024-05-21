@@ -41,7 +41,8 @@ function loadPage()
     
     //bind keys
     document.querySelector("#checkout-button").addEventListener('click', () => loadCheckoutPage());
-
+    loadYouMayAlsoLike();
+    loadRecentlyViewed();
 }
 
 //fetch the page and insert it into the placeholder
@@ -128,7 +129,15 @@ function loadBasketItem() {
         });
 }
 
+function loadYouMayAlsoLike()
+{
 
+}
+
+function loadRecentlyViewed()
+{
+
+}
 function loadCheckoutPage()
 {
     window.location.href = 'checkout-page.html';
