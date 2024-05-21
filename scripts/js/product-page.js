@@ -56,6 +56,7 @@ function pageLayout() {
     document.querySelector(".product-list-panel").style.marginTop = "-125px";
     document.querySelector(".product-list-panel").style.alignItems = "flex-start";
     document.querySelector(".product-list-panel").style.marginLeft = "160px";
+    document.querySelector(".compensation").style.height = "100px";
 }
 
 /**
