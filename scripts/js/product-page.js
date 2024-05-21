@@ -81,6 +81,11 @@ function bindButtons() {
     //bind view_cart_button
     document.getElementById('view_cart_button').
         addEventListener('click', ()=> loadBasketPage());
+    
+    //bind colour buttons
+    document.getElementsByClassName('gold')[0].addEventListener('click', () => changeToGold());
+    document.getElementsByClassName('black')[0].addEventListener('click', () => changeToBlack());
+    document.getElementById('white-circle-button').addEventListener('click', () => changeToSilver());
 }
 
 function getSelectedProduct() {
