@@ -24,6 +24,8 @@ const componentsToLoad = [
 let productInventory = null;
 let basketItems = [];
 let product_list = [];
+let youMayAlsoLikeList;
+let recentlyViewedList;
 addEventListener('DOMContentLoaded', () => loadPage());
 function loadPage()
 {
@@ -41,8 +43,9 @@ function loadPage()
     
     //bind keys
     document.querySelector("#checkout-button").addEventListener('click', () => loadCheckoutPage());
-    loadYouMayAlsoLike();
-    loadRecentlyViewed();
+
+    loadExtraItems(youMayAlsoLikeList, 'you-may-also-like-items');
+    loadExtraItems(recentlyViewedList, 'recently-viewed-items');
 }
 
 //fetch the page and insert it into the placeholder
@@ -129,15 +132,32 @@ function loadBasketItem() {
         });
 }
 
-function loadYouMayAlsoLike()
-{
-
+function loadExtraItems(panel, name) {
+    panel = document.getElementById(name);
+    fetch('page-components/templates/product-item-display-template.html')
+        .then(response => response.text())
+        .then(template => {
+            for (let i = 0; i < Math.random() * 4; i++) {
+                let randomNumber = Math.floor(Math.random() * productInventory.length);
+                let localItem = productInventory[randomNumber];
+                let productDisplay = document.createElement('div');
+                //assign this div with template
+                productDisplay.innerHTML = template;
+                // set name
+                productDisplay.querySelector(".product-name-text")
+                    .innerHTML = localItem.name;
+                // price
+                productDisplay.querySelector(".price")
+                    .innerHTML = localItem.price;
+                // image
+                productDisplay.querySelector(".product-item-display-image")
+                    .src = localItem.imagePath;
+                // set available colours
+                panel.appendChild(productDisplay);
+            }
+        })
 }
 
-function loadRecentlyViewed()
-{
-
-}
 function loadCheckoutPage()
 {
     window.location.href = 'checkout-page.html';
