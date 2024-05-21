@@ -568,6 +568,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /*desk top version*/
 @media (min-width: 768px) {
     .product-list-items {
+        margin-top: 170px;
         display: grid;
         transform: scale(1.4);
     }

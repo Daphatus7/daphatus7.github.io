@@ -45,10 +45,12 @@ function loadPage() {
     loadSelectedProduct(currProduct);
     bindButtons();
     pageLayout();
+    loadYouMayAlsoLike();
+    loadRecentlyViewed();
 }
 
 /**
- * Move
+ * Adjust You may also like layout
  */
 function pageLayout() {
     document.querySelector(".product-list-panel").style.marginTop = "-125px";
@@ -93,7 +95,6 @@ function loadSelectedProduct(selectedProduct) {
     document.getElementById("product__price").innerText = selectedProduct.price;
     document.getElementById('effect_price').innerText = selectedProduct.price;
 }
-
 
 // load the components listed above
 
@@ -177,4 +178,13 @@ function hideAddToCartEffect()
     {
         clearTimeout(cartEffectTimerHandle);
     }
+}
+function loadYouMayAlsoLike() {
+    let panel = document.getElementById("you-may-also-like-items");
+}
+
+function loadRecentlyViewed() {
+    fetch('page-components/templates/product-item-display-template.html')
+        .then(response => response.text())
+        .then(template => {})
 }

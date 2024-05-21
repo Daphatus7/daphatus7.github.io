@@ -205,12 +205,13 @@ function displayProducts(products) {
                 // add review count
                 addNumberOfReviews(productDisplay.querySelector(".product-review-count"), productInventory[i].numberOfReviews);
                 
-                productDisplay.querySelector(".add-to-cart-button-cross").addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay.id));
+                productDisplay.querySelector(".add-to-cart-button-cross").
+                addEventListener('click', (event) => onAddToCardCrossClicked(productDisplay.id));
                 productDisplays.appendChild(productDisplay);
                 
                 productDisplay.querySelector(".like-button").addEventListener('click', 
                     (event) => clickedOnLikeButton(productDisplay.id));
-                productDisplay.addEventListener('click', (event) => clickedOn(productDisplay.id));
+                productDisplay.querySelector(".product-item-display-image").addEventListener('click', (event) => clickedOn(productDisplay.id));
                 productDisplays.appendChild(productDisplay);
             }
         }
