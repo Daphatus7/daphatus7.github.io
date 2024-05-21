@@ -121,7 +121,10 @@ h3{
     font-weight: 300;
 }
 
+.description-text{
+    font-size: var(--description-font-size);
 
+}
 /*checkout-summary*/
 .terms-conditions{
     text-align: right;
@@ -391,4 +394,15 @@ h2{
         font-size: 12px;
     }
 
+}
+
+#desktop-search-input{
+    font-size: 16px;
+}
+
+#search-content-display{
+    font-size: var(--extra-title-font-size);
+}
+#desktop-search::placeholder{
+    color: white;
 }

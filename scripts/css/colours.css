@@ -284,3 +284,8 @@ input::placeholder {
 .star-rating{
     color:grey;
 }
+
+#desktop-search-input{
+    background-color: var(--offwhite);
+    color: var(--black);
+}

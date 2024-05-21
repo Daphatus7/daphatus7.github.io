@@ -81,6 +81,11 @@ function closeDropmenu(){
     dropdownBackgrounds.style.display = 'none';
 }
 
+function loadSearchPage(){
+    window.location.href = 'search-result-page.html';
+
+}
+
 // document.querySelectorAll('.nav-category').forEach(item => {
 //     item.addEventListener('mouseenter', () => {
 //         document.getElementById('dropdown-background').style.display = 'block';

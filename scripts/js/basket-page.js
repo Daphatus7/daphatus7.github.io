@@ -11,6 +11,10 @@ const componentsToLoad = [
         placeholderId: 'navigation-bar-placeholder'
     },
     {
+        url: 'page-components/product-panel.html',
+        placeholderId: 'product-panel-placeholder'
+    },
+    {
         url: 'page-components/footer.html',
         placeholderId: 'footer-placeholder'
     }
