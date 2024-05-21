@@ -83,7 +83,11 @@ function closeDropmenu(){
 
 function loadSearchPage(){
     window.location.href = 'search-result-page.html';
+}
 
+function loadNewCollections()
+{
+    window.location.href = 'product-list-page.html';
 }
 
 // document.querySelectorAll('.nav-category').forEach(item => {
