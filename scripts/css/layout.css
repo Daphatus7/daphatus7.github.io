@@ -23,13 +23,13 @@ a{
 .sidebar{
     flex-basis: 30rem;
     flex-grow: 1;
-    min-width: 40%;
+    min-width: 44%;
 }
 
 .not-sidebar{
     flex-basis: 0;
     flex-grow: 999;
-    min-width: 50%;
+    min-width: 44%;
 }
 
 .placeholder {
@@ -55,7 +55,7 @@ input[type="search"]::-webkit-search-cancel-button {
 /*creates border*/
 .inner-container
 {
-    padding: 2vh 4vw 2vh 4vw;
+    padding: 2vh 2vw 2vh 2vw;
 }
 
 /*all items lean left*/
@@ -467,10 +467,9 @@ input[type="search"]::-webkit-search-cancel-button {
     align-items: flex-start;
 }
 
-.colour-selection-circle{
-    border-radius: 50%;
+#basket__left__container {
+    width: 100%;
 }
-
 
 
 /*product-display ----------*/

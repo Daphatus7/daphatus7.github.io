@@ -51,3 +51,16 @@ export function packBasketItems(basketItems) {
     }
     return packedBasketItems;
 }
+export function addBasketItem(productInventory, basketItems, basketItemName) {
+    //try to find the item in the basket
+    for(let i = 0 ; i < basketItems.length; i++) {
+        let basketItem = basketItems[i];
+        //get first element in the tuple
+        if (basketItem[0].name === basketItemName) {
+            basketItem[1] += 1;
+            return;
+        }
+    }
+    //if the item is not in the basket add a new item
+    basketItems.push([getInventoryProduct(productInventory, basketItemName), 1]);
+}
