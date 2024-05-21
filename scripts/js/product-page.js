@@ -45,17 +45,12 @@ function loadPage() {
     loadSelectedProduct(currProduct);
     bindButtons();
     pageLayout();
-    loadYouMayAlsoLike();
-    loadRecentlyViewed();
 }
 
 /**
  * Adjust You may also like layout
  */
 function pageLayout() {
-    document.querySelector(".product-list-panel").style.marginTop = "-125px";
-    document.querySelector(".product-list-panel").style.alignItems = "flex-start";
-    document.querySelector(".product-list-panel").style.marginLeft = "160px";
     document.querySelector(".compensation").style.height = "100px";
 }
 
@@ -187,13 +182,4 @@ function hideAddToCartEffect()
     {
         clearTimeout(cartEffectTimerHandle);
     }
-}
-function loadYouMayAlsoLike() {
-    let panel = document.getElementById("you-may-also-like-items");
-}
-
-function loadRecentlyViewed() {
-    fetch('page-components/templates/product-item-display-template.html')
-        .then(response => response.text())
-        .then(template => {})
 }
