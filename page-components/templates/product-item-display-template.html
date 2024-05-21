@@ -6,6 +6,8 @@
     <title>product-item-display</title>
 </head>
 <style>
+    .product-item-display-container {
+    }
     .product-item-display-background{
         cursor: pointer;
         transition: 0.1s ease-out;
@@ -17,12 +19,15 @@
     }
     
     .product-item-display-image-container{
-        display: flex;
+        display: inline-grid;
         align-items: center;
         justify-content: center;
-        scale: 80%;
         overflow: hidden;
-
+    }
+    .product-item-display-image {
+        scale: 80%;
+        width: 200px;
+        height: 250px;
     }
     
     #product-item-display-bottom-container {
@@ -109,7 +114,7 @@
         </div>
         <div class="product-item-display-image-container">
         <img class="product-item-display-image" src="../../images/vanity-image.png" alt="item-image">
-    </div>
+        </div>
     <div id="product-item-display-bottom-container">
         <div id="product-item-information-container"> 
             <div class="colour-selection">
