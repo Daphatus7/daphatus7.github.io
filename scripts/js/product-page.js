@@ -91,6 +91,7 @@ function loadSelectedProduct(selectedProduct) {
 
 
 
+
 // load the components listed above
 
 // fetch the page and insert it into the placeholder
