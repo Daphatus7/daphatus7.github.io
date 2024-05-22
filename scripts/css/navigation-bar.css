@@ -144,7 +144,6 @@ body{
 /*Mobile*/
 @media (max-width: 390px){
     .navigation__bar-left > img, .navigation__bar-right > a, .navigation__bar-right > a> img{
-        height: 2rem;
         width: auto;
         margin-right: 3px;
     }

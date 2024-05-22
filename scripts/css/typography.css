@@ -406,3 +406,11 @@ h2{
 #desktop-search::placeholder{
     color: white;
 }
+
+.menu-heading{
+    font-size: var(--sub-title-font-size);
+}
+.menu-heading-bottom{
+    font-size: var(--sub-title-font-size);
+
+}
