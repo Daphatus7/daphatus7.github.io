@@ -100,12 +100,9 @@ function loadSelectedProduct(selectedProduct) {
     console.log("selected product " + selectedProduct.imagePath);
     document.getElementById("product__image").src = selectedProduct.imagePath;
     document.getElementById("product-name").innerText = selectedProduct.name;
-    document.getElementById("product__price").innerText = selectedProduct.price;
-    document.getElementById('effect_price').innerText = selectedProduct.price;
+    document.getElementById("product__price").innerText = (selectedProduct.price) + ".00";
+    document.getElementById('effect_price').innerText = (selectedProduct.price) + ".00";
 }
-
-
-
 
 // load the components listed above
 
