@@ -118,3 +118,6 @@ button:active{
 #decrease-quantity-button{
     cursor: pointer;
 }
+#mobile__menu-button{
+    cursor: pointer;
+}

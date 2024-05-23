@@ -365,11 +365,11 @@
 
 
 .quantity-icon-plus{
-    width: 1vh;
+    padding-right: 4px;
 }
 
 .quantity-icon-minus{
-    padding-right: 1vw;
+    padding-left: 4px;
 }
 
 .product-price-block {
