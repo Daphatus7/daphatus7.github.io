@@ -1,4 +1,6 @@
-
+/**
+ * handles loading extra items
+ */
 //define a list of product information
 const products = [
     {
