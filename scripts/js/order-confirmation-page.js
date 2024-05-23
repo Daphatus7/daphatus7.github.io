@@ -1,3 +1,6 @@
+/**
+ * this JS handles order confirmation page
+ */
 
 //Add components to the page
 
@@ -30,6 +33,9 @@ let product_list = [];
 
 addEventListener('DOMContentLoaded', () => loadPage());
 
+/**
+ * this loads the webpage
+ */
 function loadPage() {
     loadInventory();
     getBasketItems();
@@ -38,6 +44,11 @@ function loadPage() {
     updateOrderSummary();
 }
 
+/**
+ * function to load different components on the pag
+ * @param url the component link
+ * @param placeholderId the name for the element
+ */
 function fetchPage(url, placeholderId) 
 {
     fetch(url)
@@ -52,6 +63,9 @@ function loadIndexPage()
     window.location.href = 'index.html';
 }
 
+/**
+ * update order when inc qty or dec
+ */
 function updateOrderSummary(){
     let total = 0;
     for(let i = 0; i < basketItems.length; i++) {

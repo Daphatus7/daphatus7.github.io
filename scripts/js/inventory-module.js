@@ -16,6 +16,10 @@ export function getBasketItems(productInventory) {
     return basketItems;
 }
 
+/**
+ * load inventory from the system.
+ * @returns {any|*[]}
+ */
 export function getInventory() {
     let inventoryItemString = localStorage.getItem('productInventory');
     //if not null get the data from the string or a list
@@ -44,6 +48,11 @@ export function updateBasketItem(basketItems) {
     localStorage.setItem('basketItems', JSON.stringify(packBasketItems(basketItems)));
 }
 
+/**
+ * pack basket items into a dictionary
+ * @param basketItems current basket items
+ * @returns {{}}
+ */
 export function packBasketItems(basketItems) {
     let packedBasketItems = {};
     for (let i = 0; i < basketItems.length; i++) {
@@ -51,6 +60,13 @@ export function packBasketItems(basketItems) {
     }
     return packedBasketItems;
 }
+
+/**
+ * add item into basket using name
+ * @param productInventory cur inventory
+ * @param basketItems cur basket item
+ * @param basketItemName item name
+ */
 export function addBasketItem(productInventory, basketItems, basketItemName) {
     //try to find the item in the basket
     for(let i = 0 ; i < basketItems.length; i++) {

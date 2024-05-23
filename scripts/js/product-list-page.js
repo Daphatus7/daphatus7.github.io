@@ -1,4 +1,15 @@
+/**
+ * this JS handles the product list page
+* */
+
+/**
+ * holds the reference to the panel, to allow clickable buttons
+ */
 let productDisplays;
+/**
+ * product inventory
+ * @type {[{colour: string[], numberOfStars: number, imagePath: string, price: string, numberOfReviews: number, name: string},{colour: string[], numberOfStars: number, imagePath: string, price: string, numberOfReviews: number, name: string},{colour: string[], numberOfStars: number, imagePath: string, price: string, numberOfReviews: number, name: string},{colour: string[], numberOfStars: number, imagePath: string, price: string, numberOfReviews: number, name: string},{colour: string[], numberOfStars: number, imagePath: string, price: string, numberOfReviews: number, name: string},null,null,null,null,null,null,null]}
+ */
 const productInventory = [
     {
         name: "Zola Flush Light",
@@ -101,6 +112,8 @@ const productInventory = [
 const totalPossibleStars = 5;
 let basketItems = {};
 localStorage.setItem('basketItems', JSON.stringify(basketItems));
+addEventListener('DOMContentLoaded', () => loadPage());
+
 
 /**
  * load the page
@@ -116,7 +129,10 @@ function loadPage(){
     //load website items
     displayProducts(productInventory);
 }
-addEventListener('DOMContentLoaded', () => loadPage());
+
+/**
+ * load components for the website
+ */
 function loadWebsiteComponents(){
     fetch('page-components/navigation-bar.html')
         .then(response => response.text())
@@ -151,11 +167,19 @@ function clickedOn(id){
     window.location.href = 'product-page.html';
 }
 
+/**
+ * clicked on like button
+ * @param id
+ */
 function clickedOnLikeButton(id)
 {
     likeButton(productDisplays.children[id]);
 }
 
+/**
+ * implementation of feedback when clicking on like button
+ * @param displayClicked
+ */
 function likeButton(displayClicked)
 {
     let buttonIcon = displayClicked.querySelector(".like-button");
@@ -170,7 +194,11 @@ function likeButton(displayClicked)
         buttonIcon.src = "images/heart-icon-checked.png";
     }
 }
-//load the website components
+
+/**
+ * load the website components
+ * @param products load products
+ */
 function displayProducts(products) {
     productDisplays = document.getElementsByClassName('product-list-items')[0];
     fetch('page-components/templates/product-item-display-template.html')
@@ -218,7 +246,11 @@ function displayProducts(products) {
         )
 }
 
-//convert colour to required format
+/**
+ * convert colour to required format
+ * @param colour the colour selected
+ * @returns {string} return value
+ */
 function getColour(colour)
 {
     switch (colour)
@@ -237,7 +269,12 @@ function getColour(colour)
             return "white";
     }
 }
-// add colour element to the product display
+
+/**
+ * add colour element to the product display
+ * @param ColourGrid web element
+ * @param colour colour element
+ */
 function addProductColour(ColourGrid, colour)
 {
     fetch('page-components/templates/colour-circle-template.html')
@@ -251,25 +288,41 @@ function addProductColour(ColourGrid, colour)
             ))
 }
 
+/**
+ * add stars upto 5 to the element.
+ * @param productRatingElement
+ * @param numberOfStarts
+ */
 function addStars(productRatingElement, numberOfStarts)
 {
+    //filled stars
     for (let i = 0; i < numberOfStarts; i++)
     {                   
         productRatingElement.innerHTML += '&#9733;';
     }
+    //hollow stars
     for (let i = numberOfStarts; i < totalPossibleStars; i++)
     {
         productRatingElement.innerHTML += '&#9734;';
     }
 }
+
+/**
+ * add reviews
+ * @param reviewElement element
+ * @param numberOfReviews num
+ */
 function addNumberOfReviews(reviewElement, numberOfReviews)
 {
     reviewElement.innerHTML = `(${numberOfReviews})`;
 }
 
 
-
-//add product to basket
+/**
+ * add product to basket
+ * @param productDisplay
+ * @param id
+ */
 function onAddToCardCrossClicked(productDisplay,id)
 {
     //animation
@@ -295,7 +348,3 @@ function onAddToCardCrossClicked(productDisplay,id)
     localStorage.setItem('basketItems', JSON.stringify(basketItems));
 
 }
-
-fu
-
-//load the product list

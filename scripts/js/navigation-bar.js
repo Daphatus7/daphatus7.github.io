@@ -1,3 +1,8 @@
+/**
+ * this JS manages navigation bar
+ */
+
+
 /*when open mobile menu*/ 
 function showMenu() {
     let navBar = document.getElementById("navigation__bar_mobile");
@@ -44,6 +49,10 @@ function hideMenu() {
         document.body.style.overflow = 'visible';
     }, { once: true });
 }
+
+/**
+ * when loading search screen
+ */
 function loadSearch(){
     let searchBar = document.getElementById('navigation__bar__overlay')
     searchBar.style.display = 'block'
@@ -51,6 +60,10 @@ function loadSearch(){
         searchBar.style.transform = 'translateY(-20%)'; // Then move it into view
     });
 }
+
+/**
+ * when closing search screen
+ */
 function closeSearch(){
     let searchBar = document.getElementById('navigation__bar__overlay')
     searchBar.style.transform = 'translateY(-150%)';
@@ -89,12 +102,3 @@ function loadNewCollections()
 {
     window.location.href = 'product-list-page.html';
 }
-
-// document.querySelectorAll('.nav-category').forEach(item => {
-//     item.addEventListener('mouseenter', () => {
-//         document.getElementById('dropdown-background').style.display = 'block';
-//     });
-//     item.addEventListener('mouseleave', () => {
-//         document.getElementById('dropdown-background').style.display = 'none';
-//     });
-// });

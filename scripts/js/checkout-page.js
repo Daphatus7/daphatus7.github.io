@@ -1,3 +1,10 @@
+/**
+ * this JS handles checkout page
+ */
+
+/**
+ * import common methods from inventory-module to improve modularity and reusability of code
+ */
 import { getInventory, getBasketItems, getInventoryProduct, updateBasketItem, packBasketItems } from '../js/inventory-module.js';
 
 
@@ -22,12 +29,15 @@ const componentsToLoad = [
 ]
 
 
-
+//local variable
 let productInventory = null;
 let basketItems = [];
 let product_list = [];
 addEventListener('DOMContentLoaded', () => loadPage());
 
+/**
+ * load the webpage
+ */
 function loadPage() {
 
     //load Page Elements
@@ -41,6 +51,11 @@ function loadPage() {
     updateOrderSummary();
 }
 
+/**
+ * update inventory qty
+ * @param id item
+ * @param quantity new qty
+ */
 function updateOrderSummary(){
     let total = 0;
     for(let i = 0; i < basketItems.length; i++) {

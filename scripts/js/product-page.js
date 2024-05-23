@@ -1,3 +1,6 @@
+/**
+ * this handles product page
+ */
 import { getInventory, getBasketItems, getInventoryProduct, updateBasketItem, packBasketItems, addBasketItem } from '../js/inventory-module.js';
 
 
@@ -37,6 +40,10 @@ let basketItems = [];
 let currProduct = null;
 
 addEventListener('DOMContentLoaded', () => loadPage());
+
+/**
+ * load page
+ */
 function loadPage() {
     productInventory = getInventory();
     basketItems = getBasketItems(productInventory);
@@ -111,19 +118,24 @@ function fetchPage(url, placeholderId) {
         })
 }
 
+/**
+ * inc qty button
+ */
 function increaseQuantity() {
     let quantityDisplay = document.getElementById('product-quantity');
     quantity += 1;
     quantityDisplay.innerHTML = quantity;
 }
 
+/**
+ * dec qty button 
+ */
 function decreaseQuantity() {
     let quantityDisplay = document.getElementById('product-quantity');
     if (quantity > 1){
         quantity -= 1;
         quantityDisplay.innerHTML = quantity;
-    } 
-    else
+    } else
     {
         quantityDisplay.innerHTML = quantity;
     }
@@ -143,6 +155,11 @@ function changeToBlack()
     changeColour("Black", 'images/light-black-image.jpg');
 }
 
+/**
+ * change selected colour.
+ * @param colour
+ * @param imageUrl
+ */
 function changeColour(colour, imageUrl)
 {
     let productImage = document.getElementById('product__image');
@@ -152,6 +169,9 @@ function changeColour(colour, imageUrl)
 }
 
 
+/**
+ * add item to basket
+ */
 function addToBasket()
 {
     addBasketItem(productInventory, basketItems, currProduct.name);
@@ -174,6 +194,10 @@ function addToBasket()
     }
     //show the navigation bar
 }
+
+/**
+ * hide effect after n sec.
+ */
 function hideAddToCartEffect()
 {
     document.getElementById('add-to-cart-effect').classList.add('hide');

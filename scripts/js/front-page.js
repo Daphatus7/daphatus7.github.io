@@ -1,3 +1,6 @@
+/**
+ * This handles the front page / index.html
+ */
 
 // the load the components of the website
 //list components that will need for the webpage
