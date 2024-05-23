@@ -1,15 +1,19 @@
 /*basestyle*/
 button{
+    /*basic style*/
     font-family: "Century Gothic", Arial, sans-serif;
     outline: none;
     border: none;
     background: #1e1e1e;
-    transition-duration: 0.4s;
     font-size: 10px;
     font-weight: 100;
     padding: 10px 20px;
     color: #FFFFFF;
+    /*animation*/
+    transition-duration: 0.4s;
 }
+
+/*button animation*/
 button:hover{
     transform: scale(1.01);
     cursor: pointer;
@@ -18,11 +22,6 @@ button:hover{
 }
 button:active{
     background-color: black;
-}
-
-a:hover{
-    transform: scale(1.01);
-    cursor: pointer;
 }
 
 /*modifiers*/
@@ -56,7 +55,7 @@ a:hover{
     transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-/*add to cart*/
+/*add to cart cross*/
 .add-to-cart-button{
     display: flex;
     /*size*/
@@ -70,7 +69,7 @@ a:hover{
     align-items: center;
 }
 
-
+/*plus and minus to control quantity*/
 .quantity-button{
     display: flex;
     flex-direction: row;
@@ -97,13 +96,13 @@ a:hover{
     }
 }
 
-/*mobile*/
+/*mobile optimization*/
 @media (max-width: 845px){
     .quantity-button{
-        width: 100%;
+        width: 100%; /*100% width to make the button easily clickable on mobile*/
     }
     .add-to-cart-button{
-        width: 100%;
+        width: 100%; /*100% width to make the button easily clickable on mobile*/
     }
 
     .add-to-cart-button-cross{
@@ -112,6 +111,7 @@ a:hover{
     }
 }
 
+/*change cursor style*/
 #increase-quantity-button{
     cursor: pointer;
 }

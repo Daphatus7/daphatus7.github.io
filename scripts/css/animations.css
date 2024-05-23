@@ -9,8 +9,38 @@
     transition: ease-out 0.3s;
 }
 
+#navigation__bar__bottom:hover{
+    transition: height 0.3s;
+}
+
+nav ul ul{
+    transition: 0.3s;
+}
+
+/*when hovering li*/
+nav li:hover ul{
+    transition: 0.2s;
+}
+
+a:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
 .category-card:hover{
     transform: scale(1.05);
-    overflow: hidden;
+    overflow: hidden; /*hides the overflow so the page structure stays the same*/
     transition: transform 0.5s, overflow 0.5s
+}
+
+#mobile--menu-container{
+    /*animation*/
+    transform: translateX(-100%); /*starts from outside of the screen*/
+    transition: transform 0.3s ease-in-out;
+}
+
+#navigation__bar__overlay{
+    /*animation*/
+    transform: translateY(-150%); /*starts from outside of the screen*/
+    transition: transform 0.2s ease-in-out;
 }

@@ -2,7 +2,7 @@
 @media (min-width: 430px)
 {
     body{
-        margin: 0;
+        margin: 0; /*To overwrite explorer's default setting*/
         padding: 0;
     }
 }
@@ -17,9 +17,10 @@
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none; /*no underline for links*/
 }
 
+/*sidebar used to ensure responsive layout*/
 .sidebar{
     flex-basis: 30rem;
     flex-grow: 1;
@@ -32,27 +33,30 @@ a{
     min-width: 44%;
 }
 
-.placeholder {
-    overflow: hidden;
-}
 .sidebar-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+.placeholder {
+    overflow: hidden;
+}
+
+/*To delete the default style of search bar*/
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     appearance: none;
 }
 
 
-/*use when 2 components in the far opposite*/
+/*Use this class when 2 components are in the far opposite*/
 .far-between{
     display: flex;
     justify-content: space-between;
 }
-/*creates border*/
+
+/*creates padding space between elements*/
 .inner-container
 {
     padding: 2vh 2vw 2vh 2vw;
@@ -64,6 +68,7 @@ input[type="search"]::-webkit-search-cancel-button {
     justify-content: flex-start;
 }
 
+/*A black line divider too separate areas*/
 .divider{
     height: 1px;
     width: 92%;
@@ -80,19 +85,19 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow: hidden;
 }
 
+/*mobile optimization*/
 @media (min-width: 768px) {
     .category-card {
         overflow: hidden;
     }
 }
 
-
 .category-card > img {
     height: auto;
 }
 
 
-/* scroll horizontal */
+/* Allows the cards to be able to scroll horizontally */
 @media (max-width: 600px) {
     .category-card-container {
         display: flex;
@@ -100,7 +105,6 @@ input[type="search"]::-webkit-search-cancel-button {
         flex-wrap: nowrap;
         flex-direction: row;
     }
-
     .category-card {
         display: inline-block;
     }
@@ -114,6 +118,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 
 /*checkout page*/
+/* divides the elements in the container to each have a width of 50% */
 .equal-divider-container {
     display: flex;
     flex-direction: row;
@@ -138,7 +143,6 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 /*checkout-summary*/
-
 .promotion-input-text{
     width: 100%;
     height: 50px;
@@ -157,6 +161,7 @@ input[type="search"]::-webkit-search-cancel-button {
         width: 100vw;
     }
 }
+
 /*mobile top*/
 @media (max-width: 768px) {
     .footer{
@@ -343,9 +348,6 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-direction: column;
     height: 100vh;
     background-color: #ffffff;
-    /*animation*/
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
 }
 #mobile__menu-button{
     cursor: pointer;

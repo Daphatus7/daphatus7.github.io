@@ -253,8 +253,8 @@ input::placeholder {
 }
 
 #learnmore{
-    border:1px solid black;
-    color: black;
+    border:1px solid var(--black);
+    color: var(--black);
 }
 
 
@@ -278,11 +278,11 @@ input::placeholder {
 }
 .review-panel{
     background-color: #FFF;
-    outline: 1px solid black;
+    outline: 1px solid var(--black);
 }
 
 .star-rating{
-    color:grey;
+    color:var(--grey);
 }
 
 #desktop-search-input{
